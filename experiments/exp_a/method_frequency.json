@@ -1,0 +1,45 @@
+{
+  "results": {
+    "DID": {
+      "total_or_count": 3751507,
+      "max_single_query": 1863063,
+      "by_query": {
+        "difference-in-differences": 1863063,
+        "difference in differences": 1863063,
+        "diff-in-diff": 25381
+      }
+    },
+    "EVENT_STUDY": {
+      "total_or_count": 1565200,
+      "max_single_query": 782600,
+      "by_query": {
+        "event study": 782600,
+        "event-study": 782600
+      }
+    },
+    "IV": {
+      "total_or_count": 442911,
+      "max_single_query": 181825,
+      "by_query": {
+        "instrumental variable": 130543,
+        "instrumental variables": 130543,
+        "two-stage least squares": 181825
+      }
+    },
+    "RDD": {
+      "total_or_count": 50510,
+      "max_single_query": 25255,
+      "by_query": {
+        "regression discontinuity": 25255,
+        "regression-discontinuity": 25255
+      }
+    }
+  },
+  "detection_rates": {
+    "DID": 0.78,
+    "RDD": 0.78,
+    "IV": 0.54,
+    "EVENT_STUDY": 0.27
+  },
+  "note": "L3 detection rates are mean across 6 frontier models, 262 papers"
+}

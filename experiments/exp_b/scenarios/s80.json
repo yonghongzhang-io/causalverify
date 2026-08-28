@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s80",
+  "method_family": "IV",
+  "difficulty": "hard",
+  "title": "Impact of Institutional Ownership on Firm Value",
+  "research_question": "Does increased institutional ownership, as influenced by inclusion in the S&P 500 index, negatively affect firm value? The study aims to identify the causal impact of changes in ownership structure on firm valuation, using index inclusion as an instrumental variable.",
+  "data_description": "The dataset includes 300 firms with columns for firm value (y), institutional ownership (x), S&P 500 inclusion status (z), and other control variables (controls). The sample tracks firms over time, capturing changes in ownership and valuation metrics.",
+  "data_file": "experiments/exp_b/data/s80_data.csv"
+}

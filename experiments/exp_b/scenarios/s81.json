@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s81",
+  "method_family": "IV",
+  "difficulty": "hard",
+  "title": "Impact of Peer Ability on Academic Performance",
+  "research_question": "How does the ability level of college roommates influence a student's academic performance? The study aims to determine if being assigned a roommate with higher academic ability leads to a significant increase in a student's GPA.",
+  "data_description": "The dataset comprises 300 students, each with a recorded GPA (y). The key variables include the student's own academic ability (x), the assigned roommate's ability (z) used as an instrument for peer quality, and additional controls for student demographics and prior academic performance. The focus is on isolating the effect of peer ability on GPA.",
+  "data_file": "experiments/exp_b/data/s81_data.csv"
+}

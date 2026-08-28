@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s77",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "title": "Impact of Road Density on Urban Population Growth",
+  "research_question": "How does road density influence population growth in urban areas? Specifically, can the 1947 highway plan be used as an instrumental variable to assess the causal effect of increased road density on population growth?",
+  "data_description": "The dataset includes 400 urban areas with columns for population growth (y), road density (x), the 1947 highway plan as an instrumental variable (z), and other control variables (controls) such as median income and education level. The data spans several decades, capturing variations in road development and demographic changes.",
+  "data_file": "experiments/exp_b/data/s77_data.csv"
+}

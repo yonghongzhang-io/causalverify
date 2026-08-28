@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s13",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "medium",
+  "title": "M&A announcement returns for acquirer firms",
+  "research_question": "Do acquirer firms experience negative cumulative abnormal returns around M&A announcement dates, consistent with the acquirer's curse hypothesis?",
+  "data_description": "Event study data for 80 acquiring firms. Variables: stock_id, event_day (−10 to +10), ret, mkt_ret, beta. Market model estimated on [−10,−2]. Event window [−1,+1]. Focus on whether acquirer CAR is significantly different from zero.",
+  "data_file": "experiments/exp_b/data/s13_data.csv"
+}

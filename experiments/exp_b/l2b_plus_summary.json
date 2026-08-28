@@ -1,0 +1,71 @@
+{
+  "tolerance": 0.5,
+  "by_model": {
+    "Kimi": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 45,
+      "L2b_plus": 5,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.45,
+      "L2b_plus_rate": 0.05
+    },
+    "Sonnet": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 51,
+      "L2b_plus": 22,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.51,
+      "L2b_plus_rate": 0.22
+    },
+    "GPT-4o": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 78,
+      "L2b_plus": 25,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.78,
+      "L2b_plus_rate": 0.25
+    },
+    "o3": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 50,
+      "L2b_plus": 14,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.5,
+      "L2b_plus_rate": 0.14
+    },
+    "Opus": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 99,
+      "L2b": 94,
+      "L2b_plus": 55,
+      "L1_rate": 1.0,
+      "L2a_rate": 0.99,
+      "L2b_rate": 0.94,
+      "L2b_plus_rate": 0.55
+    },
+    "Gemini": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 57,
+      "L2b": 32,
+      "L2b_plus": 13,
+      "L1_rate": 1.0,
+      "L2a_rate": 0.57,
+      "L2b_rate": 0.32,
+      "L2b_plus_rate": 0.13
+    }
+  }
+}

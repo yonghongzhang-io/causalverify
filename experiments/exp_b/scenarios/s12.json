@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s12",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "easy",
+  "title": "Sudden CEO death and firm value",
+  "research_question": "Does the sudden, unexpected death of a CEO generate significant negative abnormal returns for the firm's stock in the [0,+1] event window?",
+  "data_description": "Event study data for 80 firms that experienced sudden CEO deaths. Variables: stock_id, event_day (−10 to +10), ret, mkt_ret, beta. Use estimation window [−10,−2] for market model. Event window [0,+1].",
+  "data_file": "experiments/exp_b/data/s12_data.csv"
+}

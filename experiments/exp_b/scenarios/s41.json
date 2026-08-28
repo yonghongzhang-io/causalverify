@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s41",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "Impact of ACA Individual Mandate on Insurance Premiums",
+  "research_question": "How did the enforcement of the Affordable Care Act's individual mandate affect health insurance premiums? This study aims to understand whether the mandate led to a decrease in premiums by comparing regions with different enforcement timings.",
+  "data_description": "The dataset includes 150 observations with columns: unit_id (identifying regions), period (time periods before and after mandate enforcement), treated (indicator for regions where the mandate was enforced), post (indicator for periods after enforcement), treat_x_post (interaction term), and y (log insurance premiums).",
+  "data_file": "experiments/exp_b/data/s41_data.csv"
+}

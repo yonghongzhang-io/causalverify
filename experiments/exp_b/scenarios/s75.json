@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s75",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "title": "Impact of Upwind Pollution on Infant Mortality",
+  "research_question": "Does exposure to pollution from upwind sources increase infant mortality rates? By using wind direction as an instrumental variable, we aim to isolate the causal effect of pollution exposure on infant health outcomes.",
+  "data_description": "The dataset includes 400 observations with columns: y (infant mortality rate), x (pollution exposure level), z (indicator for upwind pollution source), and controls (socioeconomic factors). The data captures variations in pollution exposure due to changes in wind direction.",
+  "data_file": "experiments/exp_b/data/s75_data.csv"
+}

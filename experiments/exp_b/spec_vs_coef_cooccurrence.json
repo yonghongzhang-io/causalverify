@@ -1,0 +1,8 @@
+{
+  "n_cells": 180,
+  "l2b_plus_pass_with_l3_pass": 37,
+  "l2b_plus_pass_total": 39,
+  "l2b_plus_fail_with_l3_pass": 140,
+  "l2b_plus_fail_total": 141,
+  "spec_coef_agreement_rate": 0.2111111111111111
+}

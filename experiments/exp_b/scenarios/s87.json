@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s87",
+  "method_family": "RDD",
+  "difficulty": "easy",
+  "title": "Impact of Unemployment Benefit Eligibility on Future Earnings",
+  "research_question": "Does reaching the age cutoff for unemployment benefit eligibility affect individuals' future earnings? Specifically, we want to understand if eligibility for these benefits leads to changes in earnings two years later.",
+  "data_description": "The dataset includes 600 individuals, with variables such as 'running_var' representing age, 'treated' indicating if the individual is above the benefit eligibility age cutoff, and 'y' capturing log earnings two years later. The data is focused around the eligibility age cutoff to assess its impact.",
+  "data_file": "experiments/exp_b/data/s87_data.csv"
+}

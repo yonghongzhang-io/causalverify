@@ -1,0 +1,651 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage[margin=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{enumitem}
+
+\definecolor{primaryblue}{HTML}{1F4E79}
+\definecolor{softgray}{HTML}{F5F5F5}
+\definecolor{codebg}{HTML}{F8F8F2}
+\definecolor{codekey}{HTML}{0066CC}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=primaryblue,
+  urlcolor=primaryblue,
+}
+
+\titleformat{\section}
+  {\Large\bfseries\color{primaryblue}}
+  {\thesection}{0.6em}{}
+\titleformat{\subsection}
+  {\large\bfseries\color{primaryblue}}
+  {\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}
+  {\normalsize\bfseries}
+  {\thesubsubsection}{0.4em}{}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  backgroundcolor=\color{codebg},
+  breaklines=true,
+  frame=single,
+  framesep=4pt,
+  framerule=0pt,
+  rulecolor=\color{softgray},
+  xleftmargin=5pt,
+  xrightmargin=5pt,
+  keywordstyle=\color{codekey}\bfseries,
+  commentstyle=\color{gray}\itshape,
+  stringstyle=\color{orange},
+  showstringspaces=false,
+  columns=flexible,
+  language=Python,
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize CausalVerify v11 Pipeline Walkthrough}
+\fancyhead[R]{\footnotesize \thepage}
+
+\title{\vspace{-1cm}
+  \textbf{\Large CausalVerify v11 Execution Pipeline in Full Detail} \\[4pt]
+  \textbf{\Large CausalVerify v11 
+}
+\author{Bilingual Technical Walkthrough \\ 
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\noindent The complete pipeline has 6 stages. Below I explain step by step \textbf{what we do, how we do it, and what we produce}.
+
+\noindent 
+
+\vspace{0.5em}
+\hrule
+\vspace{0.5em}
+
+% ─────────────────────────────────────────────────────────
+\section{Stage 0 — Data Preparation}
+
+\textbf{Purpose}: establish an evaluable input (question + true answer). \\
+
+\subsection{Exp A: Real Papers}
+
+\textbf{Script}: \texttt{src/pipeline/expand\_benchmark.py} + \texttt{src/pipeline/generate\_paper\_jsons.py}
+
+\textbf{What it does}:
+\begin{enumerate}[leftmargin=1.5em]
+\item Call the OpenAlex API to query papers from top economics journals. \\
+      
+\item Use GPT-4o to generate \texttt{research\_question} / \texttt{data\_description} / \texttt{institutional\_context} from the metadata. \\
+\item Human review and extension $\rightarrow$ 262 paper JSON files. \\
+      
+\end{enumerate}
+
+\textbf{Input}: 3-D allocation table of (economics domain $\times$ method $\times$ difficulty). \\
+
+
+\textbf{Output}:
+
+\begin{lstlisting}[language=]
+experiments/exp_a/papers/paper_XX_did_easy.json    (262 files)
+  Each contains:
+    - paper_id, authors, year, journal
+    - research_question     shown to LLM
+    - data_description      shown to LLM
+    - institutional_context shown to LLM
+    - ground_truth:         hidden from LLM, used for scoring
+        method_family    (DID/EVENT_STUDY/IV/RDD)
+        conclusion_direction  (positive/negative)
+        main_effect
+        key_robustness
+\end{lstlisting}
+
+\subsection{Exp B: Synthetic DGP Scenarios}
+
+\textbf{Script}: \texttt{src/pipeline/generate\_exp\_b\_scenarios.py} + \texttt{extend\_exp\_b\_to\_100.py}
+
+\textbf{What it does}:
+\begin{enumerate}[leftmargin=1.5em]
+\item For 4 methods (DID/ES/IV/RDD), synthesize CSV data with NumPy so that the true $\beta^*$ is completely known. \\
+      
+\item Use GPT-4o to generate natural-language research questions (hiding the method name). \\
+      GPT-4o 
+\item 30 hand-written + 70 programmatically extended = 100 scenarios. \\
+      30 
+\end{enumerate}
+
+\textbf{Key design}: \texttt{seed=42} fixed, fully reproducible.
+
+\textbf{Output}:
+
+\begin{lstlisting}[language=]
+experiments/exp_b/scenarios/s01.json    (100 scenario files)
+  - scenario_id, method_family, difficulty
+  - research_question, data_description
+  - data_file: "experiments/exp_b/data/sXX_data.csv"
+  - dgp_truth:
+      type:      "did" / "event" / "iv" / "rdd"
+      effect:    -0.3      <- exact true effect
+      direction: "negative"
+
+experiments/exp_b/data/s01_data.csv     (100 CSV files)
+  1600 rows (200 unit x 8 period) x 6 columns
+\end{lstlisting}
+
+\newpage
+
+% ─────────────────────────────────────────────────────────
+\section{Stage 1 — LLM Generation / LLM 
+
+\textbf{Purpose}: have each LLM produce R code + research plan for each task. \\
+
+\subsection{Exp A Calls / Exp A 
+
+\textbf{Script}: \texttt{src/pipeline/run\_exp\_a.py}
+
+\textbf{What it does} (for each paper $\times$ each model):
+
+\begin{lstlisting}[language=Python]
+# System prompt
+"You are a financial economist... Propose an identification strategy..."
+
+# User prompt (fill in three fields
+"""
+Research Question: {research_question}
+Available Data: {data_description}
+Institutional Context: {institutional_context}
+
+Please provide:
+  1. Identification Strategy
+  2. Treatment and Control
+  3. Key Identifying Assumptions
+  4. Threats to Identification
+  5. R Code Outline
+  6. Expected Results
+  7. Validity Checklist
+"""
+
+-> Call LLM API -> save
+\end{lstlisting}
+
+\textbf{Output}:
+
+\begin{lstlisting}[language=]
+experiments/exp_a/outputs/paper_XX_claude-opus-4-6.json  (1,572 files)
+  Contains:
+    - paper_id, model, run_at
+    - llm_response:
+        model, input_tokens, output_tokens
+        content: complete markdown answer (with R code block)
+        stop_reason
+\end{lstlisting}
+
+\textbf{Scale}: 262 papers $\times$ 6 models = \textbf{1,572 outputs} \\
+\textbf{Time}: $\sim$6--12 hours (rate-limited)
+\textbf{Cost}: $\sim\$80$--$150$
+
+\subsection{Exp B Calls / Exp B 
+
+\textbf{Script}: \texttt{src/pipeline/run\_exp\_b.py}
+
+\textbf{Differences from Exp A}:
+\begin{enumerate}[leftmargin=1.5em]
+\item Provide the LLM with the \textbf{first 5 CSV rows + the file path}. \\
+      
+\item The prompt requires \textbf{complete, runnable R code} (not an outline). \\
+\item Compress the prompt to 3 sections.
+\end{enumerate}
+
+\begin{lstlisting}[language=Python]
+# User prompt template
+"""
+Research scenario: {title}
+Research question: {research_question}
+Data description: {data_description}
+Data file path: experiments/exp_b/data/sXX_data.csv
+Data preview (first 5 rows):
+{pandas.to_string}
+Column types: {dtypes}
+
+Please implement the full analysis in 3 sections:
+  1. Identification Strategy
+  2. R Code (complete, self-contained)
+  3. Expected Findings
+"""
+\end{lstlisting}
+
+\textbf{Output}:
+
+\begin{lstlisting}[language=]
+experiments/exp_b/outputs/sXX_claude-opus-4-6.json   (600 files)
+  Same structure as Exp A. Key difference: the R code in
+  'content' references a real CSV path that can later be
+  executed by L2b+.
+\end{lstlisting}
+
+\textbf{Scale}: 100 scenarios $\times$ 6 models = \textbf{600 outputs} \\
+\textbf{Time}: $\sim$3--5 hours
+\textbf{Cost}: $\sim\$40$--$80$
+
+\newpage
+
+% ─────────────────────────────────────────────────────────
+\section{Stage 2 — External Verification (Pillar A) = L2b+}
+
+\textbf{Purpose}: verify correctness via code execution + coefficient comparison. \textbf{This is the paper's Channel A.} \\
+\textbf{
+
+\textbf{Script}: \texttt{src/pipeline/score\_l2b\_plus.py}
+
+\subsection{Step 2.1 — L1 Check / L1 
+
+\begin{lstlisting}[language=Python]
+l1 = bool(content.strip())    # Non-empty output?
+\end{lstlisting}
+
+\subsection{Step 2.2 — L2a: Extract R Code}
+
+\begin{lstlisting}[language=Python]
+# Regex match markdown code block
+pattern = r"```(?:r|R)\n(.*?)\n```"
+r_code = extract(content, pattern)
+l2a = r_code is not None
+\end{lstlisting}
+
+\subsection{Step 2.3 — L2b: Actually Execute Code}
+
+\begin{lstlisting}[language=Python]
+# Write temp R script -> execute via Rscript -> 60s timeout
+# 
+with open("/tmp/tmpXXX.R", "w") as f:
+    f.write(f"options(warn = -1)\nsuppressMessages({{\n{r_code}\n}})")
+
+result = subprocess.run(
+    ["Rscript", "--vanilla", "/tmp/tmpXXX.R"],
+    capture_output=True, text=True, timeout=60
+)
+l2b = (result.returncode == 0)
+stdout = result.stdout
+\end{lstlisting}
+
+\subsection{Step 2.4 — L2b+: Extract Coefficient + Compare}
+
+\begin{lstlisting}[language=Python]
+# Three-tier extraction strategy
+# Tier 1: labeled pattern "DID coef: -0.2987"
+# Tier 2: line-position pattern (regression table)
+# Tier 3: fallback scan (lines containing "treat"/"did"/"post")
+
+estimated = extract_coefficient(stdout, method=scenario["method_family"])
+
+# Compare against DGP truth
+true_effect = scenario["dgp_truth"]["effect"]   # -0.3
+rel_error = abs(estimated - true_effect) / abs(true_effect)
+l2b_plus = (rel_error < 0.5)    # +/- 50% tolerance
+\end{lstlisting}
+
+\textbf{Output}:
+
+\begin{lstlisting}[language=]
+experiments/exp_b/l2b_plus_scores.csv   (600 rows)
+  Each row:
+    scenario_id, method, model, model_slug
+    true_effect, estimated, rel_error
+    L1, L2a, L2b, L2b_plus
+    err_excerpt (if failed)
+
+experiments/exp_b/l2b_plus_summary.json
+  { "Opus": { "L1": 100, "L2a": 99, "L2b": 94, "L2b_plus": 50 }, ... }
+\end{lstlisting}
+
+\textbf{Typical results}:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{L2a} & \textbf{L2b} & \textbf{L2b+} \\
+\midrule
+Opus    & 99  & 94 & \textbf{50} \\
+GPT-4o  & 100 & 78 & \textbf{25} \\
+Sonnet  & 100 & 51 & \textbf{21} \\
+o3      & 100 & 50 & \textbf{11} \\
+Kimi    & 100 & 45 & \textbf{5}  \\
+Gemini  & 57  & 32 & \textbf{13} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{tcolorbox}[colback=softgray, colframe=primaryblue, boxrule=0.5pt]
+\textbf{What Channel A tells the paper} / \textbf{Channel A 
+
+``External verification is feasible; L2b+ can precisely measure which model outputs are numerically correct.''
+
+``
+\end{tcolorbox}
+
+\newpage
+
+% ─────────────────────────────────────────────────────────
+\section{Stage 3 — Internal Verification (Pillar B) = Calibration}
+
+\textbf{Purpose}: measure whether the model's confidence in its own output matches actual correctness. \textbf{This is the paper's Channel B --- new in v11.} \\
+\textbf{
+
+\subsection{3.1 Pilot (just completed) / Pilot
+
+\textbf{Script}: \texttt{src/pipeline/run\_calibration\_pilot.py}
+
+\textbf{What it does}:
+\begin{enumerate}[leftmargin=1.5em]
+\item From \texttt{l2b\_plus\_scores.csv}, sample 10 L2b+ failures + 5 L2b+ passes. \\
+      
+\item For each case, re-query Opus with a retrospective prompt: \\
+      
+\end{enumerate}
+
+\begin{lstlisting}[language=]
+Here's your earlier analysis: {original_output}
+
+Rate your confidence (0-1) on three dimensions:
+  - method_confidence
+  - specification_confidence
+  - numerical_confidence
+
+Output JSON only. Do NOT reveal true value.
+\end{lstlisting}
+
+\textbf{Output}:
+
+\begin{lstlisting}[language=]
+experiments/exp_b/calibration_pilot_results.csv   (15 rows)
+  scenario_id, method, L2b_plus,
+  method_confidence, specification_confidence, numerical_confidence
+\end{lstlisting}
+
+\textbf{Key numbers from the pilot / Pilot 
+
+\begin{itemize}[leftmargin=1.5em]
+\item Mean numerical\_conf on wrong cases = \textbf{0.50}
+\item Mean numerical\_conf on correct cases = \textbf{0.61}
+\item \textbf{Gap = +0.11} (supports ``confidently wrong'' hypothesis) \\
+      \textbf{Gap = +0.11} (
+\end{itemize}
+
+\subsection{3.2 Full Experiment (next)}
+
+\textbf{What it does}:
+\begin{enumerate}[leftmargin=1.5em]
+\item Run calibration elicitation for all 100 scenarios $\times$ 6 models. \\
+      
+\item Compute Expected Calibration Error (ECE).
+\item Compute over-confidence ratio.
+\end{enumerate}
+
+\begin{lstlisting}[language=Python]
+# Divide confidence into 10 bins
+# For each bin:
+#   actual pass rate = proportion of L2b+=1 in that bin
+#   avg confidence = mean confidence within bin
+# ECE = weighted average |actual pass rate - confidence|
+
+# Over-confidence ratio:
+P(conf > 0.8 | L2b+ = 0) / P(conf > 0.8 | L2b+ = 1)
+\end{lstlisting}
+
+\textbf{Expected output}:
+
+\begin{lstlisting}[language=]
+experiments/exp_b/calibration_scores.csv      (600 rows)
+experiments/exp_b/calibration_summary.json    (6-model summary)
+  Per model: ECE_method, ECE_specification, ECE_numerical
+             P(conf>0.8 | L2b+=0), P(conf>0.8 | L2b+=1)
+             over_confidence_ratio
+
+paper/figures/calibration_reliability.pdf
+  6 subplots, confidence bins x actual pass rate
+  Diagonal = perfect calibration
+  Curve deviating = miscalibration
+\end{lstlisting}
+
+\begin{tcolorbox}[colback=softgray, colframe=primaryblue, boxrule=0.5pt]
+\textbf{What Channel B tells the paper} / \textbf{Channel B 
+
+``Internal verification fails; self-reported confidence cannot be used as a triage signal.''
+
+``
+\end{tcolorbox}
+
+\newpage
+
+% ─────────────────────────────────────────────────────────
+\section{Stage 4 — Cross-Channel Analysis}
+
+\textbf{Purpose}: cross-compare results from Channel A and Channel B to derive the paper's core finding --- ``asymmetry.'' \\
+\textbf{
+
+\subsection{4.1 Head-to-head Ranking}
+
+\textbf{Scripts}: \texttt{head\_to\_head\_ranking.py} + \texttt{bootstrap\_head\_to\_head.py}
+
+\textbf{What it does}:
+\begin{enumerate}[leftmargin=1.5em]
+\item Use L2b+ pass rate as ``ground-truth ranking.''
+\item Compute Kendall $\tau$ between each metric's ranking and the GT.
+\item Bootstrap 10,000 times to get 95\% CI. / Bootstrap 10,000 
+\end{enumerate}
+
+\textbf{Output}:
+
+\begin{lstlisting}[language=]
+experiments/exp_b/head_to_head_ranking.json
+  {
+    "L2b vs GT":   { "tau": +0.73, "95CI": [+0.33, +0.87] },
+    "L4_S1 vs GT": { "tau": -0.07, "95CI": [-0.41, +0.36] },
+    "Calibration ECE vs GT": { ... }   <- NEW
+  }
+\end{lstlisting}
+
+\subsection{4.2 Asymmetry Analysis (new in v11) / Asymmetry 
+
+\textbf{What it does}: for each model, construct a ``channel profile'':
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Model} & \textbf{L2b+ pass rate} & \textbf{ECE} \\
+\midrule
+Opus    & 0.50 & 0.34 \\
+GPT-4o  & 0.25 & 0.42 \\
+...     & ...  & ...  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Then analyze:
+\begin{enumerate}[leftmargin=1.5em]
+\item \textbf{Correlation} between Channel A and Channel B. / Channel A vs Channel B 
+\item Whether any model is \textbf{good on Channel A but poor on Channel B} (= the paper's asymmetry claim). \\
+      
+\item Scatter / PCA visualization of the ``profile.''
+\end{enumerate}
+
+\textbf{Output}:
+
+\begin{lstlisting}[language=]
+paper/figures/channel_asymmetry.pdf
+  Scatter plot (x = L2b+, y = 1 - ECE = calibration quality)
+  Diagonal: "two channels agree"
+  Off-diagonal points: asymmetry (your core finding)
+  
+\end{lstlisting}
+
+\newpage
+
+% ─────────────────────────────────────────────────────────
+\section{Stage 5 — Figure Generation}
+
+\textbf{Scripts}: \texttt{paper/figures/make\_fig*.py}
+
+\textbf{Figures to produce (v11 checklist)}:
+
+\begin{center}
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Figure} & \textbf{Script} & \textbf{Content} \\
+\hline
+Fig 1 & \texttt{make\_two\_dim\_framework.py}   & Two-dimensional framework (done) \\
+Fig 2 & \texttt{make\_fig2\_headline.py}        & L2b+ cascade + model ranking \\
+Fig 3 & \texttt{make\_fig3\_clean.py}           & Method-level dotplot \\
+Fig 4 & \texttt{make\_fig4\_cascade.py}         & Execution funnel \\
+Fig 5 & \texttt{make\_fig\_error\_cdf.py}       & Relative error CDF \\
+Fig 6 & \texttt{make\_calibration\_reliability.py} & Reliability diagram (NEW) \\
+Fig 7 & \texttt{make\_channel\_asymmetry.py}    & Two-channel scatter (NEW) \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Each script}:
+\begin{itemize}[leftmargin=1.5em]
+\item Reads from \texttt{experiments/exp\_b/*.csv} or \texttt{*.json}
+\item Uses matplotlib + \texttt{palette.py}
+\item Outputs \texttt{paper/figures/*.pdf} + \texttt{*.png}
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────
+\section{Stage 6 — Paper Compilation}
+
+\subsection{6.1 LaTeX Source Editing / LaTeX 
+
+\textbf{File}: \texttt{paper/latex/neurips\_v11.tex}
+
+\textbf{Section changes in v11 / v11 
+
+\begin{itemize}[leftmargin=1.5em]
+\item \S2 renamed to \textbf{Two-Dimensional Evaluation Framework} (+1.5 pages new) \\
+      \S2 
+\item \S3 adds \textbf{\S3.2 Pillar B: Self-Assessment Calibration} (+0.5 pages new) \\
+      \S3 
+\item \S4 adds \textbf{\S4.3 Calibration Results + \S4.4 Cross-Channel Asymmetry} (+1.5 pages new) \\
+      \S4 
+\item \S6 adds \textbf{Practitioner Implications} (+1 page new) / \S6 
+\end{itemize}
+
+\subsection{6.2 Compilation}
+
+\textbf{Docker approach / Docker 
+
+\begin{lstlisting}[language=bash]
+docker run --rm -v $(pwd)/paper/latex:/work -w /work \
+    texlive/texlive:latest \
+    bash -c "pdflatex neurips_v11.tex && bibtex neurips_v11 && \
+             pdflatex neurips_v11.tex && pdflatex neurips_v11.tex"
+\end{lstlisting}
+
+\textbf{Output}: \texttt{paper/latex/neurips\_v11.pdf} ($\sim$15 pages main + appendix)
+
+\newpage
+
+% ─────────────────────────────────────────────────────────
+\section{One-Page Pipeline Overview}
+
+\begin{tcolorbox}[colback=softgray, colframe=primaryblue, boxrule=0.5pt]
+\small
+\begin{verbatim}
+STAGE 0 - Data Preparation
+  Exp A: OpenAlex -> 262 paper_XX.json
+  Exp B: NumPy seed=42 -> 100 sXX.json + 100 CSVs + beta* known
+                                |
+                                v
+STAGE 1 - LLM Generation / LLM 
+  run_exp_a.py: 262 x 6 = 1,572 outputs     ( ~$100, 12h )
+  run_exp_b.py: 100 x 6 = 600 outputs       ( ~$60,  5h )
+                                |
+                                v
+STAGE 2 - Pillar A (External Verification) = L2b+
+  score_l2b_plus.py: L1 -> L2a -> L2b -> L2b+
+    -> l2b_plus_scores.csv + summary.json
+    Key result: L2b+ pass rate 5-50%, tau(L2b+, GT) = +0.73
+                                |
+                                v
+STAGE 3 - Pillar B (Internal Verification) = Calibration  [NEW]
+  Pilot: 15 samples -> gap = 0.11 ('confidently wrong' holds)
+  Full:  600 calibration queries
+    -> calibration_scores.csv + summary.json
+    Key result (expected): ECE > 0.3, overconfidence asymmetric
+                                |
+                                v
+STAGE 4 - Cross-Channel Analysis
+  head_to_head_ranking.py + bootstrap_head_to_head.py
+  + asymmetry analysis (A vs B correlation per model)
+    -> head_to_head_ranking.json + channel_asymmetry.pdf
+                                |
+                                v
+STAGE 5 - Figure Generation
+  Figures 1-7 (PDF + PNG)
+                                |
+                                v
+STAGE 6 - Paper Compilation
+  Docker + pdflatex -> neurips_v11.pdf ( ~15 pages )
+\end{verbatim}
+\end{tcolorbox}
+
+\section{Each Stage's ``Paper Argument''}
+
+\begin{center}
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Stage} & \textbf{Paper section} & \textbf{Argument carried} \\
+\hline
+0 & \S3.1 Methodology     & Dataset + ground truth construction \\
+1 & \S4.1 Setup           & How 6 models are tested \\
+2 & \S4.2 Pillar A        & Channel A is feasible ($\tau = +0.73$) \\
+3 & \S4.3 Pillar B        & Channel B fails (ECE $>$ 0.3) \\
+4 & \S4.4 Cross-Channel   & \textbf{Core finding: asymmetry} \\
+5 & Figures               & Visual evidence \\
+6 & \S6 Discussion        & Practitioner implications \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Where You Are Now}
+
+\begin{tcolorbox}[colback=softgray, colframe=primaryblue, boxrule=0.5pt]
+\begin{verbatim}
+[DONE]    Stage 0 - Data preparation (v10 already done)
+[DONE]    Stage 1 - LLM generation (v10 already done)
+[DONE]    Stage 2 - Pillar A (v10 already done)
+[PARTIAL] Stage 3 - Pillar B: pilot done, full pending   <- YOU ARE HERE
+[TODO]    Stage 4 - Cross-Channel analysis
+[TODO]    Stage 5 - New figures
+[TODO]    Stage 6 - LaTeX editing + compilation
+\end{verbatim}
+\end{tcolorbox}
+
+\section{Three Choices Ahead}
+
+\begin{enumerate}[leftmargin=1.5em]
+\item \textbf{Scale to the full calibration experiment} (Stage 3 complete, Day 2--4) --- \$30--60, a few hours. \\
+      \textbf{
+\item \textbf{First improve the prompt and script} (more rigorous contemporaneous elicitation) --- half a day. \\
+      \textbf{
+\item \textbf{First write \S2 Framework LaTeX} (Stage 6 ramp-up, no new data) --- 2 hours. \\
+      \textbf{
+\end{enumerate}
+
+\end{document}

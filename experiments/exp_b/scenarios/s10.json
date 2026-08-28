@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s10",
+  "method_family": "DID",
+  "difficulty": "hard",
+  "title": "Anticipation effects in DID: pre-announced policy",
+  "research_question": "A minimum capital requirement was announced in period 3 and effective in period 5. Do banks pre-emptively raise capital ratios before the effective date, creating anticipation effects that violate standard DID assumptions?",
+  "data_description": "Panel data on 200 banks over 8 quarterly periods. Variables: unit_id, period, treated (1=bank below capital threshold, must comply), post (1=period>=5), announce (1=period>=3), treat_x_post, treat_x_announce, y (tier-1 capital ratio). Announcement in period 3; effective date period 5.",
+  "data_file": "experiments/exp_b/data/s10_data.csv"
+}

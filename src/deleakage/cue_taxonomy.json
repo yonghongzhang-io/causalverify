@@ -1,0 +1,192 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-04-24",
+  "purpose": "Design-level lexical cues that reveal a paper's causal identification method. Phase 1's strong de-leakage pass rewrites any synthesis text containing these cues into method-neutral phrasing so that LLMs cannot pattern-match their way to the correct method via surface terms.",
+  "usage": "Each cue is a case-insensitive phrase or regex fragment. The Phase 1 strong-deleakage reviewer prompt (see src/agents/strong_deleak_pass.py) is given this taxonomy plus the candidate synthesis text and asked to (a) flag matches and (b) propose a neutral rewrite. Audit the rewrites against audit/deleakage_audit.csv.",
+  "scoring_note": "A cue being in this list does not automatically mean the synthesis is 'leaking.' Context matters; e.g., the word 'instrument' in 'data-collection instrument' is not an IV cue. Use an LLM review pass, not a raw regex scrub.",
+
+  "DID": {
+    "design_cues_hard": [
+      "difference-in-differences",
+      "difference in differences",
+      "DID design",
+      "DiD estimator",
+      "two-way fixed effects",
+      "TWFE",
+      "parallel trends",
+      "common trends assumption",
+      "pre-trends",
+      "DID",
+      "DiD"
+    ],
+    "design_cues_soft": [
+      "treated and control groups",
+      "treatment and control groups",
+      "treated firms relative to untreated",
+      "before and after the policy",
+      "pre- and post-treatment",
+      "Callaway-Sant'Anna",
+      "de Chaisemartin",
+      "D'Haultfoeuille",
+      "Sun and Abraham",
+      "staggered adoption",
+      "staggered rollout",
+      "staggered difference-in-differences",
+      "event-time coefficients",
+      "dynamic DID",
+      "heterogeneous treatment effects estimator"
+    ]
+  },
+
+  "EVENT_STUDY": {
+    "design_cues_hard": [
+      "abnormal return",
+      "abnormal returns",
+      "event study methodology",
+      "event-study methodology",
+      "event study approach",
+      "cumulative abnormal returns",
+      "CARs",
+      "abnormal returns around",
+      "market model",
+      "Fama-French market model",
+      "announcement returns",
+      "event window"
+    ],
+    "design_cues_soft": [
+      "stock price reaction to",
+      "market reaction around the announcement",
+      "announcement effect",
+      "[-k, +k] window",
+      "-1, +1 event window",
+      "short-run abnormal returns",
+      "daily abnormal returns",
+      "Brown-Warner methodology"
+    ]
+  },
+
+  "IV": {
+    "design_cues_hard": [
+      "instrumental variable",
+      "instrumental variables",
+      "IV",
+      "IV estimator",
+      "IV strategy",
+      "two-stage least squares",
+      "2SLS",
+      "first-stage regression",
+      "first stage F-statistic",
+      "exclusion restriction",
+      "weak instrument",
+      "Bartik instrument",
+      "shift-share instrument",
+      "shift-share design",
+      "judge fixed effects",
+      "judge assignment as instrument",
+      "lottery as an instrument"
+    ],
+    "design_cues_soft": [
+      "instrument for",
+      "exogenous variation in",
+      "we instrument",
+      "valid instrument",
+      "as an instrument for",
+      "historical variation used to identify",
+      "Hausman test",
+      "LIML",
+      "control function",
+      "Heckman two-step"
+    ]
+  },
+
+  "RDD": {
+    "design_cues_hard": [
+      "regression discontinuity",
+      "regression-discontinuity",
+      "RDD",
+      "sharp RD",
+      "fuzzy RD",
+      "running variable",
+      "forcing variable",
+      "cutoff score",
+      "threshold around",
+      "discontinuity at the threshold",
+      "bandwidth selection",
+      "Imbens-Kalyanaraman",
+      "Calonico-Cattaneo-Titiunik",
+      "local linear regression around",
+      "McCrary density test",
+      "manipulation test"
+    ],
+    "design_cues_soft": [
+      "just above and just below",
+      "barely qualified",
+      "narrowly passed",
+      "by a narrow margin",
+      "close elections",
+      "close to the cutoff",
+      "vote-share discontinuity",
+      "eligibility cutoff",
+      "at the boundary"
+    ]
+  },
+
+  "OTHER": {
+    "design_cues_hard": [
+      "synthetic control method",
+      "synthetic control group",
+      "propensity-score matching",
+      "nearest-neighbor matching",
+      "structural model",
+      "dynamic discrete choice model",
+      "Bellman equation",
+      "simulated method of moments",
+      "indirect inference",
+      "randomized controlled trial",
+      "RCT"
+    ],
+    "design_cues_soft": [
+      "calibrated model",
+      "counterfactual simulation",
+      "welfare calculation using model parameters"
+    ]
+  },
+
+  "mechanism_banned_everywhere": {
+    "description": "Phrases that signal 'this paper uses causal identification' in general. Strong de-leakage should NOT necessarily remove these (they are expected in an empirical causal paper) but should flag excessive co-occurrence with a specific method's cues.",
+    "cues": [
+      "causal effect of",
+      "identify the causal effect",
+      "identification strategy",
+      "identification comes from",
+      "natural experiment",
+      "quasi-experiment",
+      "quasi-experimental design",
+      "plausibly exogenous",
+      "as-if random",
+      "clean identification"
+    ]
+  },
+
+  "neutral_rewrites_library": {
+    "description": "Example neutral phrasings that preserve research-question content while removing method disclosure. The strong-deleak LLM reviewer may use these as templates.",
+    "examples": [
+      {
+        "bad": "We use a difference-in-differences design comparing treated and untreated firms before and after the regulation.",
+        "neutral": "We study how firms subject to the regulation changed their behavior following its introduction, compared to firms not subject to it."
+      },
+      {
+        "bad": "We use the Russell 2000 index reconstitution as an instrument for stock liquidity.",
+        "neutral": "We exploit exogenous changes in stock liquidity that occur when firms move between major stock indices."
+      },
+      {
+        "bad": "We exploit a sharp regression-discontinuity at the 50% vote-share cutoff.",
+        "neutral": "We compare jurisdictions where a policy proposal narrowly passed with those where it narrowly failed."
+      },
+      {
+        "bad": "We measure cumulative abnormal returns in a 3-day event window around the announcement.",
+        "neutral": "We measure the short-run change in outcomes following the announcement."
+      }
+    ]
+  }
+}

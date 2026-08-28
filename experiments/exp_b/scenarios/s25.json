@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s25",
+  "method_family": "RDD",
+  "difficulty": "easy",
+  "title": "Vote share cutoff and policy adoption",
+  "research_question": "Does winning a ballot initiative (vote share ≥ 50%) cause a discontinuous jump in municipal spending on the targeted policy?",
+  "data_description": "Cross-sectional data on 600 ballot initiatives. Variables: running_var (vote share, 0–1), treated (1 if vote_share ≥ 0.5), y (log municipal spending change), near_cutoff (|running_var − 0.5| ≤ 0.3). Sharp RDD: all initiatives above 50% are adopted.",
+  "data_file": "experiments/exp_b/data/s25_data.csv"
+}

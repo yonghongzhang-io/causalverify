@@ -1,0 +1,88 @@
+% NeurIPS 2026 Paper Checklist
+% https://neurips.cc/Conferences/2026/PaperChecklist
+
+\section*{NeurIPS Paper Checklist}
+
+\begin{enumerate}
+
+\item {\bf Claims}
+    \item[] Question: Do the main claims made in the abstract and introduction accurately reflect the paper's contributions and scope?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The abstract and introduction define the scope as a benchmark for verifying LLM causal-inference workflows. They distinguish real-paper text agreement from execution-grounded coefficient correctness, and state that Exp~A measures agreement diagnostics while Exp~B provides the executable correctness endpoint.
+
+\item {\bf Limitations}
+    \item[] Question: Does the paper discuss the limitations of the work performed by the authors?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The Limitations section covers Exp~A label ambiguity, the 30-paper human ambiguity audit, the fact that Exp~A is not full human-gold ground truth, the synthetic scope of Exp~B, the dependence of L2b+ on canonical estimators and coefficient extraction, model snapshot limits, and domain scope.
+
+\item {\bf Theory assumptions and proofs}
+    \item[] Question: For each theoretical result, does the paper provide the full set of assumptions and a complete (correct) proof?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: This is an empirical benchmark paper; no theoretical results or proofs are presented.
+
+\item {\bf Experimental result reproducibility}
+    \item[] Question: Does the paper fully disclose all the information needed to reproduce the main experimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper?
+    \item[] Answer: \answerYes{}
+\item[] Justification: The anonymized release includes 259 active Exp~A paper records, four-LLM consensus labels, 100 Exp~B synthetic DGP scenarios with realised CSV data files and canonical-estimator targets, 1813 Exp~A outputs, 700 Exp~B primary execution cells, 646 calibration records, the L2b+ coefficient-extraction pipeline, prompt templates, scoring scripts, and frozen audit summaries.
+
+\item {\bf Open access to data and code}
+    \item[] Question: Does the paper provide open access to the data and code, with sufficient documentation and instructions for reproducing the main experimental results?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The anonymized repository submitted with the paper contains the code, frozen outputs, documentation, datasheet, component-level data-license notes, and reproduction commands. The README explains how to rerun deterministic scoring for Exp~A, Exp~B, and calibration without making new LLM API calls.
+
+\item {\bf Experimental setting/details}
+    \item[] Question: Does the paper specify all the training and test details (e.g., data splits, hyperparameters, how they were chosen, type of optimizer, etc.) necessary to understand the results?
+    \item[] Answer: \answerYes{}
+\item[] Justification: No training is performed; this is an evaluation-only benchmark. The paper and release specify the evaluated models, prompt construction, Exp~A consensus-label construction, Exp~B DGP generation, realised-data canonical estimators, L2b/L2b+ scoring, and calibration protocol. Prompt templates and implementation details are included in the code release.
+
+\item {\bf Experiment statistical significance}
+    \item[] Question: Does the paper report error bars suitably and correctly defined or other appropriate information about the statistical significance of the experiments?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The paper reports sample sizes for all scoreable subsets, model-level pass rates, rank correlations for the L2b/L2b+ and L4/L2b+ comparisons, and a relative-error distribution analysis showing that the main Exp~B ranking is not an artifact of a single tolerance threshold. The paper does not make pairwise model-significance claims.
+
+\item {\bf Experiments compute resources}
+    \item[] Question: For each experiment, does the paper provide sufficient information on the computer resources (type, memory, time, etc.) needed to reproduce the experiments?
+    \item[] Answer: \answerYes{}
+\item[] Justification: The original model-generation runs use commercial LLM API calls and no local GPU compute. The deterministic scoring and figure-generation steps can be rerun from frozen outputs on a standard CPU environment. Token counts, costs, prompts, and run logs are preserved in the audit artifacts.
+
+\item {\bf Code of ethics}
+    \item[] Question: Does the research conducted in the paper conform, in every respect, with the NeurIPS Code of Ethics?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The paper evaluates publicly available LLMs on published economics papers and synthetic scenarios. No human subjects are involved. The broader impact paragraph (Section~8) discusses risks of using LLMs for policy-facing causal analysis.
+
+\item {\bf Broader impacts}
+    \item[] Question: Does the paper discuss both potential positive societal impacts and negative societal impacts of the work?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section~8 (Broader impact paragraph) discusses the risk that LLMs used in policy-facing causal analysis without recognizing documented failure modes could support misleading conclusions. The benchmark itself is designed to surface these failure modes, which is a positive impact.
+
+\item {\bf Safeguards}
+    \item[] Question: Does the paper describe safeguards that have been put in place for responsible release of data or models that have a high risk for misuse?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: The released data consists of published paper metadata and synthetic scenarios; the released code is an evaluation framework. Neither poses a meaningful misuse risk.
+
+\item {\bf Licenses for existing assets}
+    \item[] Question: Are the creators or original owners of assets (e.g., code, data, models) used in the paper properly credited and are the license and terms of use explicitly mentioned and properly respected?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The 259 active paper records include source metadata and provenance. Models are identified by provider and API version in the release documentation. The code is released under the repository's code license, synthetic DGP artifacts and scored outputs are licensed as documented in the data-license file, and original published article PDFs are not relicensed by this repository unless redistribution rights are explicitly confirmed. OpenAlex-derived metadata is used under its stated terms.
+
+\item {\bf New assets}
+    \item[] Question: Are new assets introduced in the paper well documented and is the documentation provided alongside the assets in a format that is easily accessible?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The benchmark is accompanied by a DATASHEET.md following Gebru et al.\ (2021), a detailed README with reproduction instructions, and structured JSON schemas for all papers and scenarios.
+
+\item {\bf Crowdsourcing and research with human subjects}
+    \item[] Question: For crowdsourcing experiments and research with human subjects, does the paper include the full text of instructions given to participants and screenshots?
+    \item[] Answer: \answerNA{}
+\item[] Justification: No crowdsourcing or human subjects research was conducted. A 30-paper blinded author ambiguity audit and a 50-cell blinded coefficient-extraction audit were performed after the automated benchmark freeze; neither was used for training, prompt tuning, model selection, or threshold tuning. The labeling protocols and instructions are released in the repository.
+
+\item {\bf Institutional review board (IRB) approvals or equivalent for research with human subjects}
+    \item[] Question: Does the paper describe potential risks incurred by study participants, whether compensation was provided, etc.?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: No human subjects research was conducted.
+
+\item {\bf Declaration of LLM usage}
+    \item[] Question: Does the paper describe the usage of LLMs in the research process?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: LLMs are the subject of evaluation and are used in the benchmark pipeline for Exp~A consensus labeling, field reconstruction, coefficient extraction, and calibration elicitation. The release includes prompts, model outputs, caches, and audit records needed to inspect those uses. The authors also used LLM assistance during coding and manuscript editing, with final responsibility for claims and text retained by the authors.
+
+\end{enumerate}

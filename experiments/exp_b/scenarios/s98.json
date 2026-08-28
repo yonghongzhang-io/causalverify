@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s98",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "title": "Impact of Covenant Violations on Capital Expenditure",
+  "research_question": "How does crossing a debt-to-asset covenant threshold affect a firm's capital expenditure decisions? Specifically, we are interested in understanding whether firms increase their capital expenditures when they are just above or below this financial covenant threshold.",
+  "data_description": "The dataset includes 400 firms, with columns for running_var (representing the debt-to-asset ratio), treated (indicating whether the firm is above the covenant threshold), and y (log capex, the outcome of interest). The data focuses on firms near the covenant violation threshold, allowing for a detailed analysis of their investment behavior.",
+  "data_file": "experiments/exp_b/data/s98_data.csv"
+}

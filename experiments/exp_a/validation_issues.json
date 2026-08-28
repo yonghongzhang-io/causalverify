@@ -1,0 +1,160 @@
+[
+  {
+    "paper_id": "paper_100",
+    "file": "paper_100_did_hard.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "The hospital market is served by firms that are private for-profit, private not-for-profit, and government-owned and operated. I use a plausibly exogenous change in hospital financing that was intende",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_101",
+    "file": "paper_101_event_easy.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "Health care report cards–public disclosure of patient health outcomes at the level of the individual physician and/or hospital–may address important informational asymmetries in markets for health car",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_102",
+    "file": "paper_102_event_medium.json",
+    "expected_method": "EVENT_STUDY",
+    "detected_method": "DID",
+    "type": "method_mismatch"
+  },
+  {
+    "paper_id": "paper_106",
+    "file": "paper_106_rdd_easy.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "This paper exploits a sharp reduction in patient cost sharing at age 70 in Japan, using a regression discontinuity design to examine its effect on utilization, health, and financial risk arising from ",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_109",
+    "file": "paper_109_did_easy.json",
+    "expected_method": "DID",
+    "detected_method": "IV",
+    "type": "method_mismatch"
+  },
+  {
+    "paper_id": "paper_111",
+    "file": "paper_111_did_hard.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "Educational interventions are often evaluated and compared on the basis of their impacts on test scores. Decades of research have produced two empirical regularities: interventions in later grades ten",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_116",
+    "file": "paper_116_rdd_easy.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "Parents gauge school quality in part by the level of student achievement and a school's racial and socioeconomic mix. The importance of school characteristics in the housing market can be seen in the ",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_117",
+    "file": "paper_117_rdd_medium.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "A growing number of school districts use centralized assignment mechanisms to allocate school seats in a manner that reflects student preferences and school priorities. Many of these assignment scheme",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_119",
+    "file": "paper_119_did_medium.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "We examine portage sites in the U.S. South, Mid-Atlantic, and Midwest, including those on the <i>fall line</i>, a geomorphological feature in the southeastern U.S. marking the final rapids on rivers b",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_129",
+    "file": "paper_129_did_medium.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "This paper links the sharp drop in US manufacturing employment after 2000 to a change in US trade policy that eliminated potential tariff increases on Chinese imports. Industries more exposed to the c",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_130",
+    "file": "paper_130_did_hard.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "This paper uses the 1991 Indian trade liberalization to measure the impact of trade liberalization on poverty, and to examine the mechanisms underpinning this impact. Variation in sectoral composition",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_135",
+    "file": "paper_135_iv_hard.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "A growing body of research examines the regional effects of trade liberalization using a weighted average of trade policy changes across industries. This paper develops a specific-factors model of reg",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_136",
+    "file": "paper_136_rdd_medium.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "This paper provides new evidence that state policies play a role in the location of industry. The paper classifies a state as probusiness if it has a right‐to‐work law and antibusiness if it does not.",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_59",
+    "file": "paper_59_did_medium.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "We document frictions in money market mutual fund lending that lead to the transmission of distress across borrowers. Using novel security-level holdings data, we show that funds exposed to Eurozone b",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_69",
+    "file": "paper_69_rdd_easy.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "ABSTRACT We identify a specific channel (debt covenants) and the corresponding mechanism (transfer of control rights) through which financing frictions impact corporate investment. Using a regression ",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_71",
+    "file": "paper_71_rdd_hard.json",
+    "expected_direction": "positive",
+    "detected_direction": "negative",
+    "abstract_snippet": "ABSTRACT I exploit sharply nonlinear funding rules for defined benefit pension plans in order to identify the dependence of corporate investment on internal financial resources in a large sample. Capi",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_76",
+    "file": "paper_76_event_easy.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "111 The recent recession and continuing slow employment growth have focused renewed attention on the plight of displaced workers—workers whose job loss results from the plant closings and mass layoffs",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_78",
+    "file": "paper_78_event_hard.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "We study how health behaviors are shaped through family spillovers. We leverage administrative data to identify the effects of health shocks on family members’ consumption of preventive care and healt",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_83",
+    "file": "paper_83_rdd_easy.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "Economic impacts of unionization on employers are difficult to estimate in the absence of large, representative data on establishments with union status information. Estimates are also confounded by s",
+    "type": "direction_mismatch"
+  },
+  {
+    "paper_id": "paper_98",
+    "file": "paper_98_did_easy.json",
+    "expected_direction": "negative",
+    "detected_direction": "positive",
+    "abstract_snippet": "I consider the labor-market effects of mandates which raise the costs of employing a demographically identifiable group. The efficiency of these policies will be largely dependent on the extent to whi",
+    "type": "direction_mismatch"
+  }
+]

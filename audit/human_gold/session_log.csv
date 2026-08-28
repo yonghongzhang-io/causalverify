@@ -1,0 +1,30 @@
+session_date,annotator_id,start_time,end_time,papers_labeled_this_session,blinding_confirmed,interruptions,fatigue_level,notes
+2026-04-24,YH,2026-04-24T09:00:00,2026-04-24T09:32:00,1,YES,0,1,paper_05 first labeling; M1 edge case on event-study + decomposition; prelim matched final (no flip); supporting sentences trimmed from two-sentence quote down to the more operational sentence for 200-char cap
+2026-04-24,YH,2026-04-24T11:06:33,,,YES,,1,
+2026-05-01,YH,2026-05-01T00:53:02,2026-05-01T01:11:51,1,YES,0,1,paper_64 completed; event-study boundary case.
+2026-05-01,YH,2026-05-01T01:17:12,2026-05-01T01:36:01,1,YES,0,1,paper_66 completed; OTHER/OLS case.
+2026-05-01,YH,2026-05-01T01:38:47,2026-05-01T10:39:15,1,YES,0,1,paper_68 completed; timer anomaly; paper_68 actual time corrected to 25 min.
+2026-05-01,YH,2026-05-01T10:43:38,2026-05-01T11:15:53,1,YES,0,1,paper_78 completed; dynamic DID/event-study boundary case.
+2026-05-01,YH,2026-05-01T11:21:08,2026-05-01T11:57:17,1,YES,0,1,paper_90 completed; OTHER regression-pattern case.
+2026-05-01,YH,2026-05-01T12:04:16,2026-05-01T12:19:35,1,YES,0,1,paper_113 completed; timer adjusted to 30 min.
+2026-05-01,YH,2026-05-01T12:23:12,2026-05-01T12:53:04,1,YES,0,1,paper_114 completed; matching/fixed-effects OTHER case with near-null/mixed direction.
+2026-05-01,YH,2026-05-01T13:09:59,2026-05-01T13:15:33,1,YES,0,1,paper_122 completed; synthetic-control OTHER case; timer to be adjusted to 40 min.
+2026-05-01,YH,2026-05-01T13:20:07,2026-05-01T13:32:11,1,YES,0,1,paper_126 completed; spatial discontinuity/nonlinear pricing OTHER case.
+2026-05-01,YH,2026-05-01T13:38:21,2026-05-01T13:44:50,1,YES,0,1,paper_138 completed; climate-profit regression/projection OTHER case; timer to be adjusted to 26 min.
+2026-05-01,YH,2026-05-01T13:50:32,2026-05-01T13:53:57,1,YES,0,1,paper_142 completed; IV/rainfall-shock instrument case; timer to be adjusted to 32 min.
+2026-05-01,YH,2026-05-01T13:57:21,2026-05-01T14:02:52,1,YES,0,1,paper_153 completed; randomized field experiment OTHER case; timer to be adjusted to 34 min.
+2026-05-01,YH,2026-05-01T14:11:18,2026-05-01T14:13:59,1,YES,0,1,paper_160 completed; 2SLS/parental-education IV case; timer to be adjusted to 36 min.
+2026-05-01,YH,2026-05-01T14:17:25,2026-05-01T14:21:34,1,YES,0,1,paper_183 completed; equilibrium assignment CEO-pay OTHER case; timer to be adjusted to 34 min.
+2026-05-01,YH,2026-05-01T14:33:59,2026-05-01T14:38:37,1,YES,0,1,paper_194 completed; weighted GLS OTHER case; timer to be adjusted to 44 min.
+2026-05-01,YH,2026-05-01T14:40:58,2026-05-01T15:26:06,1,YES,0,1,paper_206 completed; regime-switching multiplier OTHER case.
+2026-05-01,YH,2026-05-01T15:29:50,2026-05-01T16:07:32,1,YES,0,1,paper_223 completed; roads/highways IV case.
+2026-05-01,YH,2026-05-01T16:10:24,2026-05-01T16:14:09,1,YES,0,1,paper_249 completed; average-schooling IV case; timer to be adjusted to 33 min.
+2026-05-01,YH,2026-05-01T16:20:05,2026-05-01T16:28:50,1,YES,0,1,paper_11 completed; acquisition-announcement event-study case; timer to be adjusted to 37 min.
+2026-05-01,YH,2026-05-01T16:43:04,2026-05-01T16:58:51,1,YES,0,1,paper_12 completed; acquisition announcement event-study case; timer to be adjusted to 25 min and direction support updated to aggregate-loss sentence.
+2026-05-01,YH,2026-05-01T17:05:21,2026-05-01T17:14:52,1,YES,0,1,paper_19 completed; age-65 RDD case; timer to be adjusted to 39 min.
+2026-05-01,YH,2026-05-01T17:17:21,2026-05-01T17:22:55,1,YES,0,1,paper_28 completed; public-attention stock-price event-study case; timer to be adjusted to 25 min.
+2026-05-01,YH,2026-05-01T17:33:18,2026-05-01T17:38:22,1,YES,0,1,paper_34 completed; SOX rule-cutoff RDD case; timer to be adjusted to 44 min.
+2026-05-01,YH,2026-05-01T17:43:16,2026-05-01T17:51:51,1,YES,0,1,
+2026-05-01,YH,2026-05-01T17:58:25,2026-05-01T18:08:34,1,YES,0,1,
+2026-05-01,YH,2026-05-01T18:17:12,2026-05-01T18:19:04,1,YES,0,1,
+2026-05-01,YH,2026-05-01T18:22:33,2026-05-01T18:24:39,1,YES,0,1,

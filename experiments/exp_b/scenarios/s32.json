@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s32",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "Impact of Overtime Eligibility Expansion on Work Hours",
+  "research_question": "How does expanding overtime pay eligibility affect the number of hours worked by employees? Specifically, we investigate whether the change in policy leads to an increase in the log of hours worked by those newly eligible for overtime pay.",
+  "data_description": "The dataset includes 200 observations with columns: unit_id, period, treated, post, treat_x_post, and y. Each observation represents an employee, with 'treated' indicating those affected by the policy change, 'post' marking the period after the policy implementation, and 'y' representing the log of hours worked.",
+  "data_file": "experiments/exp_b/data/s32_data.csv"
+}

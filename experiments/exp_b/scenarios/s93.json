@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s93",
+  "method_family": "RDD",
+  "difficulty": "medium",
+  "title": "Impact of Wilderness Designation on Deforestation",
+  "research_question": "Does the designation of wilderness areas influence deforestation rates in mountainous regions? Specifically, we examine whether areas just inside the wilderness boundary, determined by an elevation cutoff, experience different deforestation rates compared to areas just outside the boundary.",
+  "data_description": "The dataset includes 500 observations with columns: running_var (elevation), treated (indicator for wilderness designation), and y (deforestation rate). The data focuses on areas near the elevation cutoff that determines wilderness designation.",
+  "data_file": "experiments/exp_b/data/s93_data.csv"
+}

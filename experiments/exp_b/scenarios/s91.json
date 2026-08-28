@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s91",
+  "method_family": "RDD",
+  "difficulty": "medium",
+  "title": "Impact of Very-Low-Birth-Weight Classification on Neonatal Mortality",
+  "research_question": "Does being classified as very-low-birth-weight impact neonatal mortality rates? This study investigates whether crossing the birth weight threshold for this classification influences the log of neonatal mortality.",
+  "data_description": "The dataset includes 500 observations with columns: running_var (birth weight in grams), treated (indicator for very-low-birth-weight classification), and y (log neonatal mortality). Observations are concentrated around the classification threshold.",
+  "data_file": "experiments/exp_b/data/s91_data.csv"
+}

@@ -1,0 +1,9 @@
+method,model,L3a_rate_pct,L3b_rate_pct,detected_method_match_pct,papers
+DID,Kimi-128k,100.0,100.0,100.0,3
+DID,Claude-Sonnet,100.0,100.0,100.0,3
+EVENT_STUDY,Kimi-128k,33.33333333333333,100.0,33.33333333333333,3
+EVENT_STUDY,Claude-Sonnet,66.66666666666666,66.66666666666666,66.66666666666666,3
+IV,Kimi-128k,50.0,0.0,50.0,2
+IV,Claude-Sonnet,50.0,50.0,50.0,2
+RDD,Kimi-128k,100.0,100.0,100.0,2
+RDD,Claude-Sonnet,100.0,50.0,100.0,2

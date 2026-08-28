@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s94",
+  "method_family": "RDD",
+  "difficulty": "medium",
+  "title": "Impact of School District Boundaries on Urban House Prices",
+  "research_question": "How do school district boundaries affect house prices in urban areas? Specifically, does proximity to a less desirable school district negatively impact property values?",
+  "data_description": "The dataset includes 500 observations of houses located near the boundary of two urban school districts. Key columns are running_var (distance to the boundary), treated (indicator for being in the less desirable district), and y (log house prices).",
+  "data_file": "experiments/exp_b/data/s94_data.csv"
+}

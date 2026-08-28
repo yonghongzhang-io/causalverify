@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s15",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "medium",
+  "title": "Election night surprise on financial sector stocks",
+  "research_question": "Did the unexpected election outcome generate abnormal returns for financial sector stocks in the [0,+3] post-election window?",
+  "data_description": "Event study data for 80 financial stocks. Variables: stock_id, event_day (−10 to +10), ret, mkt_ret, beta. Market model estimated on [−10,−2]. Event window [0,+3]. Election result announced on event day 0 (after market close, so [+1,+3] captures market reaction).",
+  "data_file": "experiments/exp_b/data/s15_data.csv"
+}

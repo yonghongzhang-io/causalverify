@@ -1,0 +1,258 @@
+{
+  "tolerance": 0.5,
+  "es_max_window_days": 11,
+  "by_model": {
+    "Kimi": {
+      "n": 100,
+      "L2b": 45,
+      "L2b_plus_regex": 6,
+      "L2b_plus_judge": 8,
+      "L2b_plus_v2": 10,
+      "L2b_plus_regex_rate": 0.06,
+      "L2b_plus_judge_rate": 0.08,
+      "L2b_plus_v2_rate": 0.1
+    },
+    "Sonnet": {
+      "n": 100,
+      "L2b": 51,
+      "L2b_plus_regex": 27,
+      "L2b_plus_judge": 31,
+      "L2b_plus_v2": 50,
+      "L2b_plus_regex_rate": 0.27,
+      "L2b_plus_judge_rate": 0.31,
+      "L2b_plus_v2_rate": 0.5
+    },
+    "GPT-4o": {
+      "n": 100,
+      "L2b": 78,
+      "L2b_plus_regex": 28,
+      "L2b_plus_judge": 50,
+      "L2b_plus_v2": 62,
+      "L2b_plus_regex_rate": 0.28,
+      "L2b_plus_judge_rate": 0.5,
+      "L2b_plus_v2_rate": 0.62
+    },
+    "o3": {
+      "n": 100,
+      "L2b": 50,
+      "L2b_plus_regex": 18,
+      "L2b_plus_judge": 37,
+      "L2b_plus_v2": 46,
+      "L2b_plus_regex_rate": 0.18,
+      "L2b_plus_judge_rate": 0.37,
+      "L2b_plus_v2_rate": 0.46
+    },
+    "Opus": {
+      "n": 100,
+      "L2b": 94,
+      "L2b_plus_regex": 64,
+      "L2b_plus_judge": 71,
+      "L2b_plus_v2": 88,
+      "L2b_plus_regex_rate": 0.64,
+      "L2b_plus_judge_rate": 0.71,
+      "L2b_plus_v2_rate": 0.88
+    },
+    "Gemini": {
+      "n": 100,
+      "L2b": 32,
+      "L2b_plus_regex": 15,
+      "L2b_plus_judge": 29,
+      "L2b_plus_v2": 32,
+      "L2b_plus_regex_rate": 0.15,
+      "L2b_plus_judge_rate": 0.29,
+      "L2b_plus_v2_rate": 0.32
+    },
+    "GPT-5": {
+      "n": 100,
+      "L2b": 76,
+      "L2b_plus_regex": 29,
+      "L2b_plus_judge": 59,
+      "L2b_plus_v2": 72,
+      "L2b_plus_regex_rate": 0.29,
+      "L2b_plus_judge_rate": 0.59,
+      "L2b_plus_v2_rate": 0.72
+    },
+    "Llama": {
+      "n": 100,
+      "L2b": 41,
+      "L2b_plus_regex": 3,
+      "L2b_plus_judge": 16,
+      "L2b_plus_v2": 20,
+      "L2b_plus_regex_rate": 0.03,
+      "L2b_plus_judge_rate": 0.16,
+      "L2b_plus_v2_rate": 0.2
+    }
+  },
+  "by_model_method": {
+    "Kimi__DID": {
+      "n": 30,
+      "L2b_plus_v2": 5,
+      "rate": 0.16666666666666666
+    },
+    "Sonnet__DID": {
+      "n": 30,
+      "L2b_plus_v2": 20,
+      "rate": 0.6666666666666666
+    },
+    "GPT-4o__DID": {
+      "n": 30,
+      "L2b_plus_v2": 25,
+      "rate": 0.8333333333333334
+    },
+    "o3__DID": {
+      "n": 30,
+      "L2b_plus_v2": 8,
+      "rate": 0.26666666666666666
+    },
+    "Opus__DID": {
+      "n": 30,
+      "L2b_plus_v2": 29,
+      "rate": 0.9666666666666667
+    },
+    "Gemini__DID": {
+      "n": 30,
+      "L2b_plus_v2": 14,
+      "rate": 0.4666666666666667
+    },
+    "GPT-5__DID": {
+      "n": 30,
+      "L2b_plus_v2": 20,
+      "rate": 0.6666666666666666
+    },
+    "Kimi__EVENT_STUDY": {
+      "n": 24,
+      "L2b_plus_v2": 4,
+      "rate": 0.16666666666666666
+    },
+    "Sonnet__EVENT_STUDY": {
+      "n": 24,
+      "L2b_plus_v2": 21,
+      "rate": 0.875
+    },
+    "GPT-4o__EVENT_STUDY": {
+      "n": 24,
+      "L2b_plus_v2": 13,
+      "rate": 0.5416666666666666
+    },
+    "o3__EVENT_STUDY": {
+      "n": 24,
+      "L2b_plus_v2": 12,
+      "rate": 0.5
+    },
+    "Opus__EVENT_STUDY": {
+      "n": 24,
+      "L2b_plus_v2": 19,
+      "rate": 0.7916666666666666
+    },
+    "Gemini__EVENT_STUDY": {
+      "n": 24,
+      "L2b_plus_v2": 5,
+      "rate": 0.20833333333333334
+    },
+    "GPT-5__EVENT_STUDY": {
+      "n": 24,
+      "L2b_plus_v2": 17,
+      "rate": 0.7083333333333334
+    },
+    "Kimi__IV": {
+      "n": 24,
+      "L2b_plus_v2": 1,
+      "rate": 0.041666666666666664
+    },
+    "Sonnet__IV": {
+      "n": 24,
+      "L2b_plus_v2": 3,
+      "rate": 0.125
+    },
+    "GPT-4o__IV": {
+      "n": 24,
+      "L2b_plus_v2": 15,
+      "rate": 0.625
+    },
+    "o3__IV": {
+      "n": 24,
+      "L2b_plus_v2": 16,
+      "rate": 0.6666666666666666
+    },
+    "Opus__IV": {
+      "n": 24,
+      "L2b_plus_v2": 23,
+      "rate": 0.9583333333333334
+    },
+    "Gemini__IV": {
+      "n": 24,
+      "L2b_plus_v2": 13,
+      "rate": 0.5416666666666666
+    },
+    "GPT-5__IV": {
+      "n": 24,
+      "L2b_plus_v2": 23,
+      "rate": 0.9583333333333334
+    },
+    "Kimi__RDD": {
+      "n": 22,
+      "L2b_plus_v2": 0,
+      "rate": 0.0
+    },
+    "Sonnet__RDD": {
+      "n": 22,
+      "L2b_plus_v2": 6,
+      "rate": 0.2727272727272727
+    },
+    "GPT-4o__RDD": {
+      "n": 22,
+      "L2b_plus_v2": 9,
+      "rate": 0.4090909090909091
+    },
+    "o3__RDD": {
+      "n": 22,
+      "L2b_plus_v2": 10,
+      "rate": 0.45454545454545453
+    },
+    "Opus__RDD": {
+      "n": 22,
+      "L2b_plus_v2": 17,
+      "rate": 0.7727272727272727
+    },
+    "Gemini__RDD": {
+      "n": 22,
+      "L2b_plus_v2": 0,
+      "rate": 0.0
+    },
+    "GPT-5__RDD": {
+      "n": 22,
+      "L2b_plus_v2": 12,
+      "rate": 0.5454545454545454
+    },
+    "Llama__DID": {
+      "n": 30,
+      "L2b_plus_v2": 3,
+      "rate": 0.1
+    },
+    "Llama__EVENT_STUDY": {
+      "n": 24,
+      "L2b_plus_v2": 9,
+      "rate": 0.375
+    },
+    "Llama__IV": {
+      "n": 24,
+      "L2b_plus_v2": 4,
+      "rate": 0.16666666666666666
+    },
+    "Llama__RDD": {
+      "n": 22,
+      "L2b_plus_v2": 4,
+      "rate": 0.18181818181818182
+    }
+  },
+  "es_window_distribution": {
+    "2": 52,
+    "11": 16,
+    "1": 21,
+    "3": 14,
+    "4": 2,
+    "6": 7,
+    "10": 2,
+    "5": 1
+  }
+}

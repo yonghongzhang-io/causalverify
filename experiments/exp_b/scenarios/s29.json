@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s29",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "title": "Bandwidth sensitivity and RDD robustness checks",
+  "research_question": "Using the Russell 1000/2000 index reconstitution cutoff, does index membership affect institutional ownership, and is the RDD estimate robust to bandwidth choice?",
+  "data_description": "Cross-sectional data on 600 firms near the Russell 1000/2000 boundary. Variables: running_var (end-of-May market cap rank, normalized; cutoff = 0.5), treated (1 = Russell 2000 member i.e. just below cutoff), y (institutional ownership fraction), near_cutoff. Must test: bandwidth sensitivity, polynomial order sensitivity, placebo cutoffs.",
+  "data_file": "experiments/exp_b/data/s29_data.csv"
+}

@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: PYTHONPATH=. python tests/test_rid_and_scoring.py -v
+
+  redaction-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assert no scoring targets are committed
+        run: |
+          set -e
+          fail=0
+          # column names that must never appear in a tracked CSV header
+          for col in gt_direction gt_m_level gt_d_level true_effect true_direction \
+                     dgp_effect dgp_direction baseline_effect baseline_direction; do
+            if git ls-files '*.csv' | while read -r f; do head -1 "$f"; done \
+               | tr ',' '\n' | grep -qx "$col"; then
+              echo "FAIL: column '$col' present in a tracked CSV header"; fail=1
+            fi
+          done
+          # files that must never be tracked
+          for pat in '*SEALED*' 'paper_native_labels.csv' 'human_vs_llm_consensus.csv'; do
+            if git ls-files "$pat" | grep -q .; then
+              echo "FAIL: tracked file matching $pat"; fail=1
+            fi
+          done
+          # scenario JSONs must not carry targets
+          if git ls-files 'experiments/exp_b/scenarios/*.json' | xargs -r grep -l '"ground_truth"\|"dgp_truth"' | grep -q .; then
+            echo "FAIL: scenario JSON carries ground_truth/dgp_truth"; fail=1
+          fi
+          # third-party corpus must not be tracked
+          if git ls-files 'experiments/exp_a/pdfs/*' 'audit/pdfs/*' | grep -q .; then
+            echo "FAIL: third-party source PDFs tracked"; fail=1
+          fi
+          [ "$fail" -eq 0 ] && echo "redaction guard passed"
+          exit $fail

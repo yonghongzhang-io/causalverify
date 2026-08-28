@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s48",
+  "method_family": "DID",
+  "difficulty": "hard",
+  "title": "Impact of BRT Corridor on Urban Commute Times",
+  "research_question": "How does the opening of a Bus Rapid Transit (BRT) corridor affect commute times in urban areas? Specifically, does the introduction of a BRT corridor lead to an increase in the log of commute times for residents in the affected areas?",
+  "data_description": "The dataset includes observations from 100 urban areas, with columns for unit_id, period, treated, post, treat_x_post, and y. The variable 'y' represents the log of commute times, and 'treated' indicates whether an area is affected by the BRT corridor. Data spans multiple periods before and after the BRT opening.",
+  "data_file": "experiments/exp_b/data/s48_data.csv"
+}

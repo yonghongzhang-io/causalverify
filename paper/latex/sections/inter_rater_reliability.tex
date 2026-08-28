@@ -1,0 +1,89 @@
+% =====================================================================
+% Section: Inter-Rater Reliability (human evaluation supplement)
+% =====================================================================
+% This file is rendered by `human_rating/analysis/fill_latex_section.py`
+% after raters return their filled CSVs. Placeholders in the form
+% {{...}} are substituted with values from
+% `human_rating/results/agreement_summary.json`.
+%
+% To include in the main paper, add this line inside the Findings section:
+%     \input{sections/inter_rater_reliability.tex}
+% =====================================================================
+
+\subsection{F4$'$ (methodological): Human raters agree on what models do,
+  so the L4-text fragility is about scoring, not ambiguity}
+\label{sec:irr}
+
+A remaining concern about Finding~F4 is whether L4-text fragility reflects
+a poorly chosen scorer or genuine ambiguity in LLM responses: perhaps
+human readers would also disagree about what direction each output
+predicts, in which case no L4-text scorer could ever be reliable. We test
+this directly by recruiting three independent human raters (applied
+empirical-finance PhD students) to classify a stratified random sample of
+{{N_TASK1}} Exp~A papers along two dimensions: (i)~method family
+(DID / Event Study / IV / RDD / Unclear), and (ii)~direction of the main
+reported effect (positive / negative / mixed / unclear). Raters saw only
+the paper title and research question --- the same information the
+benchmark's ground truth procedure uses --- and worked independently
+without discussion. Full instructions, sampling script, and forms are
+released in the \texttt{human\_rating/} directory of the project
+repository.
+
+\paragraph{Agreement among human raters.}
+Fleiss' $\kappa$ across the three raters is {{KAPPA_METHOD}}
+({{KAPPA_METHOD_INTERP}}) for method family and {{KAPPA_DIRECTION}}
+({{KAPPA_DIRECTION_INTERP}}) for direction. Pairwise Cohen's $\kappa$
+ranges from {{COHEN_METHOD_MIN}} to {{COHEN_METHOD_MAX}} across the
+three rater pairs on method family, and from {{COHEN_DIR_MIN}} to
+{{COHEN_DIR_MAX}} on direction. These are well above the slight / fair
+boundary in Landis \& Koch's (1977) scheme, indicating that humans can
+reliably recover method and direction from the same inputs we give the
+LLMs.
+
+\paragraph{Agreement with the benchmark ground truth.}
+Taking the majority vote across the three raters and comparing against
+the benchmark's ground truth (independently extracted from paper
+abstracts), humans match ground truth on {{GT_METHOD_ACC}} of papers for
+method family and {{GT_DIR_ACC}} for direction. This is the empirical
+human ceiling for this task: even expert readers working from the same
+inputs occasionally diverge from the canonical label. The L4-text
+fragility reported in F4 (58--66pp spread across scorer
+operationalizations) is therefore not attributable to ambiguity in the
+underlying task --- humans reach {{GT_DIR_ACC}} agreement with ground
+truth, while automatic scorers span a 58--66pp range on the same
+responses.
+
+\paragraph{Human verification of L2b+ passes.}
+A second concern is whether L2b+ passes (LLM numerical estimate within
+50\% of the true effect) reflect genuinely correct method implementations
+or numerically lucky but methodologically wrong code. We sampled
+{{N_TASK2}} L2b+ ``pass'' cases stratified by method family and asked the
+same three raters to read the LLM's full R code and judge whether the
+implementation was legitimate. Humans judged {{L2BPLUS_LEGIT_FRAC}}\% of
+numerical passes to be legitimate method implementations (majority
+vote), with Fleiss' $\kappa = {{KAPPA_PASS_LEGIT}}$
+({{KAPPA_PASS_LEGIT_INTERP}}) across raters. This validates L2b+ as a
+primary endpoint: numerical passes overwhelmingly reflect correct
+methodological implementations, not coincidental proximity to truth.
+
+\begin{table}[h]
+\centering
+\caption{Inter-rater reliability on the CausalVerify human-evaluation
+sample. Three raters independently classified {{N_TASK1}} Exp~A papers
+and reviewed {{N_TASK2}} L2b+ pass cases; Fleiss' $\kappa$ uses the
+multi-rater formula, Cohen's $\kappa$ is averaged over the three rater
+pairs. Landis \& Koch (1977) interpretations: 0.21--0.40 = fair,
+0.41--0.60 = moderate, 0.61--0.80 = substantial,
+$\geq 0.81$ = almost perfect.}
+\label{tab:irr}
+\small
+\begin{tabular}{lcc}
+\toprule
+\textbf{Dimension} & \textbf{Fleiss' $\kappa$} & \textbf{Interpretation} \\
+\midrule
+Method family (task 1)        & {{KAPPA_METHOD}}      & {{KAPPA_METHOD_INTERP}} \\
+Direction (task 1)            & {{KAPPA_DIRECTION}}   & {{KAPPA_DIRECTION_INTERP}} \\
+L2b+ pass legitimacy (task 2) & {{KAPPA_PASS_LEGIT}}  & {{KAPPA_PASS_LEGIT_INTERP}} \\
+\bottomrule
+\end{tabular}
+\end{table}

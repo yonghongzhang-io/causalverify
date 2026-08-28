@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s01",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "COVID-19 lockdown effect on retail foot traffic",
+  "research_question": "Did COVID-19 lockdown orders (March 2020) reduce retail store foot traffic, and did stores in counties with stricter lockdowns experience larger declines compared to stores in counties with minimal restrictions?",
+  "data_description": "Panel data on 200 retail stores across 8 monthly periods (2019M10–2020M5). Variables: unit_id (store), period (1–8, treatment at period 4 = March 2020), treated (1 = county with strict lockdown, 0 = minimal restrictions), post (1 = post-March 2020), treat_x_post (interaction), y (log foot traffic index). Pre-period: 3 months. Post-period: 4 months.",
+  "data_file": "experiments/exp_b/data/s01_data.csv"
+}

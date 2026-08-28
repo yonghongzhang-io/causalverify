@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s38",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "Impact of Rent Control Expansion on Urban Rental Prices",
+  "research_question": "How does the expansion of rent control policies affect rental prices in urban districts? Specifically, what is the causal impact of these policies on the log of rental prices in treated versus untreated districts?",
+  "data_description": "The dataset includes 150 observations with columns: unit_id, period, treated, post, treat_x_post, and y. Each observation represents a district-period combination, capturing whether a district was treated with rent control expansion and the corresponding log rental prices.",
+  "data_file": "experiments/exp_b/data/s38_data.csv"
+}

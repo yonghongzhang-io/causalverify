@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s21",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "title": "Vietnam draft lottery as IV for military service on earnings",
+  "research_question": "Did military service reduce long-run civilian earnings, using Vietnam-era draft lottery numbers as an instrument for veteran status?",
+  "data_description": "Cross-sectional data on 500 men eligible for Vietnam-era draft. Variables: y (log annual earnings), x (veteran binary), z (draft lottery number, 1–365; low numbers = likely drafted), controls (age, education, race). IV: low draft number → more likely to serve → instrument for veteran status.",
+  "data_file": "experiments/exp_b/data/s21_data.csv"
+}

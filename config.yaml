@@ -1,0 +1,74 @@
+# ════════════════════════════════════════
+# The Financial Scientist — Configuration
+# ════════════════════════════════════════
+
+project:
+  name: "The Financial Scientist"
+  version: "v5.1"
+
+# ── Models ──
+models:
+  ideation: "claude-opus-4-20250514"
+  code: "claude-sonnet-4-20250514"
+  writing: "claude-opus-4-20250514"
+  visual_review: "gpt-4o"
+  code_audit: "o3"
+  tournament_judge: "gemini-2.5-pro"
+
+# ── RID Settings ──
+rid:
+  max_specifications: 5
+  parallel_trends_threshold: 1.96    # t-stat threshold
+  placebo_threshold: 1.96
+  first_stage_f_threshold: 10
+  precommit_required: true
+
+# ── Experiment Settings ──
+experiments:
+  exp_a:
+    n_papers: 10
+    method_families:
+      DID: 3
+      event_study: 3
+      IV: 2
+      RDD: 2
+
+  exp_b:
+    n_scenarios: 30
+    method_distribution:
+      DID: 8
+      event_study: 10
+      IV: 6
+      RDD: 6
+    models_to_test:
+      - "gpt-4o"
+      - "o3"
+      - "claude-sonnet-4-20250514"
+      - "claude-opus-4-20250514"
+      - "gemini-2.5-pro"
+
+  exp_c:
+    n_papers: 10            # same as exp_a
+    expand_if_unstable: 15  # expand to this if variance too high
+
+# ── Evaluation ──
+evaluation:
+  raters: 2
+  adjudication_rater: 1     # third rater for disagreements
+  kappa_targets:
+    binary_screening: 0.75
+    per_item_checklist: 0.65
+    failure_classification: 0.60
+  calibration_samples: 5
+  layer3_pass_threshold: 4  # out of 5 checklist items
+
+# ── Data Sources ──
+data:
+  fred:
+    base_url: "https://api.stlouisfed.org/fred"
+    rate_limit: 120          # requests per minute
+  yfinance:
+    rate_limit: 2000         # requests per hour
+  edgar:
+    base_url: "https://efts.sec.gov/LATEST"
+    user_agent: "YourName your@email.com"

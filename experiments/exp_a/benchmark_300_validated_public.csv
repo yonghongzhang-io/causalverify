@@ -1,0 +1,90 @@
+domain,difficulty,authors,year,journal,title,oa_status,oa_doi,oa_cited_by
+agriculture,medium,Deschenes & Greenstone,2007,AER,The Economic Impacts of Climate Change: Evidence from Agricultural Output and Random Fluctuations in Weather,validated,https://doi.org/10.1257/aer.97.1.354,1261
+agriculture,easy,Hornbeck,2012,QJE,The Enduring Impact of the American Dust Bowl: Short and Long-run Adjustments to Environmental Catastrophe,validated,https://doi.org/10.1257/aer.102.4.1477,9
+agriculture,hard,Roberts & Schlenker,2013,QJE,Identifying Supply and Demand Elasticities of Agricultural Commodities: Implications for the US Ethanol Mandate,validated,https://doi.org/10.1257/aer.103.6.2265,383
+agriculture,medium,"Dell, Jones & Olken",2014,AER,What Do We Learn from the Weather? The New Climate-Economy Literature,validated,https://doi.org/10.1257/jel.52.3.740,2154
+agriculture,medium,Jayachandran,2006,JDE,Selling Labor Low: Wage Responses to Productivity Shocks in Developing Countries,validated,https://doi.org/10.1086/503579,461
+agriculture,medium,Foster & Rosenzweig,2003,AER,Economic Growth and the Rise of Forests,validated,https://doi.org/10.1162/003355303321675464,350
+agriculture,easy,Olmstead & Rhode,2008,JEP,Creating Abundance: Biological Innovation and American Agricultural Development,validated,https://doi.org/10.1016/j.eeh.2008.11.001,7
+agriculture,medium,Jayachandran,2009,AER,Air Quality and Early-Life Mortality: Evidence from Indonesia's Wildfires,validated,https://doi.org/10.1353/jhr.2009.0001,171
+agriculture,hard,Hornbeck,2012,AEJ:Applied,The Enduring Impact of the American Dust Bowl: Short- and Long-Run Adjustments to Environmental Catastrophe,validated,https://doi.org/10.1257/aer.102.4.1477,9
+agriculture,medium,Mullainathan & Shafir,2013,JHR,Scarcity: Why Having Too Little Means So Much,validated,,1749
+development,medium,"Banerjee, Duflo, Glennerster & Kinnan",2015,AER,The Miracle of Microfinance? Evidence from a Randomized Evaluation,validated,https://doi.org/10.1257/app.20130533,1438
+development,medium,Banerjee & Iyer,2005,AER,"History, Institutions, and Economic Performance: The Legacy of Colonial Land Tenure Systems in India",validated,https://doi.org/10.1257/0002828054825574,1265
+development,medium,Feyrer & Sacerdote,2009,QJE,Colonialism and Modern Income: Islands as Natural Experiments,validated,https://doi.org/10.1162/rest.91.2.245,205
+development,medium,Banerjee & Duflo,2003,JDE,Inequality and Growth: What Can the Data Say?,validated,https://doi.org/10.1023/a:1026205114860,76
+development,easy,Angrist & Krueger,1991,QJE,Does Compulsory School Attendance Affect Schooling and Earnings?,validated,https://doi.org/10.2307/2937954,2550
+development,medium,Olken,2007,JPE,Monitoring Corruption: Evidence from a Field Experiment in Indonesia,validated,https://doi.org/10.1086/517935,1538
+development,medium,Casaburi & Macchiavello,2019,QJE,Demand and Supply of Infrequent Payments as a Commitment Device: Evidence from Kenya,validated,https://doi.org/10.1257/aer.20180281,98
+education,medium,Lovenheim,2011,JHR,The Effect of Liquid Housing Wealth on College Enrollment,validated,https://doi.org/10.1086/660775,258
+education,hard,Jackson,2018,QJE,Does School Spending Matter? The New Literature on an Old Question,validated,https://doi.org/10.3386/w25368,111
+education,medium,Card & Krueger,1992,QJE,School Quality and Black-White Relative Earnings: A Direct Assessment,validated,https://doi.org/10.2307/2118326,478
+education,hard,Hoxby,2000,QJE,The Effects of Class Size on Student Achievement: New Evidence from Population Variation,validated,https://doi.org/10.1162/003355300555060,947
+education,hard,"Chetty, Friedman & Rockoff",2014,AER,Measuring the Impacts of Teachers I: Evaluating Bias in Teacher Value-Added Estimates,validated,https://doi.org/10.1257/aer.104.9.2593,1210
+education,hard,"Black, Devereux & Salvanes",2005,QJE,Why the Apple Doesn't Fall Far: Understanding Intergenerational Transmission of Human Capital,validated,https://doi.org/10.1257/0002828053828635,800
+education,medium,"Cortes, Goodman & Nomi",2015,AEJ:EP,Intensive Math Instruction and Educational Attainment: Long-Run Impacts of Double-Dose Algebra,validated,https://doi.org/10.1353/jhr.2015.0004,88
+education,hard,Jackson,2010,JHR,A Little Now for a Lot Later: A Look at a Texas Advanced Placement Incentive Program,validated,https://doi.org/10.1353/jhr.2010.0019,164
+education,hard,Deming & Dynarski,2009,JHR,"Into College, Out of Poverty? Policies to Increase the Postsecondary Attainment of the Poor",validated,https://doi.org/10.3386/w15387,244
+environment,easy,Greenstone,2002,JPE,The Impacts of Environmental Regulations on Industrial Activity: Evidence from the 1970 and 1977 Clean Air Act Amendments and the Census of Manufactures,validated,https://doi.org/10.1086/342808,1068
+environment,medium,"Busse, Knittel & Zettelmeyer",2013,QJE,Are Consumers Myopic? Evidence from New and Used Car Purchases,validated,https://doi.org/10.1257/aer.103.1.220,481
+environment,medium,Davis,2008,AER,The Effect of Driving Restrictions on Air Quality in Mexico City,validated,https://doi.org/10.1086/529398,704
+environment,hard,"Fowlie, Holland & Mansur",2012,AER,What Do Emissions Markets Deliver and to Whom? Evidence from Southern California's NOx Trading Program,validated,https://doi.org/10.3886/e112517v1,0
+environment,hard,"Deryugina, Kawano & Levitt",2018,JPublE,The Economic Impact of Hurricane Katrina on its Victims: Evidence from Individual Tax Returns,validated,https://doi.org/10.1257/app.20160307,18
+environment,easy,Chay & Greenstone,2005,QJE,Does Air Quality Matter? Evidence from the Housing Market,validated,https://doi.org/10.1086/427462,958
+environment,hard,Greenstone & Hanna,2014,AER,"Environmental Regulations, Air and Water Pollution, and Infant Mortality in India",validated,https://doi.org/10.1257/aer.104.10.3038,964
+environment,medium,Graff Zivin & Neidell,2012,AER,The Impact of Pollution on Worker Productivity,validated,https://doi.org/10.1257/aer.102.7.3652,1040
+environment,hard,Hsiang & Jina,2014,QJE,"The Causal Effect of Environmental Catastrophe on Long-Run Economic Growth: Evidence from 6,700 Cyclones",validated,https://doi.org/10.3386/w20352,504
+environment,easy,Lee & Lemieux,2010,JEP,Regression Discontinuity Designs in Economics,validated,https://doi.org/10.1257/jel.48.2.281,65
+finance,easy,Bertrand & Mullainathan,2003,QJE,Enjoying the Quiet Life? Corporate Governance and Managerial Preferences,validated,https://doi.org/10.1086/376950,3850
+finance,medium,Garmaise & Moskowitz,2006,RFS,Bank Mergers and Crime: The Real and Social Effects of Credit Market Competition,validated,https://doi.org/10.1111/j.1540-6261.2006.00847.x,257
+finance,easy,Fama & French,1993,JF,Common Risk Factors in the Returns on Stocks and Bonds,validated,https://doi.org/10.1016/0304-405x(93)90023-5,27412
+finance,easy,MacKinlay,1997,JF,Event Studies in Economics and Finance,validated,,4548
+finance,medium,"Campbell, Lo & MacKinlay",1997,JF,The Econometrics of Financial Markets,validated,https://doi.org/10.1515/9781400830213,5021
+finance,medium,Gompers & Lerner,1999,JFE,The Venture Capital Cycle,validated,,1666
+finance,hard,Baker & Wurgler,2006,JF,Investor Sentiment and the Cross-Section of Stock Returns,validated,https://doi.org/10.1111/j.1540-6261.2006.00885.x,6000
+finance,easy,Rajan & Zingales,1998,AER,Financial Dependence and Growth,validated,https://doi.org/10.1111/j.1745-6622.1998.tb00498.x,268
+finance,medium,"Beck, Levine & Loayza",2000,JFE,Finance and the Sources of Growth,validated,https://doi.org/10.1016/s0304-405x(00)00072-6,99
+finance,hard,Gabaix & Landier,2008,QJE,Why Has CEO Pay Increased So Much?,validated,https://doi.org/10.1162/qjec.2008.123.1.49,1812
+finance,medium,"Dougal, Engelberg, Parsons & Van Wesep",2015,JFE,Anchoring on Credit Spreads,validated,https://doi.org/10.1111/jofi.12248,110
+finance,medium,Gormley & Matsa,2011,JFE,Growing Out of Trouble? Corporate Responses to Liability Risk,validated,https://doi.org/10.1093/rfs/hhr011,271
+health,medium,Gruber & Poterba,1994,JHR,Tax Incentives and the Decision to Purchase Health Insurance: Evidence from the Self-Employed,validated,https://doi.org/10.2307/2118419,306
+health,medium,Currie & Gruber,1996,JHR,"Health Insurance Eligibility, Utilization of Medical Care, and Child Health",validated,https://doi.org/10.2307/2946684,19
+health,medium,Cutler & Lleras-Muney,2006,JHE,Education and Health: Evaluating Theories and Evidence,validated,https://doi.org/10.3386/w12352,502
+health,hard,"Miller, Johnson & Wherry",2021,AEJ:Applied,Medicaid and Mortality: New Evidence from Linked Survey and Administrative Data,validated,https://doi.org/10.1093/qje/qjab004,262
+health,medium,"Anderson, Dobkin & Gross",2012,AER,The Effect of Health Insurance Coverage on the Use of Medical Services,validated,https://doi.org/10.1257/pol.4.1.1,1
+health,medium,Baicker & Chandra,2004,JPublE,"Medicare Spending, The Physician Workforce, and Beneficiaries’ Quality of Care",validated,https://doi.org/10.1377/hlthaff.w4.184,524
+health,easy,Card,1999,QJE,The Causal Effect of Education on Earnings,validated,,2171
+health,hard,Chay & Greenstone,2003,QJE,The Impact of Air Pollution on Infant Mortality: Evidence from Geographic Variation in Pollution Shocks Induced by a Recession,validated,https://doi.org/10.1162/00335530360698513,11
+health,medium,Baicker & Chandra,2004,JHR,"Medicare Spending, the Physician Workforce, and Beneficiaries' Quality of Care",validated,https://doi.org/10.1377/hlthaff.w4.184,524
+health,hard,"Chay, McEwan & Urquiola",2005,JHR,The Central Role of Noise in Evaluating Interventions That Use Test Scores to Rank Schools,validated,https://doi.org/10.1257/0002828054825529,2
+labor,easy,Card,1990,ILRR,The Impact of the Mariel Boatlift on the Miami Labor Market,validated,https://doi.org/10.2307/2523702,385
+labor,medium,Angrist & Krueger,1999,ILRR,Empirical Strategies in Labor Economics,validated,https://doi.org/10.1016/s1573-4463(99)03004-7,1630
+labor,medium,"Dube, Lester & Reich",2010,REStat,Minimum Wage Effects Across State Borders: Estimates Using Contiguous Counties,validated,https://doi.org/10.1162/rest_a_00039,1202
+labor,easy,Katz & Krueger,1992,ILR,The Effect of the Minimum Wage on the Fast-Food Industry,validated,https://doi.org/10.2307/2524735,136
+labor,hard,Borjas,2003,QJE,The Labor Demand Curve is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market,validated,https://doi.org/10.1162/003355303322552810,1841
+labor,hard,Imbens & Angrist,1994,Econometrica,Identification and Estimation of Local Average Treatment Effects,validated,https://doi.org/10.2307/2951620,4053
+labor,medium,Acemoglu & Angrist,2001,JPE,Consequences of Employment Protection? The Case of the Americans with Disabilities Act,validated,https://doi.org/10.1086/322836,11
+labor,hard,"Hahn, Todd & Van der Klaauw",2001,Econometrica,Identification and Estimation of Treatment Effects with a Regression Discontinuity Design,validated,https://doi.org/10.1111/1468-0262.00183,2731
+public,medium,Besley & Case,1995,JPE,Does Electoral Accountability Affect Economic Policy Choices? Evidence from Gubernatorial Term Limits,validated,https://doi.org/10.2307/2946699,5
+public,easy,Finkelstein,2007,QJE,E-ZTax: Tax Salience and Tax Rates,validated,https://doi.org/10.3386/w12924,81
+public,hard,Auerbach & Gorodnichenko,2012,AER,Measuring the Output Responses to Fiscal Policy,validated,https://doi.org/10.1257/pol.4.2.1,1712
+public,medium,Gordon & Li,2009,JPublE,Tax Structures in Developing Countries: Many Puzzles and a Possible Explanation,validated,https://doi.org/10.1016/j.jpubeco.2009.04.001,569
+public,medium,Ferreira & Gyourko,2009,QJE,Do Political Parties Matter? Evidence from U.S. Cities,validated,https://doi.org/10.1162/qjec.2009.124.1.399,430
+public,medium,Eggers & Hainmueller,2009,AER,MPs for Sale? Returns to Office in Postwar British Politics,validated,https://doi.org/10.1017/s0003055409990190,319
+public,hard,Caughey & Sekhon,2011,AER,"Elections and the Regression Discontinuity Design: Lessons from Close U.S. House Races, 1942–2008",validated,https://doi.org/10.1093/pan/mpr032,343
+trade,easy,Trefler,2004,AER,The Long and Short of the Canada-U.S. Free Trade Agreement,validated,https://doi.org/10.1257/0002828042002633,1037
+trade,hard,"Fajgelbaum, Goldberg, Kennedy & Khandelwal",2020,QJE,The Return to Protectionism,validated,https://doi.org/10.1007/16495_2020_11,11
+trade,hard,Handley & Limão,2017,AER,"Policy Uncertainty, Trade, and Welfare: Theory and Evidence for China and the United States",validated,https://doi.org/10.1257/aer.20141419,835
+trade,easy,Harrison & Rodríguez-Clare,2010,JEL,"Trade, Foreign Investment, and Industrial Policy for Developing Countries",validated,https://doi.org/10.1016/b978-0-444-52944-2.00001-x,580
+trade,medium,"Rodrik, Subramanian & Trebbi",2004,JPE,Institutions Rule: The Primacy of Institutions over Geography and Integration in Economic Development,validated,https://doi.org/10.1023/b:joeg.0000031425.72248.85,79
+trade,hard,Nunn,2007,QJE,"Relationship-Specificity, Incomplete Contracts, and the Pattern of Trade",validated,https://doi.org/10.1162/qjec.122.2.569,269
+trade,hard,"Calonico, Cattaneo & Titiunik",2014,Econometrica,Robust Nonparametric Confidence Intervals for Regression-Discontinuity Designs,validated,https://doi.org/10.3982/ecta11757,2947
+urban,medium,Greenstone & Gallagher,2008,QJE,Does Hazardous Waste Matter? Evidence from the Housing Market and the Superfund Program,validated,https://doi.org/10.1162/qjec.2008.123.3.951,447
+urban,medium,Baum-Snow,2007,QJE,Did Highways Cause Suburbanization?,validated,https://doi.org/10.1162/qjec.122.2.775,1251
+urban,medium,Cheshire & Sheppard,2002,JUE,The Welfare Economics of Land Use Planning,validated,https://doi.org/10.1016/s0094-1190(02)00003-7,255
+urban,medium,Billings,2011,REStat,Estimating the Value of a New Transit Option,validated,https://doi.org/10.1016/j.regsciurbeco.2011.03.013,254
+urban,hard,Hornbeck & Keniston,2017,QJE,Creative Destruction: Barriers to Urban Growth and the Great Boston Fire of 1872,validated,https://doi.org/10.1257/aer.20141707,203
+urban,easy,Duranton & Turner,2011,AER,The Fundamental Law of Road Congestion: Evidence from US Cities,validated,https://doi.org/10.1257/aer.101.6.2616,7
+urban,medium,Saiz,2010,QJE,The Geographic Determinants of Housing Supply,validated,https://doi.org/10.1162/qjec.2010.125.3.1253,1937
+urban,medium,Fack & Grenet,2010,JUE,When Do Better Schools Raise Housing Prices? Evidence from Paris Public and Private Schools,validated,,3
+urban,medium,"Kane, Riegg & Staiger",2006,REStat,"School Quality, Neighborhoods, and Housing Prices: The Impacts of School Desegregation",validated,https://doi.org/10.1093/aler/ahl007,233

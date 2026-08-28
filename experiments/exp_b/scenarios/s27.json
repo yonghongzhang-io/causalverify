@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s27",
+  "method_family": "RDD",
+  "difficulty": "medium",
+  "title": "Income cutoff and subsidy program participation",
+  "research_question": "Does eligibility for a housing subsidy (income below threshold) increase housing expenditure, using income just below vs. just above the eligibility cutoff?",
+  "data_description": "Cross-sectional data on 600 households. Variables: running_var (income/threshold ratio, 0–1; cutoff = 0.5), treated (1 if income ≤ threshold i.e. running_var ≤ 0.5), y (housing expenditure share), near_cutoff. Must check for income manipulation at threshold (McCrary test).",
+  "data_file": "experiments/exp_b/data/s27_data.csv"
+}

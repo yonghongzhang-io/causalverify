@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s89",
+  "method_family": "RDD",
+  "difficulty": "easy",
+  "title": "Impact of Credit Score Threshold on Loan Default Rates",
+  "research_question": "Does crossing a specific credit score threshold for loan approval influence the likelihood of defaulting on loans? This study examines the causal effect of meeting a minimum credit score requirement on subsequent loan default rates.",
+  "data_description": "The dataset includes 600 observations with columns: running_var (credit score), treated (indicator for scores above the threshold), and y (default rate). The data captures individuals near the credit score cutoff for loan approval.",
+  "data_file": "experiments/exp_b/data/s89_data.csv"
+}

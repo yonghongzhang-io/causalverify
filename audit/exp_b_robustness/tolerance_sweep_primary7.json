@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "denominator": "Rows with L2b=1 and a defined relative-error field.",
+    "rankings": {
+      "0.10": [
+        "Gemini",
+        "GPT-5",
+        "Sonnet",
+        "GPT-4o",
+        "o3",
+        "Opus",
+        "Kimi"
+      ],
+      "0.25": [
+        "Gemini",
+        "Sonnet",
+        "GPT-5",
+        "o3",
+        "Opus",
+        "GPT-4o",
+        "Kimi"
+      ],
+      "0.50": [
+        "Gemini",
+        "Sonnet",
+        "GPT-5",
+        "o3",
+        "Opus",
+        "GPT-4o",
+        "Kimi"
+      ],
+      "0.75": [
+        "Gemini",
+        "Sonnet",
+        "o3",
+        "GPT-5",
+        "GPT-4o",
+        "Opus",
+        "Kimi"
+      ],
+      "1.00": [
+        "Gemini",
+        "Sonnet",
+        "o3",
+        "GPT-5",
+        "GPT-4o",
+        "Opus",
+        "Kimi"
+      ]
+    },
+    "relative_error_field_used": "rel_error_v2",
+    "tolerances": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "primary_models": [
+    "Kimi",
+    "Sonnet",
+    "GPT-4o",
+    "o3",
+    "Opus",
+    "Gemini",
+    "GPT-5"
+  ],
+  "rows": [
+    {
+      "model": "Kimi",
+      "n_executed_with_relative_error": 31,
+      "pass_count": 9,
+      "pass_rate": 0.2903,
+      "tolerance": 0.1
+    },
+    {
+      "model": "Sonnet",
+      "n_executed_with_relative_error": 51,
+      "pass_count": 42,
+      "pass_rate": 0.8235,
+      "tolerance": 0.1
+    },
+    {
+      "model": "GPT-4o",
+      "n_executed_with_relative_error": 67,
+      "pass_count": 53,
+      "pass_rate": 0.791,
+      "tolerance": 0.1
+    },
+    {
+      "model": "o3",
+      "n_executed_with_relative_error": 49,
+      "pass_count": 38,
+      "pass_rate": 0.7755,
+      "tolerance": 0.1
+    },
+    {
+      "model": "Opus",
+      "n_executed_with_relative_error": 94,
+      "pass_count": 72,
+      "pass_rate": 0.766,
+      "tolerance": 0.1
+    },
+    {
+      "model": "Gemini",
+      "n_executed_with_relative_error": 32,
+      "pass_count": 32,
+      "pass_rate": 1.0,
+      "tolerance": 0.1
+    },
+    {
+      "model": "GPT-5",
+      "n_executed_with_relative_error": 76,
+      "pass_count": 64,
+      "pass_rate": 0.8421,
+      "tolerance": 0.1
+    },
+    {
+      "model": "Kimi",
+      "n_executed_with_relative_error": 31,
+      "pass_count": 9,
+      "pass_rate": 0.2903,
+      "tolerance": 0.25
+    },
+    {
+      "model": "Sonnet",
+      "n_executed_with_relative_error": 51,
+      "pass_count": 48,
+      "pass_rate": 0.9412,
+      "tolerance": 0.25
+    },
+    {
+      "model": "GPT-4o",
+      "n_executed_with_relative_error": 67,
+      "pass_count": 59,
+      "pass_rate": 0.8806,
+      "tolerance": 0.25
+    },
+    {
+      "model": "o3",
+      "n_executed_with_relative_error": 49,
+      "pass_count": 44,
+      "pass_rate": 0.898,
+      "tolerance": 0.25
+    },
+    {
+      "model": "Opus",
+      "n_executed_with_relative_error": 94,
+      "pass_count": 84,
+      "pass_rate": 0.8936,
+      "tolerance": 0.25
+    },
+    {
+      "model": "Gemini",
+      "n_executed_with_relative_error": 32,
+      "pass_count": 32,
+      "pass_rate": 1.0,
+      "tolerance": 0.25
+    },
+    {
+      "model": "GPT-5",
+      "n_executed_with_relative_error": 76,
+      "pass_count": 71,
+      "pass_rate": 0.9342,
+      "tolerance": 0.25
+    },
+    {
+      "model": "Kimi",
+      "n_executed_with_relative_error": 31,
+      "pass_count": 10,
+      "pass_rate": 0.3226,
+      "tolerance": 0.5
+    },
+    {
+      "model": "Sonnet",
+      "n_executed_with_relative_error": 51,
+      "pass_count": 50,
+      "pass_rate": 0.9804,
+      "tolerance": 0.5
+    },
+    {
+      "model": "GPT-4o",
+      "n_executed_with_relative_error": 67,
+      "pass_count": 62,
+      "pass_rate": 0.9254,
+      "tolerance": 0.5
+    },
+    {
+      "model": "o3",
+      "n_executed_with_relative_error": 49,
+      "pass_count": 46,
+      "pass_rate": 0.9388,
+      "tolerance": 0.5
+    },
+    {
+      "model": "Opus",
+      "n_executed_with_relative_error": 94,
+      "pass_count": 88,
+      "pass_rate": 0.9362,
+      "tolerance": 0.5
+    },
+    {
+      "model": "Gemini",
+      "n_executed_with_relative_error": 32,
+      "pass_count": 32,
+      "pass_rate": 1.0,
+      "tolerance": 0.5
+    },
+    {
+      "model": "GPT-5",
+      "n_executed_with_relative_error": 76,
+      "pass_count": 72,
+      "pass_rate": 0.9474,
+      "tolerance": 0.5
+    },
+    {
+      "model": "Kimi",
+      "n_executed_with_relative_error": 31,
+      "pass_count": 13,
+      "pass_rate": 0.4194,
+      "tolerance": 0.75
+    },
+    {
+      "model": "Sonnet",
+      "n_executed_with_relative_error": 51,
+      "pass_count": 50,
+      "pass_rate": 0.9804,
+      "tolerance": 0.75
+    },
+    {
+      "model": "GPT-4o",
+      "n_executed_with_relative_error": 67,
+      "pass_count": 63,
+      "pass_rate": 0.9403,
+      "tolerance": 0.75
+    },
+    {
+      "model": "o3",
+      "n_executed_with_relative_error": 49,
+      "pass_count": 47,
+      "pass_rate": 0.9592,
+      "tolerance": 0.75
+    },
+    {
+      "model": "Opus",
+      "n_executed_with_relative_error": 94,
+      "pass_count": 88,
+      "pass_rate": 0.9362,
+      "tolerance": 0.75
+    },
+    {
+      "model": "Gemini",
+      "n_executed_with_relative_error": 32,
+      "pass_count": 32,
+      "pass_rate": 1.0,
+      "tolerance": 0.75
+    },
+    {
+      "model": "GPT-5",
+      "n_executed_with_relative_error": 76,
+      "pass_count": 72,
+      "pass_rate": 0.9474,
+      "tolerance": 0.75
+    },
+    {
+      "model": "Kimi",
+      "n_executed_with_relative_error": 31,
+      "pass_count": 14,
+      "pass_rate": 0.4516,
+      "tolerance": 1.0
+    },
+    {
+      "model": "Sonnet",
+      "n_executed_with_relative_error": 51,
+      "pass_count": 50,
+      "pass_rate": 0.9804,
+      "tolerance": 1.0
+    },
+    {
+      "model": "GPT-4o",
+      "n_executed_with_relative_error": 67,
+      "pass_count": 63,
+      "pass_rate": 0.9403,
+      "tolerance": 1.0
+    },
+    {
+      "model": "o3",
+      "n_executed_with_relative_error": 49,
+      "pass_count": 47,
+      "pass_rate": 0.9592,
+      "tolerance": 1.0
+    },
+    {
+      "model": "Opus",
+      "n_executed_with_relative_error": 94,
+      "pass_count": 88,
+      "pass_rate": 0.9362,
+      "tolerance": 1.0
+    },
+    {
+      "model": "Gemini",
+      "n_executed_with_relative_error": 32,
+      "pass_count": 32,
+      "pass_rate": 1.0,
+      "tolerance": 1.0
+    },
+    {
+      "model": "GPT-5",
+      "n_executed_with_relative_error": 76,
+      "pass_count": 72,
+      "pass_rate": 0.9474,
+      "tolerance": 1.0
+    }
+  ],
+  "source": "experiments/exp_b/l2b_plus_scores_canonical_judge_v2.csv"
+}

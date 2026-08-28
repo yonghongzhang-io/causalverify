@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s68",
+  "method_family": "IV",
+  "difficulty": "easy",
+  "title": "Impact of Compulsory Schooling on Wages",
+  "research_question": "Does additional compulsory schooling affect individuals' wages later in life? The study investigates the causal impact of education, as mandated by compulsory schooling laws, on the log of wages earned by individuals.",
+  "data_description": "The dataset contains 500 observations with columns: y (log wages), x (years of education), z (compulsory schooling year), and controls (age, gender, region). The compulsory schooling year serves as an instrumental variable for education.",
+  "data_file": "experiments/exp_b/data/s68_data.csv"
+}

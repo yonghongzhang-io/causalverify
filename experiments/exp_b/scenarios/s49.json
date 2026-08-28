@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s49",
+  "method_family": "DID",
+  "difficulty": "hard",
+  "title": "Impact of Mass Deworming on School Attendance",
+  "research_question": "Does the rollout of a mass deworming program negatively affect school attendance rates? While deworming programs are generally expected to improve health and educational outcomes, this study investigates whether there are unintended consequences that lead to a reduction in school attendance.",
+  "data_description": "The dataset includes 100 observations with columns: unit_id, period, treated, post, treat_x_post, and y. The 'unit_id' represents different schools, 'period' indicates the time of observation, 'treated' shows whether the school was part of the deworming program, 'post' indicates the period after the program rollout, 'treat_x_post' is the interaction term, and 'y' measures the school attendance rate.",
+  "data_file": "experiments/exp_b/data/s49_data.csv"
+}

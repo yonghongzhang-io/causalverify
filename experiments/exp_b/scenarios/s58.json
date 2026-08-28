@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s58",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "medium",
+  "title": "Impact of Analyst Buy Recommendations on Stock Returns",
+  "research_question": "Does an analyst's buy recommendation negatively affect the 1-day cumulative abnormal return (CAR) of a stock? We aim to understand the immediate market reaction to such recommendations and whether they lead to a decline in stock value.",
+  "data_description": "The dataset includes 80 stocks, each with daily observations around the event of an analyst buy recommendation. Key columns are stock_id, event_day, ret, mkt_ret, and beta, capturing stock returns, market returns, and stock-specific risk factors.",
+  "data_file": "experiments/exp_b/data/s58_data.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s69",
+  "method_family": "IV",
+  "difficulty": "easy",
+  "title": "Impact of Vietnam Service on Long-Term Earnings",
+  "research_question": "How does military service during the Vietnam War affect long-term earnings? The study aims to understand the causal impact of being drafted, using the draft lottery number as an instrumental variable for actual service.",
+  "data_description": "The dataset includes 500 individuals with columns: y (log earnings), x (Vietnam service), z (draft lottery number), and controls (age, education). The draft lottery number serves as an instrument to account for the randomness of being drafted.",
+  "data_file": "experiments/exp_b/data/s69_data.csv"
+}

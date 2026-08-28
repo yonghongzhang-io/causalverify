@@ -1,0 +1,119 @@
+% =====================================================================
+% Appendix A — Versioning and Temporal Validity
+% Task A7 (master plan Module 3.3)
+% =====================================================================
+
+\section{Versioning and Temporal Validity}
+\label{app:versioning}
+
+Large-language-model APIs are moving targets. A model ID served by a
+vendor today may return different weights tomorrow, even though the
+string in our code is unchanged. We document here the exact API strings
+used, the invocation windows, and what we know about each model's
+status during those windows. A machine-readable manifest mirroring this
+section is archived at
+\texttt{experiments\_log/models\_manifest.json}.
+
+\subsection{Evaluated models (seven frontier LLMs)}
+
+Table~\ref{tab:eval-models} lists the seven models whose outputs are
+the object of evaluation in Experiments A and B.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\caption{Evaluated models and invocation windows. ``Rolling alias''
+indicates the vendor's model string is not a dated snapshot; weights
+may change silently during the invocation window.}
+\label{tab:eval-models}
+\begin{tabular}{llll}
+\toprule
+\textbf{Paper name} & \textbf{API string} & \textbf{Vendor} & \textbf{Notes} \\
+\midrule
+Claude Opus 4.6     & \texttt{claude-opus-4-6}          & Anthropic    & Dated snapshot; immutable \\
+Claude Sonnet 4.6   & \texttt{claude-sonnet-4-20250514} & Anthropic    & Dated snapshot; immutable \\
+GPT-4o              & \texttt{gpt-4o}                   & OpenAI       & Rolling alias \\
+OpenAI o3           & \texttt{o3}                       & OpenAI       & Rolling alias; reasoning family \\
+Kimi v1-128k        & \texttt{moonshot-v1-128k}         & Moonshot AI  & Explicit version in ID \\
+Gemini 2.5 Flash    & \texttt{gemini-2.5-flash}         & Google       & Rolling alias; uses ``thinking'' tokens \\
+GPT-5               & \texttt{gpt-5}                    & OpenAI       & Rolling alias; reasoning family \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All seven models were invoked between March~2026 and April~2026, within
+a single corpus (Experiment~A's 137 papers and Experiment~B's 100
+synthetic scenarios).\footnote{GPT-5 completed 76 of 110 Experiment~A
+papers before an API-quota interruption. After crediting, it resumed
+and finished the remaining papers. We record the exact interruption
+point in the run log at
+\texttt{experiments\_log/runs/2026-04-22/001\_\_expa\_gpt5\_batch}.}
+Rolling aliases (GPT-4o, o3, GPT-5, Gemini 2.5 Flash) introduce a known
+limitation: a reader re-running our prompts against the same model ID
+after a vendor update would observe different outputs. This is an
+intrinsic constraint of API-only evaluation that no paper using these
+endpoints can fully avoid. We mitigate by (a) recording invocation
+windows, (b) saving every raw output at invocation time, and
+(c) committing all model outputs into the release bundle.
+
+\subsection{Annotator models (Phase 2 GT construction)}
+
+Four LLMs cast votes on the canonical \texttt{method\_family} and
+\texttt{conclusion\_direction} labels used for L1/L3/L4 scoring.
+Table~\ref{tab:annot-models} summarizes.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\caption{Phase 2 ground-truth annotator models. All four cast an equal
+vote; the canonical label is the majority.}
+\label{tab:annot-models}
+\begin{tabular}{lll}
+\toprule
+\textbf{Role} & \textbf{API string} & \textbf{Vendor} \\
+\midrule
+Primary re-extractor (Phase~1 + Phase~2)  & \texttt{claude-opus-4-7} & Anthropic \\
+Cached vote (original ingestion)          & \texttt{gpt-4o}          & OpenAI    \\
+K2-generation voter                        & \texttt{kimi-latest}     & Moonshot AI \\
+Independent voter                          & \texttt{gemini-2.5-flash}& Google    \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three design choices deserve emphasis.
+
+\paragraph{Primary re-extractor is outside the evaluated pool.}
+Claude Opus~4.7 was chosen as the primary Phase~1 synthesis engine and
+Phase~2 annotator precisely because the evaluated pool contains
+\emph{Opus 4.6}, not 4.7. This avoids the degenerate case of a model
+grading its own answers.
+
+\paragraph{Kimi annotator was upgraded mid-voting.}
+The initial Phase~2 vote used \texttt{moonshot-v1-128k}. We observed a
+systematic failure mode (Event Study papers being mislabeled as Other)
+and upgraded to \texttt{kimi-latest}, which auto-routes to Moonshot's
+K2-generation model. The decision and its evidence are logged at
+\texttt{experiments\_log/decisions/2026-04-22\_\_kimi\_upgrade.md}.
+Only the final, upgraded votes are used for canonical labels.
+
+\paragraph{GPT-4o appears in both pools.}
+GPT-4o is both an evaluated subject (Experiments A and B) and an
+annotator voter (Phase~2). This is a real circularity concern. Our
+mitigations are (i)~GPT-4o is only one of four equally-weighted
+annotator votes, (ii)~Module~2.2's Leave-One-Model-Out robustness
+analysis explicitly recomputes rankings after removing each annotator
+family, and (iii)~the primary re-extractor (Opus~4.7) is outside the
+evaluated pool.
+
+\subsection{Temporal scope}
+
+All results in this paper should be read as characterizing these
+specific models during the March--April 2026 window. We make no claim
+about a given vendor's future releases. A reproducibility check against
+the dated snapshot (where available) and a re-run against future rolling
+aliases are both valid follow-ups. We commit to releasing raw outputs,
+prompts, and the \texttt{models\_manifest.json} so that any divergence
+can be attributed to a specific model change rather than a benchmark
+ambiguity.

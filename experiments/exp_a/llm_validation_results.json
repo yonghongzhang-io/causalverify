@@ -1,0 +1,164 @@
+[
+  {
+    "paper_id": "paper_100",
+    "file": "paper_100_did_hard.json",
+    "our_direction": "negative",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract mentions a 'plausibly exogenous change in hospital financing,' which suggests the use of an instrumental variable (IV) approach, and it states that increased public medical spending has not improved health outcomes, indicating a negative direction.",
+    "match": true
+  },
+  {
+    "paper_id": "paper_101",
+    "file": "paper_101_event_easy.json",
+    "our_direction": "positive",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract discusses the effects of report cards on health outcomes and resource use, indicating a negative impact, and the use of national data suggests a difference-in-differences approach to identify causal effects.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_106",
+    "file": "paper_106_rdd_easy.json",
+    "our_direction": "positive",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The study uses a regression discontinuity design (RDD) to identify the causal effect, and the main treatment effect is negative as reduced cost sharing leads to lower out-of-pocket expenditures.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_111",
+    "file": "paper_111_did_hard.json",
+    "our_direction": "positive",
+    "llm_direction": "positive",
+    "confidence": "medium",
+    "reasoning": "The abstract suggests evaluating a hypothesis using a model of education production, which aligns more with an IV approach than DID, and the direction is positive as it implies an effect on knowledge despite test score normalization issues.",
+    "match": true
+  },
+  {
+    "paper_id": "paper_116",
+    "file": "paper_116_rdd_easy.json",
+    "our_direction": "positive",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract states that changes in peer characteristics at exam school admissions cutoffs have little causal effect on test scores or college quality, indicating a negative direction for the treatment effect.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_117",
+    "file": "paper_117_rdd_medium.json",
+    "our_direction": "negative",
+    "llm_direction": "positive",
+    "confidence": "high",
+    "reasoning": "The abstract describes using lottery-generated randomization for causal identification, which aligns with an instrumental variable approach, and reports large achievement gains from charter school attendance, indicating a positive effect.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_119",
+    "file": "paper_119_did_medium.json",
+    "our_direction": "positive",
+    "llm_direction": "positive",
+    "confidence": "high",
+    "reasoning": "The abstract suggests a historical analysis of portage sites' continued importance, indicating a positive path dependence effect, likely using DID to compare changes over time.",
+    "match": true
+  },
+  {
+    "paper_id": "paper_129",
+    "file": "paper_129_did_medium.json",
+    "our_direction": "negative",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract suggests a causal link between US trade policy changes and employment decline, consistent with a negative treatment effect, and the use of DID is inferred from the comparison between US and EU outcomes.",
+    "match": true
+  },
+  {
+    "paper_id": "paper_130",
+    "file": "paper_130_did_hard.json",
+    "our_direction": "positive",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract indicates a difference-in-difference approach was used and reports slower decline in poverty and lower consumption growth, suggesting a negative impact of trade liberalization on poverty reduction.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_135",
+    "file": "paper_135_iv_hard.json",
+    "our_direction": "positive",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract indicates a causal relationship between trade liberalization and wage decline, suggesting the use of an instrumental variable approach, and the direction of the main treatment effect is negative as regions with larger price declines experienced larger wage declines.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_136",
+    "file": "paper_136_rdd_medium.json",
+    "our_direction": "negative",
+    "llm_direction": "positive",
+    "confidence": "high",
+    "reasoning": "The abstract describes an abrupt increase in manufacturing activity at state borders, indicating a positive treatment effect of probusiness policies.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_59",
+    "file": "paper_59_did_medium.json",
+    "our_direction": "negative",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract describes a situation where funds with higher Eurozone exposure reduced lending more, indicating a negative treatment effect.",
+    "match": true
+  },
+  {
+    "paper_id": "paper_69",
+    "file": "paper_69_rdd_easy.json",
+    "our_direction": "positive",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract states that capital investment declines sharply following a financial covenant violation, indicating a negative treatment effect.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_71",
+    "file": "paper_71_rdd_hard.json",
+    "our_direction": "positive",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract indicates a negative correlation between capital expenditures and mandatory contributions to pension plans, suggesting a negative treatment effect.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_76",
+    "file": "paper_76_event_easy.json",
+    "our_direction": "negative",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract discusses long-term earnings losses for displaced workers, indicating a negative treatment effect, and the use of evidence suggests an event study method.",
+    "match": true
+  },
+  {
+    "paper_id": "paper_78",
+    "file": "paper_78_event_hard.json",
+    "our_direction": "negative",
+    "llm_direction": "positive",
+    "confidence": "high",
+    "reasoning": "The abstract describes family members improving their health behaviors following a health shock, indicating a positive treatment effect.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_83",
+    "file": "paper_83_rdd_easy.json",
+    "our_direction": "negative",
+    "llm_direction": "positive",
+    "confidence": "high",
+    "reasoning": "The study finds small impacts on all outcomes, with wage estimates close to zero, suggesting minimal positive effects rather than negative ones.",
+    "match": false
+  },
+  {
+    "paper_id": "paper_98",
+    "file": "paper_98_did_easy.json",
+    "our_direction": "negative",
+    "llm_direction": "negative",
+    "confidence": "high",
+    "reasoning": "The abstract suggests a difference-in-differences approach by comparing labor-market effects before and after the mandates, and the direction is negative as costs are shifted to wages, implying a reduction in net wages for the targeted group.",
+    "match": true
+  }
+]

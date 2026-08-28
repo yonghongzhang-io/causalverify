@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s04",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "TARP capital injection on bank risk-taking",
+  "research_question": "Did TARP capital injections (2008–2009) cause recipient banks to increase risk-taking (measured by non-performing loan ratio) compared to non-recipient banks?",
+  "data_description": "Panel data on 200 bank holding companies over 8 quarterly periods (2007Q3–2009Q2). Variables: unit_id (bank), period, treated (1=TARP recipient), post (1=post-TARP), treat_x_post, y (non-performing loan ratio). TARP recipients self-selected — use parallel pre-trends as identifying assumption.",
+  "data_file": "experiments/exp_b/data/s04_data.csv"
+}

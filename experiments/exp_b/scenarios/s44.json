@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s44",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "Impact of NAFTA Tariff Removal on Bilateral Trade Flows",
+  "research_question": "How did the elimination of tariffs under NAFTA affect bilateral trade flows between member countries? This study aims to quantify the change in trade flows attributable to the removal of tariffs, isolating the effect from other concurrent economic changes.",
+  "data_description": "The dataset includes 150 observations with columns: unit_id (identifying country pairs), period (year), treated (indicating if the pair is affected by NAFTA), post (indicating post-NAFTA period), treat_x_post (interaction term), and y (log bilateral trade flows).",
+  "data_file": "experiments/exp_b/data/s44_data.csv"
+}

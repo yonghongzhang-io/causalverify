@@ -1,0 +1,478 @@
+{
+  "by_l2b_plus_v2": {
+    "0": 15,
+    "1": 35
+  },
+  "by_method": {
+    "DID": 13,
+    "EVENT_STUDY": 12,
+    "IV": 11,
+    "RDD": 14
+  },
+  "by_model": {
+    "GPT-4o": 9,
+    "GPT-5": 10,
+    "Gemini": 5,
+    "Kimi": 7,
+    "Opus": 6,
+    "Sonnet": 6,
+    "o3": 7
+  },
+  "n_requested": 50,
+  "n_sampled": 50,
+  "replay": [
+    {
+      "method": "DID",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_001",
+      "scenario_id": "s01",
+      "stderr_chars": 0,
+      "stdout_chars": 174
+    },
+    {
+      "method": "DID",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_002",
+      "scenario_id": "s05",
+      "stderr_chars": 0,
+      "stdout_chars": 379
+    },
+    {
+      "method": "DID",
+      "model": "Opus",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_003",
+      "scenario_id": "s09",
+      "stderr_chars": 0,
+      "stdout_chars": 3593
+    },
+    {
+      "method": "DID",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_004",
+      "scenario_id": "s31",
+      "stderr_chars": 0,
+      "stdout_chars": 1266
+    },
+    {
+      "method": "DID",
+      "model": "Gemini",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_005",
+      "scenario_id": "s36",
+      "stderr_chars": 0,
+      "stdout_chars": 1529
+    },
+    {
+      "method": "DID",
+      "model": "Gemini",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_006",
+      "scenario_id": "s37",
+      "stderr_chars": 0,
+      "stdout_chars": 1430
+    },
+    {
+      "method": "DID",
+      "model": "Kimi",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_007",
+      "scenario_id": "s39",
+      "stderr_chars": 0,
+      "stdout_chars": 259
+    },
+    {
+      "method": "DID",
+      "model": "Kimi",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_008",
+      "scenario_id": "s42",
+      "stderr_chars": 0,
+      "stdout_chars": 204
+    },
+    {
+      "method": "DID",
+      "model": "Sonnet",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_009",
+      "scenario_id": "s42",
+      "stderr_chars": 329,
+      "stdout_chars": 988
+    },
+    {
+      "method": "DID",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_010",
+      "scenario_id": "s44",
+      "stderr_chars": 0,
+      "stdout_chars": 717
+    },
+    {
+      "method": "DID",
+      "model": "o3",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_011",
+      "scenario_id": "s47",
+      "stderr_chars": 95,
+      "stdout_chars": 227
+    },
+    {
+      "method": "DID",
+      "model": "Sonnet",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_012",
+      "scenario_id": "s49",
+      "stderr_chars": 329,
+      "stdout_chars": 972
+    },
+    {
+      "method": "DID",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_013",
+      "scenario_id": "s50",
+      "stderr_chars": 0,
+      "stdout_chars": 435
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "Kimi",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_014",
+      "scenario_id": "s14",
+      "stderr_chars": 0,
+      "stdout_chars": 121
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "Sonnet",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_015",
+      "scenario_id": "s14",
+      "stderr_chars": 0,
+      "stdout_chars": 438
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "Opus",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_016",
+      "scenario_id": "s15",
+      "stderr_chars": 0,
+      "stdout_chars": 5264
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "Gemini",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_017",
+      "scenario_id": "s56",
+      "stderr_chars": 321,
+      "stdout_chars": 2442
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_018",
+      "scenario_id": "s58",
+      "stderr_chars": 0,
+      "stdout_chars": 619
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "o3",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_019",
+      "scenario_id": "s58",
+      "stderr_chars": 0,
+      "stdout_chars": 345
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_020",
+      "scenario_id": "s58",
+      "stderr_chars": 0,
+      "stdout_chars": 781
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "o3",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_021",
+      "scenario_id": "s62",
+      "stderr_chars": 93,
+      "stdout_chars": 738
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "Kimi",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_022",
+      "scenario_id": "s63",
+      "stderr_chars": 0,
+      "stdout_chars": 1410
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_023",
+      "scenario_id": "s63",
+      "stderr_chars": 0,
+      "stdout_chars": 130
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "Opus",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_024",
+      "scenario_id": "s65",
+      "stderr_chars": 0,
+      "stdout_chars": 56077
+    },
+    {
+      "method": "EVENT_STUDY",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_025",
+      "scenario_id": "s65",
+      "stderr_chars": 0,
+      "stdout_chars": 1042
+    },
+    {
+      "method": "IV",
+      "model": "Kimi",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_026",
+      "scenario_id": "s19",
+      "stderr_chars": 0,
+      "stdout_chars": 565
+    },
+    {
+      "method": "IV",
+      "model": "Kimi",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_027",
+      "scenario_id": "s22",
+      "stderr_chars": 0,
+      "stdout_chars": 150
+    },
+    {
+      "method": "IV",
+      "model": "Opus",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_028",
+      "scenario_id": "s22",
+      "stderr_chars": 0,
+      "stdout_chars": 6613
+    },
+    {
+      "method": "IV",
+      "model": "Gemini",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_029",
+      "scenario_id": "s22",
+      "stderr_chars": 0,
+      "stdout_chars": 2216
+    },
+    {
+      "method": "IV",
+      "model": "Gemini",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_030",
+      "scenario_id": "s67",
+      "stderr_chars": 298,
+      "stdout_chars": 1020
+    },
+    {
+      "method": "IV",
+      "model": "o3",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_031",
+      "scenario_id": "s68",
+      "stderr_chars": 0,
+      "stdout_chars": 2824
+    },
+    {
+      "method": "IV",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_032",
+      "scenario_id": "s68",
+      "stderr_chars": 0,
+      "stdout_chars": 1164
+    },
+    {
+      "method": "IV",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_033",
+      "scenario_id": "s69",
+      "stderr_chars": 0,
+      "stdout_chars": 818
+    },
+    {
+      "method": "IV",
+      "model": "Sonnet",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_034",
+      "scenario_id": "s72",
+      "stderr_chars": 0,
+      "stdout_chars": 2752
+    },
+    {
+      "method": "IV",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_035",
+      "scenario_id": "s81",
+      "stderr_chars": 0,
+      "stdout_chars": 87
+    },
+    {
+      "method": "IV",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_036",
+      "scenario_id": "s84",
+      "stderr_chars": 0,
+      "stdout_chars": 690
+    },
+    {
+      "method": "RDD",
+      "model": "o3",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_037",
+      "scenario_id": "s100",
+      "stderr_chars": 0,
+      "stdout_chars": 380
+    },
+    {
+      "method": "RDD",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_038",
+      "scenario_id": "s26",
+      "stderr_chars": 0,
+      "stdout_chars": 1483
+    },
+    {
+      "method": "RDD",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_039",
+      "scenario_id": "s27",
+      "stderr_chars": 0,
+      "stdout_chars": 3479
+    },
+    {
+      "method": "RDD",
+      "model": "Sonnet",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_040",
+      "scenario_id": "s28",
+      "stderr_chars": 0,
+      "stdout_chars": 5724
+    },
+    {
+      "method": "RDD",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_041",
+      "scenario_id": "s28",
+      "stderr_chars": 0,
+      "stdout_chars": 1976
+    },
+    {
+      "method": "RDD",
+      "model": "o3",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_042",
+      "scenario_id": "s30",
+      "stderr_chars": 0,
+      "stdout_chars": 786
+    },
+    {
+      "method": "RDD",
+      "model": "GPT-5",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_043",
+      "scenario_id": "s86",
+      "stderr_chars": 0,
+      "stdout_chars": 813
+    },
+    {
+      "method": "RDD",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_044",
+      "scenario_id": "s89",
+      "stderr_chars": 0,
+      "stdout_chars": 1727
+    },
+    {
+      "method": "RDD",
+      "model": "o3",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_045",
+      "scenario_id": "s89",
+      "stderr_chars": 0,
+      "stdout_chars": 265
+    },
+    {
+      "method": "RDD",
+      "model": "Opus",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_046",
+      "scenario_id": "s90",
+      "stderr_chars": 0,
+      "stdout_chars": 4507
+    },
+    {
+      "method": "RDD",
+      "model": "Sonnet",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_047",
+      "scenario_id": "s91",
+      "stderr_chars": 0,
+      "stdout_chars": 681
+    },
+    {
+      "method": "RDD",
+      "model": "Opus",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_048",
+      "scenario_id": "s91",
+      "stderr_chars": 0,
+      "stdout_chars": 9842
+    },
+    {
+      "method": "RDD",
+      "model": "GPT-4o",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_049",
+      "scenario_id": "s95",
+      "stderr_chars": 0,
+      "stdout_chars": 3105
+    },
+    {
+      "method": "RDD",
+      "model": "Kimi",
+      "replayed_ok": 1,
+      "sample_id": "l2bjhv_050",
+      "scenario_id": "s98",
+      "stderr_chars": 0,
+      "stdout_chars": 15
+    }
+  ],
+  "replay_ok": 50,
+  "scorer_disagreement_rows": 35,
+  "seed": 20260502
+}

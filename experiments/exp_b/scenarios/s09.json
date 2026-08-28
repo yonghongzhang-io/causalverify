@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s09",
+  "method_family": "DID",
+  "difficulty": "hard",
+  "title": "Heterogeneous treatment effects by firm size in DID",
+  "research_question": "Did a corporate tax cut (period 4) differentially affect investment for large vs. small firms, and can we identify heterogeneous treatment effects within a DID framework?",
+  "data_description": "Panel data on 200 firms (100 large, 100 small) over 8 annual periods. Variables: unit_id, period, treated (1=large firm, subject to larger tax cut), post, treat_x_post, y (log investment), size_group (large/small). Both groups experience tax cuts but large firms benefit more.",
+  "data_file": "experiments/exp_b/data/s09_data.csv"
+}

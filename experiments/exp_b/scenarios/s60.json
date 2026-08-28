@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s60",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "medium",
+  "title": "Impact of Unexpected Dovish Fed Announcements on Bank Stock Returns",
+  "research_question": "How do unexpected dovish announcements by the Federal Reserve affect cumulative abnormal returns (CAR) of bank stocks? This study aims to understand the immediate market reaction to such monetary policy surprises.",
+  "data_description": "The dataset includes daily stock return data for 80 banks, with columns: stock_id, event_day, ret, mkt_ret, and beta. Event_day captures the days surrounding the Fed announcement, allowing for the analysis of stock returns before and after the event.",
+  "data_file": "experiments/exp_b/data/s60_data.csv"
+}

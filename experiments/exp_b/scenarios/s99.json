@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s99",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "title": "Impact of Additional Representative on Public Spending",
+  "research_question": "Does the allocation of a second representative in districts crossing a population threshold affect public spending per capita? The study aims to understand whether having an additional representative leads to changes in the allocation of public resources.",
+  "data_description": "The dataset includes 400 observations of districts with variables such as running_var (population size), treated (indicator for districts with a second representative), and y (public spending per capita). The data focuses on districts near the population threshold for receiving a second representative.",
+  "data_file": "experiments/exp_b/data/s99_data.csv"
+}

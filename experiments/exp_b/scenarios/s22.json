@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s22",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "title": "Bartik shift-share IV for local employment shock on wages",
+  "research_question": "Did local industry employment shocks increase wages, using a Bartik shift-share instrument (national industry growth × local industry shares) to instrument for local employment growth?",
+  "data_description": "Cross-sectional data on 500 local labor markets. Variables: y (log average wage change), x (log employment growth), z (Bartik instrument: sum of national growth rates × initial industry shares), controls (initial wage level, population). ",
+  "data_file": "experiments/exp_b/data/s22_data.csv"
+}

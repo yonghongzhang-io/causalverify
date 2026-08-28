@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "interpretation": "Deltas are rate differences. v2 is ES-aware canonical-judge-v2 scoring.",
+    "missing_fields": {},
+    "selected_fields": {
+      "judge": "L2b_plus_judge",
+      "regex": "regex_l2b_plus",
+      "v2": "L2b_plus_v2"
+    }
+  },
+  "primary_models": [
+    "Kimi",
+    "Sonnet",
+    "GPT-4o",
+    "o3",
+    "Opus",
+    "Gemini",
+    "GPT-5"
+  ],
+  "rows": [
+    {
+      "delta_judge_minus_regex": 0.02,
+      "delta_judge_v2_minus_judge": 0.02,
+      "judge_pass_count": 8,
+      "judge_pass_rate": 0.08,
+      "model": "Kimi",
+      "n": 100,
+      "regex_pass_count": 6,
+      "regex_pass_rate": 0.06,
+      "v2_pass_count": 10,
+      "v2_pass_rate": 0.1
+    },
+    {
+      "delta_judge_minus_regex": 0.04,
+      "delta_judge_v2_minus_judge": 0.19,
+      "judge_pass_count": 31,
+      "judge_pass_rate": 0.31,
+      "model": "Sonnet",
+      "n": 100,
+      "regex_pass_count": 27,
+      "regex_pass_rate": 0.27,
+      "v2_pass_count": 50,
+      "v2_pass_rate": 0.5
+    },
+    {
+      "delta_judge_minus_regex": 0.22,
+      "delta_judge_v2_minus_judge": 0.12,
+      "judge_pass_count": 50,
+      "judge_pass_rate": 0.5,
+      "model": "GPT-4o",
+      "n": 100,
+      "regex_pass_count": 28,
+      "regex_pass_rate": 0.28,
+      "v2_pass_count": 62,
+      "v2_pass_rate": 0.62
+    },
+    {
+      "delta_judge_minus_regex": 0.19,
+      "delta_judge_v2_minus_judge": 0.09,
+      "judge_pass_count": 37,
+      "judge_pass_rate": 0.37,
+      "model": "o3",
+      "n": 100,
+      "regex_pass_count": 18,
+      "regex_pass_rate": 0.18,
+      "v2_pass_count": 46,
+      "v2_pass_rate": 0.46
+    },
+    {
+      "delta_judge_minus_regex": 0.07,
+      "delta_judge_v2_minus_judge": 0.17,
+      "judge_pass_count": 71,
+      "judge_pass_rate": 0.71,
+      "model": "Opus",
+      "n": 100,
+      "regex_pass_count": 64,
+      "regex_pass_rate": 0.64,
+      "v2_pass_count": 88,
+      "v2_pass_rate": 0.88
+    },
+    {
+      "delta_judge_minus_regex": 0.14,
+      "delta_judge_v2_minus_judge": 0.03,
+      "judge_pass_count": 29,
+      "judge_pass_rate": 0.29,
+      "model": "Gemini",
+      "n": 100,
+      "regex_pass_count": 15,
+      "regex_pass_rate": 0.15,
+      "v2_pass_count": 32,
+      "v2_pass_rate": 0.32
+    },
+    {
+      "delta_judge_minus_regex": 0.3,
+      "delta_judge_v2_minus_judge": 0.13,
+      "judge_pass_count": 59,
+      "judge_pass_rate": 0.59,
+      "model": "GPT-5",
+      "n": 100,
+      "regex_pass_count": 29,
+      "regex_pass_rate": 0.29,
+      "v2_pass_count": 72,
+      "v2_pass_rate": 0.72
+    }
+  ],
+  "source": "experiments/exp_b/l2b_plus_scores_canonical_judge_v2.csv"
+}

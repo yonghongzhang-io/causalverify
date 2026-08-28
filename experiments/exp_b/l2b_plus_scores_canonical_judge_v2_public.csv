@@ -1,0 +1,1537 @@
+scenario_id,method,baseline,baseline_source,baseline_available,canonical_status,L1,L2a,L2b,rel_error,L2b_plus,err_excerpt,model,model_slug,regex_l2b_plus,rel_error_judge,L2b_plus_judge,L2b_plus_v2,es_window_match,rel_error_v2
+s01,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Kimi,moonshot-v1-128k,1,0.00015083967418633832,1,1,,0.00015083967418633832
+s01,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in waldtest(pretrend_model, ""treated:period_2 = treated:period_3 = 0"") : 
+  could not find function ""waldtest""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s01,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-4o,gpt-4o,0,0.00015083967418633832,1,1,,0.00015083967418633832
+s01,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,o3,o3,1,0.00015083967418633832,1,1,,0.00015083967418633832
+s01,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Opus,claude-opus-4-6,1,0.00015083967418633832,1,1,,0.00015083967418633832
+s01,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in tidy(event_study_model) : could not find function ""tidy""
+Calls: suppressMessages -> withCallingHandlers -> as.data.frame
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s01,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in linearHypothesis.lm(mod_es, lead_params, vcov. = vc_es, test = ""Chisq"") : 
+  there are aliased coefficients in the model.
+Calls: suppressMessages ... withCallingHandlers -> <Anonymous> -> lin",GPT-5,gpt-5,0,,0,0,,
+s02,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.3041,0,,Kimi,moonshot-v1-128k,0,2.304143829043059,0,0,,2.304143829043059
+s02,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Sonnet,claude-sonnet-4-20250514,1,0.00023459660048192802,1,1,,0.00023459660048192802
+s02,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.7441,0,,GPT-4o,gpt-4o,0,0.00023459660048192802,1,1,,0.00023459660048192802
+s02,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.1256,1,,o3,o3,1,0.00023459660048192802,1,1,,0.00023459660048192802
+s02,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Opus,claude-opus-4-6,1,0.00023459660048192802,1,1,,0.00023459660048192802
+s02,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ i(treated, period, ref = 3) | unit_id +...: 
+Evaluation of the right-hand-side of the formula raises an error: 
+  in i(factor_var = treated, var = period, ref = 3): 
+In argument `r",Gemini,gemini-2.5-flash,0,,0,0,,
+s02,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ treat_x_post | unit_id + period, data =...: 
+The only variable, 'treat_x_post', is collinear with the fixed effects.
+Without doubt, your model is misspecified.
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s03,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in eval(predvars, data, env) : object 'event_time' not found
+Calls: suppressMessages ... model.frame.Formula -> model.frame -> model.frame.default -> eval -> eval
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s03,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in summary(trend_test)$coefficients[""treated:period"", ] : 
+  incorrect number of dimensions
+Calls: suppressMessages -> withCallingHandlers -> print
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s03,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.7185,0,,GPT-4o,gpt-4o,0,0.00010190778399767104,1,1,,0.00010190778399767104
+s03,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in grepl(var2keep, vect2check, perl = TRUE) : 
+  invalid regular expression 'rel_year::[-3:-1]'
+Calls: suppressMessages ... etable -> etable_internal_df -> keep_apply -> grepl
+Execution halted",o3,o3,0,,0,0,,
+s03,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,0.00010190778399767104,1,1,,0.00010190778399767104
+s03,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Gemini,gemini-2.5-flash,1,0.00010190778399767104,1,1,,0.00010190778399767104
+s03,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,0.00010190778399767104,1,1,,0.00010190778399767104
+s04,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.956,0,,Kimi,moonshot-v1-128k,0,3.956014778278576,0,0,,3.956014778278576
+s04,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0003,1,,Sonnet,claude-sonnet-4-20250514,1,0.00029291984390196984,1,1,,0.00029291984390196984
+s04,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.00029291984390196984,1,1,,0.00029291984390196984
+s04,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ sunab(first_treat_period, period) | uni...: 
+All variables, 'period::-4:cohort::5', 'period::-3:cohort::5' and 5 others,
+are collinear with the fixed effects. Without doubt, your m",o3,o3,0,,0,0,,
+s04,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0003,1,,Opus,claude-opus-4-6,1,0.00029291984390196984,1,1,,0.00029291984390196984
+s04,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in tidy(event_study_model) : could not find function ""tidy""
+Calls: suppressMessages ... withCallingHandlers -> %>% -> mutate -> filter -> as.data.frame
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s04,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-5,gpt-5,1,0.00029291984390196984,1,1,,0.00029291984390196984
+s05,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in plm.fit(data, model, effect, random.method, random.models, random.dfcor,  : 
+  0 (non-NA) cases
+Calls: suppressMessages -> withCallingHandlers -> plm -> plm.fit
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s05,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Sonnet,claude-sonnet-4-20250514,1,0.00013686339512454756,1,1,,0.00013686339512454756
+s05,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.5993,0,,GPT-4o,gpt-4o,0,,0,0,,
+s05,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in cat(""β (Treat×Post) ="", round(b, 4), "" | 95% CI ["", round(ci[1],  : 
+  argument 4 (type 'list') cannot be handled by 'cat'
+Calls: suppressMessages -> withCallingHandlers -> cat
+Execution halt",o3,o3,0,,0,0,,
+s05,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.00013686339512454756,1,1,,0.00013686339512454756
+s05,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,0.0,1,1,,0.0
+s05,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,0.00013686339512454756,1,1,,0.00013686339512454756
+s06,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s06,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Sonnet,claude-sonnet-4-20250514,1,0.00017244352474570694,1,1,,0.00017244352474570694
+s06,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"erve = .preserve)
+  8. │   └─dplyr:::dplyr_row_slice.data.frame(.data, loc, preserve = .preserve)
+  9. │     ├─dplyr::dplyr_reconstruct(vec_slice(data, i), data)
+ 10. │     │ └─dplyr:::dplyr_new_data_",GPT-4o,gpt-4o,0,,0,0,,
+s06,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in etable(event_mod, keep = ""rel_time::"", se = ""clus...: 
+Not any variable was selected, please reframe your keep/drop arguments. In
+particular, to 'keep' variables using their original names (",o3,o3,0,,0,0,,
+s06,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Opus,claude-opus-4-6,1,0.00017244352474570694,1,1,,0.00017244352474570694
+s06,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in etable(did_model, se = did_model$se, cl...:
+ Argument 'se' (which has been replaced by arg. 'vcov') must be a single
+ character equal to 'iid', 'normal', 'standard', 'hetero', 'white', 'hc1'",Gemini,gemini-2.5-flash,0,,0,0,,
+s06,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-5,gpt-5,0,0.00017244352474570694,1,1,,0.00017244352474570694
+s07,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in vcovHC.default(type = ""HC1"") : 
+  argument ""x"" is missing, with no default
+Calls: suppressMessages ... coeftest.default -> vcovHC -> vcovHC.default -> meatHC
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s07,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ treated_x_t_3 + treated_x_t_2 + treated...: 
+The variables 'treated_x_t_3' and 'treated_x_t_2' are in the RHS (first
+part) of the formula but not in the data set.
+Maybe you meant: ",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s07,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,1.8809131206248397e-05,1,1,,1.8809131206248397e-05
+s07,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(did) : there is no package called ‘did’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",o3,o3,0,,0,0,,
+s07,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.3843,1,,Opus,claude-opus-4-6,1,1.8809131206248397e-05,1,1,,1.8809131206248397e-05
+s07,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in etable(did_model, se.type = ""robust"") : 
+  The second element of '...' (named 'se.type') is not valid: it should be a fixest object or a list of fixest objects, it is neither.
+Calls: suppress",Gemini,gemini-2.5-flash,0,,0,0,,
+s07,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-5,gpt-5,1,1.8809131206248397e-05,1,1,,1.8809131206248397e-05
+s08,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(cluster) : 'arg' must be NULL or a character vector
+Calls: suppressMessages ... vcovHC -> vcovHC.plm -> vcovG -> vcovG.plm -> match.arg
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s08,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(lfe) : there is no package called ‘lfe’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s08,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ iperiod(treat_x_post, period) | unit_id...: 
+Evaluation of the right-hand-side of the formula raises an error: 
+  In iperiod(treat_x_post, period): could not find function ""iperiod",GPT-4o,gpt-4o,0,,0,0,,
+s08,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(did) : there is no package called ‘did’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",o3,o3,0,,0,0,,
+s08,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.2597,0,,Opus,claude-opus-4-6,0,5.5752877012397625e-05,1,1,,5.5752877012397625e-05
+s08,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s08,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,5.5752877012397625e-05,1,1,,5.5752877012397625e-05
+s09,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in eval(predvars, data, env) : object 'size_group' not found
+Calls: suppressMessages ... model.frame.Formula -> model.frame -> model.frame.default -> eval -> eval
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s09,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0,1,,Sonnet,claude-sonnet-4-20250514,1,0.0,1,1,,0.0
+s09,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.6521,0,,GPT-4o,gpt-4o,0,0.0,1,1,,0.0
+s09,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0,1,,o3,o3,1,0.0,1,1,,0.0
+s09,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.546,0,,Opus,claude-opus-4-6,0,0.0,1,1,,0.0
+s09,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s09,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0,1,,GPT-5,gpt-5,1,0.0,1,1,,0.0
+s10,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in eval(predvars, data, env) : object 'announce' not found
+Calls: suppressMessages ... model.frame.Formula -> model.frame -> model.frame.default -> eval -> eval
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s10,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error: in feols(y ~ treat_x_announce + treat_x_post | unit_...: 
+The variable 'treat_x_announce' is in the RHS (first part) of the formula
+but not in the data set.
+Maybe you meant: `treat_x_period_1`,",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s10,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.5714,0,,GPT-4o,gpt-4o,0,0.058909280088007485,1,1,,0.058909280088007485
+s10,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0589,1,,o3,o3,1,0.058909280088007485,1,1,,0.058909280088007485
+s10,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0589,1,,Opus,claude-opus-4-6,1,0.058909280088007485,1,1,,0.058909280088007485
+s10,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s10,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error: in feols(y ~ treat_x_announce + treat_x_post | unit_...: 
+All observations are fixed-effects singletons. The estimation cannot be
+done.
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s11,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"pected_ret = beta * mkt_ret, abnormal_ret = ret - expected_ret)
+  6. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+  7. │   ├─base::withCallingHandlers(...)
+  8. │   └─dplyr:::mutate_col(dot",Kimi,moonshot-v1-128k,0,,0,0,,
+s11,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.9737,0,,Sonnet,claude-sonnet-4-20250514,0,0.9737496271253853,0,1,2,0.0131
+s11,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"  4. ├─dplyr::mutate(...)
+  5. ├─dplyr:::mutate.data.frame(...)
+  6. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+  7. │   ├─base::withCallingHandlers(...)
+  8. │   └─dplyr:::mutate_col(dot",GPT-4o,gpt-4o,0,,0,0,,
+s11,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in setnames(estimates, c(""term"", ""estimate""), c(""param"", ""value"")) : 
+  Items of 'old' not found in column names: [term]. Consider skip_absent=TRUE.
+Calls: suppressMessages ... withCallingHandle",o3,o3,0,,0,0,,
+s11,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.78,0,,Opus,claude-opus-4-6,0,0.7798548274833449,0,1,2,0.1101
+s11,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,48.7166,0,,Gemini,gemini-2.5-flash,0,1.0383812270060655,0,1,2,0.0192
+s11,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0379,0,,GPT-5,gpt-5,0,0.9737496271253853,0,1,2,0.0131
+s12,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in UseMethod(""estfun"") : 
+  no applicable method for 'estfun' applied to an object of class ""formula""
+Calls: suppressMessages ... NeweyWest -> vcovHAC -> vcovHAC.default -> meatHAC -> estfun
+Exe",Kimi,moonshot-v1-128k,0,,0,0,,
+s12,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,39.4468,0,,Sonnet,claude-sonnet-4-20250514,0,0.8646674356016918,0,1,2,0.0677
+s12,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,39.4468,0,,GPT-4o,gpt-4o,0,0.8646674356016918,0,1,2,0.0677
+s12,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.8647,0,,o3,o3,0,0.8646674356016918,0,1,2,0.0677
+s12,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,6.4856,0,,Opus,claude-opus-4-6,0,185.5936178392926,0,0,11,15.9631
+s12,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s12,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,39.4468,0,,GPT-5,gpt-5,0,0.8658208381391772,0,1,2,0.0671
+s13,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.8377,0,,Kimi,moonshot-v1-128k,0,0.8388106416275428,0,1,2,0.0806
+s13,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.8614,0,,Sonnet,claude-sonnet-4-20250514,0,0.8052761010507489,0,1,2,0.0974
+s13,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.8377,0,,GPT-4o,gpt-4o,0,0.8388106416275428,0,1,2,0.0806
+s13,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,54.8909,0,,o3,o3,0,0.8052761010507489,0,1,2,0.0974
+s13,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,54.8909,0,,Opus,claude-opus-4-6,0,176.49832327297116,0,0,11,15.1362
+s13,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s13,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in `$<-.data.frame`(`*tmp*`, AR, value = numeric(0)) : 
+  replacement has 0 rows, data has 240
+Calls: suppressMessages -> withCallingHandlers -> $<- -> $<-.data.frame
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s14,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,43.1579,0,,Kimi,moonshot-v1-128k,0,0.019694427271924334,1,1,1,0.0197
+s14,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.9365,0,,Sonnet,claude-sonnet-4-20250514,0,1.9365009273160825,0,1,3,0.0212
+s14,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.6994,0,,GPT-4o,gpt-4o,0,1.6980482204362803,0,1,3,0.1007
+s14,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.9365,0,,o3,o3,0,1.9365009273160825,0,1,3,0.0212
+s14,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,16.4115,0,,Opus,claude-opus-4-6,0,1.9365009273160825,0,1,3,0.0212
+s14,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s14,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,43.1579,0,,GPT-5,gpt-5,0,1.9365009273160825,0,1,3,0.0212
+s15,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in bptest(lm(aar$mean_AR ~ 1), data = aar) : 
+  the auxiliary variance regression requires at least an intercept and a regressor
+Calls: suppressMessages -> withCallingHandlers -> bptest
+Executio",Kimi,moonshot-v1-128k,0,,0,0,,
+s15,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,3.1053,0,,Sonnet,claude-sonnet-4-20250514,0,3.0400919918992213,0,1,4,0.01
+s15,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"  4. ├─dplyr::mutate(...)
+  5. ├─dplyr:::mutate.data.frame(...)
+  6. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+  7. │   ├─base::withCallingHandlers(...)
+  8. │   └─dplyr:::mutate_col(dot",GPT-4o,gpt-4o,0,,0,0,,
+s15,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"::mutate.data.frame(., ab_ret = ret - (alpha + beta * mkt_ret))
+ 10. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+ 11. │   ├─base::withCallingHandlers(...)
+ 12. │   └─dplyr:::mutate_col(dot",o3,o3,0,,0,0,,
+s15,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.1922,0,,Opus,claude-opus-4-6,0,2.0034668588885456,0,1,3,0.0012
+s15,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s15,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in params[, ""alpha_hat""] : subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers -> data.frame
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s16,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(quantmod) : there is no package called ‘quantmod’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s16,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.9817,0,,Sonnet,claude-sonnet-4-20250514,0,5.0606060606060606,0,1,6,0.0101
+s16,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.7478,0,,GPT-4o,gpt-4o,0,,0,0,,
+s16,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in withCallingHandlers(expr, message = function(c) if (inherits(c,  : 
+  No chip-dependency variable found in the dataset.
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",o3,o3,0,,0,0,,
+s16,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,5.0676,0,,Opus,claude-opus-4-6,0,5.068097539049332,0,1,6,0.0113
+s16,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s16,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in withCallingHandlers(expr, message = function(c) if (inherits(c,  : 
+  No chip dependency variable found. Expected a column containing 'chip' (e.g., 'chip_dep').
+Calls: suppressMessages -> wit",GPT-5,gpt-5,0,,0,0,,
+s17,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"base::withCallingHandlers(...)
+  9. │   └─dplyr:::map(quosures, summarise_eval_one, mask = mask)
+ 10. │     └─base::lapply(.x, .f, ...)
+ 11. │       └─dplyr (local) FUN(X[[i]], ...)
+ 12. │         └─m",Kimi,moonshot-v1-128k,0,,0,0,,
+s17,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0457,0,,Sonnet,claude-sonnet-4-20250514,0,1.0457142857142854,0,1,2,0.0229
+s17,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"lyr:::mutate.data.frame(., AR = ret - (alpha + beta * mkt_ret))
+  6. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+  7. │   ├─base::withCallingHandlers(...)
+  8. │   └─dplyr:::mutate_col(dot",GPT-4o,gpt-4o,0,,0,0,,
+s17,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in `distinct()`:
+! Must use existing variables.
+✖ `fine_ratio` not found in `.data`.
+Backtrace:
+    ▆
+ 1. ├─base::suppressMessages(...)
+ 2. │ └─base::withCallingHandlers(...)
+ 3. ├─dt %>% distin",o3,o3,0,,0,0,,
+s17,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0449,0,,Opus,claude-opus-4-6,0,1.0457142857142854,0,1,2,0.0229
+s17,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s17,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in withCallingHandlers(expr, message = function(c) if (inherits(c,  : 
+  Missing required columns: fine_ratio
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s18,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in eval(predvars, data, env) : object 'eps_surprise' not found
+Calls: suppressMessages ... model.frame.Formula -> model.frame -> model.frame.default -> eval -> eval
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s18,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,67.7474,0,,Sonnet,claude-sonnet-4-20250514,0,0.9593015261927679,0,1,2,0.0203
+s18,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in eval(predvars, data, env) : object 'eps_surprise' not found
+Calls: suppressMessages ... eval -> <Anonymous> -> model.frame.default -> eval -> eval
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s18,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in withCallingHandlers(expr, message = function(c) if (inherits(c,  : 
+  Column `eps_surprise` is not in the data. Analysis cannot proceed.
+Calls: suppressMessages -> withCallingHandlers
+Executi",o3,o3,0,,0,0,,
+s18,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in eval(jsub, SDenv, parent.frame()) : object 'mean_ar' not found
+Calls: suppressMessages ... withCallingHandlers -> [ -> [.data.table -> eval -> eval
+Execution halted",Opus,claude-opus-4-6,0,,0,0,,
+s18,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s18,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in withCallingHandlers(expr, message = function(c) if (inherits(c,  : 
+  Missing required columns: eps_surprise
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s19,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0021,1,,Kimi,moonshot-v1-128k,1,0.0021239621548562325,1,1,,0.0021239621548562325
+s19,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s19,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-4o,gpt-4o,0,,0,0,,
+s19,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in cd$diagnostics[""weak instruments"", ""statistic""] : 
+  subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers -> cat
+Execution halted",o3,o3,0,,0,0,,
+s19,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,8.275177226707788e-05,1,1,,8.275177226707788e-05
+s19,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,8.275177226707788e-05,1,1,,8.275177226707788e-05
+s19,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.8226,0,,GPT-5,gpt-5,0,0.002215908568486333,1,1,,0.002215908568486333
+s20,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in feols(y ~ x + controls | 0 | z, data = data) : 
+  could not find function ""feols""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s20,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s20,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in hausman.iv(y ~ x + controls | z + controls, ivreg = iv_model) : 
+  could not find function ""hausman.iv""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s20,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,o3,o3,0,6.240802365868699e-05,1,1,,6.240802365868699e-05
+s20,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,6.240802365868699e-05,1,1,,6.240802365868699e-05
+s20,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in round(weak_instrument_stat, 2) : 
+  non-numeric argument to mathematical function
+Calls: suppressMessages -> withCallingHandlers -> print -> paste
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s20,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.2342,0,,GPT-5,gpt-5,0,6.240802365868699e-05,1,1,,6.240802365868699e-05
+s21,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,142.57342469948702,0,0,,142.57342469948702
+s21,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s21,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.2262,1,,GPT-4o,gpt-4o,1,0.22622693515044784,1,1,,0.22622693515044784
+s21,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in `$<-.data.frame`(`*tmp*`, z_num, value = numeric(0)) : 
+  replacement has 0 rows, data has 500
+Calls: suppressMessages -> withCallingHandlers -> $<- -> $<-.data.frame
+Execution halted",o3,o3,0,,0,0,,
+s21,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.00011484572391086176,1,1,,0.00011484572391086176
+s21,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in vcovHC(first_stage_model, type = ""HC1"") : 
+  could not find function ""vcovHC""
+Calls: suppressMessages ... withCallingHandlers -> coeftest -> coeftest.default
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s21,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.7573,0,,GPT-5,gpt-5,0,0.00011484572391086176,1,1,,0.00011484572391086176
+s22,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.5141,0,,Kimi,moonshot-v1-128k,0,1.5141274856951408,0,0,,1.5141274856951408
+s22,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s22,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,8.102254835624793e-05,1,1,,8.102254835624793e-05
+s22,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in linearHypothesis(iv_mod, ""x = 0"", test = ""F"", vcov. = vcovHC(iv_mod,  : 
+  could not find function ""linearHypothesis""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",o3,o3,0,,0,0,,
+s22,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.8427,0,,Opus,claude-opus-4-6,0,0.006926332985155293,1,1,,0.006926332985155293
+s22,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.5141,0,,Gemini,gemini-2.5-flash,0,8.102254835624793e-05,1,1,,8.102254835624793e-05
+s22,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.5141,0,,GPT-5,gpt-5,0,8.102254835624793e-05,1,1,,8.102254835624793e-05
+s23,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: object 'saragan_test' not found
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s23,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s23,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.6331,0,,GPT-4o,gpt-4o,0,0.6329678498420368,0,0,,0.6329678498420368
+s23,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,o3,o3,1,8.259513927599292e-05,1,1,,8.259513927599292e-05
+s23,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,8.259513927599292e-05,1,1,,8.259513927599292e-05
+s23,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s23,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,4.1622,0,,GPT-5,gpt-5,0,8.259513927599292e-05,1,1,,8.259513927599292e-05
+s24,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in pdata.frame(data, index = c(""id"", ""time"")) : 
+  variable 'id' does not exist (individual index)
+Calls: suppressMessages -> withCallingHandlers -> pdata.frame
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s24,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s24,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0012,1,,GPT-4o,gpt-4o,1,0.0013169917677289902,1,1,,0.0013169917677289902
+s24,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.6459,0,,o3,o3,0,3.0029128254436805e-05,1,1,,3.0029128254436805e-05
+s24,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.646,0,,Opus,claude-opus-4-6,0,3.0029128254436805e-05,1,1,,3.0029128254436805e-05
+s24,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.6459,0,,Gemini,gemini-2.5-flash,0,3.0029128254436805e-05,1,1,,3.0029128254436805e-05
+s24,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.646,0,,GPT-5,gpt-5,0,3.0029128254436805e-05,1,1,,3.0029128254436805e-05
+s25,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y ~ running_var | treated, data = data, h = 0.3, kernel = ""triangular"",  : 
+  unused arguments (data = data, degree = 1)
+Calls: suppressMessages -> withCallingHandlers
+Execution halt",Kimi,moonshot-v1-128k,0,,0,0,,
+s25,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in round(pvalue, 4) : non-numeric argument to mathematical function
+Calls: suppressMessages -> withCallingHandlers -> cat
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s25,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.9323,0,,GPT-4o,gpt-4o,0,0.08138291179061301,1,1,,0.08138291179061301
+s25,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1692,1,,o3,o3,1,0.16907323518308812,1,1,,0.16907323518308812
+s25,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1691,1,,Opus,claude-opus-4-6,1,0.16907323518308812,1,1,,0.16907323518308812
+s25,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in contrib.url(repos, ""source"") : 
+  trying to use CRAN without setting a mirror
+Calls: suppressMessages ... withCallingHandlers -> install.packages -> contrib.url
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s25,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,3.5926,0,,GPT-5,gpt-5,0,0.03340883352208382,1,1,,0.03340883352208382
+s26,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y ~ running_var, data = data, c = 0.5, h = 0.3, kernel = ""gaussian"",  : 
+  unused arguments (data = data, degree = 2, biasadj = TRUE)
+Calls: suppressMessages -> withCallingHandlers
+E",Kimi,moonshot-v1-128k,0,,0,0,,
+s26,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1042,1,,Sonnet,claude-sonnet-4-20250514,1,0.19058673250058344,1,1,,0.19058673250058344
+s26,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,3.0941,0,,GPT-4o,gpt-4o,0,0.09437422978820963,1,1,,0.09437422978820963
+s26,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rd_main$coef[1, 2] : subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",o3,o3,0,,0,0,,
+s26,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1908,1,,Opus,claude-opus-4-6,1,0.2503613086538028,1,1,,0.2503613086538028
+s26,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdplot(y = data$y, x = data$running_var, c = cutoff, title = ""RDD Plot: College Enrollment by Test Score"",  : 
+  unused arguments (xlabel = ""Standardized Test Score"", ylabel = ""College Enroll",Gemini,gemini-2.5-flash,0,,0,0,,
+s26,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0471,0,,GPT-5,gpt-5,0,0.011672418946084121,1,1,,0.011672418946084121
+s27,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rddensityplot(data$running_var, data$treated, c = 0.5, h = 0.05) : 
+  could not find function ""rddensityplot""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s27,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in matrix(NA, n_B, o_B + 1) : 
+  invalid 'nrow' value (too large or NA)
+Calls: suppressMessages ... withCallingHandlers -> rdrobust -> rdrobust_bw -> matrix
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s27,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s27,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rd_main$Estimate[1, ""coef""] : subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",o3,o3,0,,0,0,,
+s27,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.2943,1,,Opus,claude-opus-4-6,1,0.2942785746490497,1,1,,0.2942785746490497
+s27,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rddensity(X = running_var, c = cutoff) : 
+  could not find function ""rddensity""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s27,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.2943,1,,GPT-5,gpt-5,1,1.5983539534919262,0,0,,1.5983539534919262
+s28,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s28,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,5.178,0,,Sonnet,claude-sonnet-4-20250514,0,0.05911844579068308,1,1,,0.05911844579068308
+s28,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,5.178,0,,GPT-4o,gpt-4o,0,0.36202214330478377,1,1,,0.36202214330478377
+s28,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in r_main$Estimate[1, ""tau_BC""] : subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",o3,o3,0,,0,0,,
+s28,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0591,1,,Opus,claude-opus-4-6,1,0.05911844579068308,1,1,,0.05911844579068308
+s28,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s28,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in lm.wfit(x, y, w, offset = offset, singular.ok = singular.ok,  : 
+  0 (non-NA) cases
+Calls: suppressMessages ... withCallingHandlers -> local_linear_rd -> lm -> lm.wfit
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s29,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in loadNamespace(x) : there is no package called ‘rdd’
+Calls: suppressMessages ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s29,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s29,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.3497,1,,GPT-4o,gpt-4o,1,0.3498361221321372,1,1,,0.3498361221321372
+s29,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.3498,1,,o3,o3,1,0.3498361221321372,1,1,,0.3498361221321372
+s29,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Opus,claude-opus-4-6,0,,0,0,,
+s29,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s29,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.6079,0,,GPT-5,gpt-5,0,2.410996283344049,0,0,,2.410996283344049
+s30,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(data$running_var, data$treated, data$y, c = 0.75, h = 0.1,  : 
+  unused arguments (degree = 1, bias = TRUE)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s30,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.028,1,,Sonnet,claude-sonnet-4-20250514,1,0.02796148758805245,1,1,,0.02796148758805245
+s30,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.406,1,,GPT-4o,gpt-4o,1,0.405984276881567,1,1,,0.405984276881567
+s30,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,o3,o3,0,0.007193612318347005,1,1,,0.007193612318347005
+s30,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in matrix(NA, n_B, o_B + 1) : 
+  invalid 'nrow' value (too large or NA)
+Calls: suppressMessages ... withCallingHandlers -> rdrobust -> rdrobust_bw -> matrix
+Execution halted",Opus,claude-opus-4-6,0,,0,0,,
+s30,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y = Y, x = R, c = 0, fuzzy = D, instrument = W) : 
+  unused argument (instrument = W)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s30,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1998,1,,GPT-5,gpt-5,1,0.00016259233706713856,1,1,,0.00016259233706713856
+s31,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.4576,0,,Kimi,moonshot-v1-128k,0,1.457542083925154,0,0,,1.457542083925154
+s31,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Sonnet,claude-sonnet-4-20250514,1,0.00017108095311968005,1,1,,0.00017108095311968005
+s31,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.00017108095311968005,1,1,,0.00017108095311968005
+s31,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ sunab(adopt_year, period_num) | unit_id...: 
+All variables, 'period_num::-3:cohort::4', 'period_num::-2:cohort::4' and 5
+others, are collinear with the fixed effects. Without doubt",o3,o3,0,,0,0,,
+s31,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Opus,claude-opus-4-6,1,0.00017108095311968005,1,1,,0.00017108095311968005
+s31,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in round(did_pvalue, 4) : 
+  non-numeric argument to mathematical function
+Calls: suppressMessages -> withCallingHandlers -> cat -> paste0
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s31,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.8131,0,,GPT-5,gpt-5,0,0.00017108095311968005,1,1,,0.00017108095311968005
+s32,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.1737,0,,Kimi,moonshot-v1-128k,0,1.1736335232021398,0,0,,1.1736335232021398
+s32,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Sonnet,claude-sonnet-4-20250514,1,2.57158654031862e-05,1,1,,2.57158654031862e-05
+s32,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,2.57158654031862e-05,1,1,,2.57158654031862e-05
+s32,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,o3,o3,1,2.57158654031862e-05,1,1,,2.57158654031862e-05
+s32,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,2.57158654031862e-05,1,1,,2.57158654031862e-05
+s32,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,2.57158654031862e-05,1,1,,2.57158654031862e-05
+s32,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-5,gpt-5,1,2.57158654031862e-05,1,1,,2.57158654031862e-05
+s33,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Kimi,moonshot-v1-128k,1,0.00014329727018694738,1,1,,0.00014329727018694738
+s33,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Sonnet,claude-sonnet-4-20250514,1,0.00014329727018694738,1,1,,0.00014329727018694738
+s33,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,4.115,0,,GPT-4o,gpt-4o,0,,0,0,,
+s33,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ sunab(treated, rel_year, ref = -1) | un...: 
+Evaluation of the right-hand-side of the formula raises an error: 
+  In sunab(treated, rel_year, ref = -1): argument 3 matches multiple",o3,o3,0,,0,0,,
+s33,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.4633,0,,Opus,claude-opus-4-6,0,0.00014329727018694738,1,1,,0.00014329727018694738
+s33,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.9104,0,,Gemini,gemini-2.5-flash,0,0.00014329727018694738,1,1,,0.00014329727018694738
+s33,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,0.00014329727018694738,1,1,,0.00014329727018694738
+s34,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.6654,0,,Kimi,moonshot-v1-128k,0,2.665254787828392,0,0,,2.665254787828392
+s34,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Sonnet,claude-sonnet-4-20250514,1,0.00020788400072762158,1,1,,0.00020788400072762158
+s34,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,5.4964,0,,GPT-4o,gpt-4o,0,0.00020788400072762158,1,1,,0.00020788400072762158
+s34,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,o3,o3,1,0.00020788400072762158,1,1,,0.00020788400072762158
+s34,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Opus,claude-opus-4-6,1,0.00020788400072762158,1,1,,0.00020788400072762158
+s34,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s34,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,GPT-5,gpt-5,1,0.00020788400072762158,1,1,,0.00020788400072762158
+s35,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in x$terms : $ operator is invalid for atomic vectors
+Calls: suppressMessages ... model.matrix.default -> terms -> terms.default -> %||% -> %||%
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s35,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Sonnet,claude-sonnet-4-20250514,1,8.605111436192151e-05,1,1,,8.605111436192151e-05
+s35,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-4o,gpt-4o,0,8.605111436192151e-05,1,1,,8.605111436192151e-05
+s35,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ sunab(treated, period) | unit_id + peri...: 
+Evaluation of the right-hand-side of the formula raises an error: 
+  dimension extent is '0' while length of names is '1'
+Execution hal",o3,o3,0,,0,0,,
+s35,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,8.605111436192151e-05,1,1,,8.605111436192151e-05
+s35,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Gemini,gemini-2.5-flash,1,8.605111436192151e-05,1,1,,8.605111436192151e-05
+s35,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: unexpected '|' in:
+""    ""| 95% CI = ["", round(ci_twfe_2c[1], 4), "","", round(ci_twfe_2c[2], 4), ""]"",
+    |""
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s36,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.9773,0,,Kimi,moonshot-v1-128k,0,1.977067166305298,0,0,,1.977067166305298
+s36,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0001,1,,Sonnet,claude-sonnet-4-20250514,1,8.209268747322089e-05,1,1,,8.209268747322089e-05
+s36,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,8.209268747322089e-05,1,1,,8.209268747322089e-05
+s36,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in contrib.url(repos, ""source"") : 
+  trying to use CRAN without setting a mirror
+Calls: suppressMessages ... withCallingHandlers -> install.packages -> contrib.url
+Execution halted",o3,o3,0,,0,0,,
+s36,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.6595,0,,Opus,claude-opus-4-6,0,8.209268747322089e-05,1,1,,8.209268747322089e-05
+s36,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.6595,0,,Gemini,gemini-2.5-flash,0,8.209268747322089e-05,1,1,,8.209268747322089e-05
+s36,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,8.209268747322089e-05,1,1,,8.209268747322089e-05
+s37,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.2321,0,,Kimi,moonshot-v1-128k,0,2.232147297573591,0,0,,2.232147297573591
+s37,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Sonnet,claude-sonnet-4-20250514,1,0.00018235368879411854,1,1,,0.00018235368879411854
+s37,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.4824,0,,GPT-4o,gpt-4o,0,0.00018235368879411854,1,1,,0.00018235368879411854
+s37,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in coeftest(did_naive, vcov. = vcovHC(did_naive, type = ""HC1"")) : 
+  could not find function ""coeftest""
+Calls: suppressMessages -> withCallingHandlers -> print
+Execution halted",o3,o3,0,,0,0,,
+s37,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Opus,claude-opus-4-6,1,0.00018235368879411854,1,1,,0.00018235368879411854
+s37,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.4824,0,,Gemini,gemini-2.5-flash,0,0.00018235368879411854,1,1,,0.00018235368879411854
+s37,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in x$p : $ operator is invalid for atomic vectors
+Calls: suppressMessages -> withCallingHandlers -> sapply -> lapply -> FUN
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s38,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.5969,0,,Kimi,moonshot-v1-128k,0,2.596665239965015,0,0,,2.596665239965015
+s38,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(lfe) : there is no package called ‘lfe’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s38,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0013,1,,GPT-4o,gpt-4o,1,0.0013088436893263424,1,1,,0.0013088436893263424
+s38,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0," ssc, forceCovariance = forceCovariance,  : 
+  To compute the Clustered VCOV, we need a variable for the clusters. Since you didn't provide it in the formula, we typically deduce it from a) the 'panel",o3,o3,0,,0,0,,
+s38,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,6.823355726335824e-05,1,1,,6.823355726335824e-05
+s38,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.7294,0,,Gemini,gemini-2.5-flash,0,6.823355726335824e-05,1,1,,6.823355726335824e-05
+s38,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,6.823355726335824e-05,1,1,,6.823355726335824e-05
+s39,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Kimi,moonshot-v1-128k,1,0.0002332018615591597,1,1,,0.0002332018615591597
+s39,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.9295,0,,Sonnet,claude-sonnet-4-20250514,0,0.0002332018615591597,1,1,,0.0002332018615591597
+s39,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.0002332018615591597,1,1,,0.0002332018615591597
+s39,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,", ssc = ssc, forceCovariance = forceCovariance,  : 
+  To compute the Clustered VCOV, we need a variable for the clusters. Since you didn't provide it in the formula, we typically deduce it from a) the",o3,o3,0,,0,0,,
+s39,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Opus,claude-opus-4-6,1,0.0002332018615591597,1,1,,0.0002332018615591597
+s39,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in contrib.url(repos, ""source"") : 
+  trying to use CRAN without setting a mirror
+Calls: suppressMessages ... withCallingHandlers -> install.packages -> contrib.url
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s39,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,GPT-5,gpt-5,1,0.0002332018615591597,1,1,,0.0002332018615591597
+s40,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.8426,0,,Kimi,moonshot-v1-128k,0,0.8425152210412573,0,0,,0.8425152210412573
+s40,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0915,1,,Sonnet,claude-sonnet-4-20250514,1,0.0001187156421184231,1,1,,0.0001187156421184231
+s40,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.0001187156421184231,1,1,,0.0001187156421184231
+s40,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ sunab(treated, period) | unit_id + peri...: 
+Evaluation of the right-hand-side of the formula raises an error: 
+  dimension extent is '0' while length of names is '1'
+Execution hal",o3,o3,0,,0,0,,
+s40,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.0001187156421184231,1,1,,0.0001187156421184231
+s40,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,", ssc = ssc, forceCovariance = forceCovariance,  : 
+  To compute the Clustered VCOV, we need a variable for the clusters. Since you didn't provide it in the formula, we typically deduce it from a) the",Gemini,gemini-2.5-flash,0,,0,0,,
+s40,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ treated:post | unit_id + period + unit_...: 
+All observations are fixed-effects singletons. The estimation cannot be
+done.
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s41,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,4.2006,0,,Kimi,moonshot-v1-128k,0,4.200377625678546,0,0,,4.200377625678546
+s41,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in sprintf(""Interpretation: The ACA mandate %.4f log premium points\n"",  : 
+  invalid format '%.4f'; use format %s for character objects
+Calls: suppressMessages -> withCallingHandlers -> cat -> ",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s41,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-4o,gpt-4o,0,0.0004720320981826572,1,1,,0.0004720320981826572
+s41,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in contrib.url(repos, ""source"") : 
+  trying to use CRAN without setting a mirror
+Calls: suppressMessages ... withCallingHandlers -> install.packages -> contrib.url
+Execution halted",o3,o3,0,,0,0,,
+s41,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0005,1,,Opus,claude-opus-4-6,1,0.0004720320981826572,1,1,,0.0004720320981826572
+s41,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in etable(model_did_ols, se.type = ""robust"") : 
+  The second element of '...' (named 'se.type') is not valid: it should be a fixest object or a list of fixest objects, it is neither.
+Calls: supp",Gemini,gemini-2.5-flash,0,,0,0,,
+s41,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in contrib.url(repos, ""source"") : 
+  trying to use CRAN without setting a mirror
+Calls: suppressMessages ... withCallingHandlers -> install.packages -> contrib.url
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s42,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.6974,0,,Kimi,moonshot-v1-128k,0,2.6974614607580483,0,0,,2.6974614607580483
+s42,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.9474,0,,Sonnet,claude-sonnet-4-20250514,0,0.0002635161842856103,1,1,,0.0002635161842856103
+s42,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.0002635161842856103,1,1,,0.0002635161842856103
+s42,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in cat(""95% CI: "", round(confint(did_twfe, ""treat_x_post""), 4),  : 
+  argument 2 (type 'list') cannot be handled by 'cat'
+Calls: suppressMessages -> withCallingHandlers -> cat
+Execution halted",o3,o3,0,,0,0,,
+s42,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error: in feols(y ~ i(period, treated, ref = max(df$period[...: 
+The variable 'df' is in the RHS (first part) of the formula but not in the
+data set.
+Execution halted",Opus,claude-opus-4-6,0,,0,0,,
+s42,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0003,1,,Gemini,gemini-2.5-flash,1,0.0002635161842856103,1,1,,0.0002635161842856103
+s42,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0003,1,,GPT-5,gpt-5,1,0.0002635161842856103,1,1,,0.0002635161842856103
+s43,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.6302,0,,Kimi,moonshot-v1-128k,0,1.6304708081924026,0,0,,1.6304708081924026
+s43,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Sonnet,claude-sonnet-4-20250514,1,0.0001487209994051173,1,1,,0.0001487209994051173
+s43,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0014,1,,GPT-4o,gpt-4o,1,0.0014447182799353833,1,1,,0.0014447182799353833
+s43,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in etable(event_mod, se.bare = ""cluster"") : 
+  The second element of '...' (named 'se.bare') is not valid: it should be a fixest object or a list of fixest objects, it is neither.
+Calls: suppres",o3,o3,0,,0,0,,
+s43,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.0001487209994051173,1,1,,0.0001487209994051173
+s43,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,0.0001487209994051173,1,1,,0.0001487209994051173
+s43,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,0.0001487209994051173,1,1,,0.0001487209994051173
+s44,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in coef(did_model)[""treat_x_post"", 1] : 
+  incorrect number of dimensions
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s44,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0003,1,,Sonnet,claude-sonnet-4-20250514,1,0.00032110796208146544,1,1,,0.00032110796208146544
+s44,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.9714,0,,GPT-4o,gpt-4o,0,0.00032110796208146544,1,1,,0.00032110796208146544
+s44,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ treat_x_post | unit_id + period, data =...: 
+The only variable, 'treat_x_post', is collinear with the fixed effects.
+Without doubt, your model is misspecified.
+Execution halted",o3,o3,0,,0,0,,
+s44,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0003,1,,Opus,claude-opus-4-6,1,0.00032110796208146544,1,1,,0.00032110796208146544
+s44,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,0.00032110796208146544,1,1,,0.00032110796208146544
+s44,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,4.1768,0,,GPT-5,gpt-5,0,0.00032110796208146544,1,1,,0.00032110796208146544
+s45,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.7775,0,,Kimi,moonshot-v1-128k,0,1.7773359555561936,0,0,,1.7773359555561936
+s45,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ treat_x_post + treated + post | unit_id...: 
+You cannot use the argument 'vcov' in combination with 'cluster'.
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s45,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.00015790758099937013,1,1,,0.00015790758099937013
+s45,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ faux_int | unit_id + period, data = dat...: 
+The data set contains 0 observation: the estimation cannot be done.
+Execution halted",o3,o3,0,,0,0,,
+s45,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,Opus,claude-opus-4-6,1,0.00015790758099937013,1,1,,0.00015790758099937013
+s45,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s45,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0002,1,,GPT-5,gpt-5,1,0.00015790758099937013,1,1,,0.00015790758099937013
+s46,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.7016,0,,Kimi,moonshot-v1-128k,0,2.701630659528573,0,0,,2.701630659528573
+s46,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(lfe) : there is no package called ‘lfe’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s46,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.3924,0,,GPT-4o,gpt-4o,0,0.00025706078928833557,1,1,,0.00025706078928833557
+s46,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0003,1,,o3,o3,1,0.00025706078928833557,1,1,,0.00025706078928833557
+s46,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0003,1,,Opus,claude-opus-4-6,1,0.00025706078928833557,1,1,,0.00025706078928833557
+s46,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Gemini,gemini-2.5-flash,0,0.00025706078928833557,1,1,,0.00025706078928833557
+s46,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in ct_twfe[""treat_x_post"", ""Pr(>t)""] : subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers -> unname
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s47,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Kimi,moonshot-v1-128k,1,0.0,1,1,,0.0
+s47,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ placebo_interact | unit_id + period, da...: 
+The only variable, 'placebo_interact', is collinear with the fixed effects.
+Without doubt, your model is misspecified.
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s47,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,4.9688,0,,GPT-4o,gpt-4o,0,0.0001468469576882687,1,1,,0.0001468469576882687
+s47,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,o3,o3,0,0.0001468469576882687,1,1,,0.0001468469576882687
+s47,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.0001468469576882687,1,1,,0.0001468469576882687
+s47,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in etable(model_did_fe, model_ols_did, headers = list(`DID with FE` = ""model_did_fe"",  : 
+  The second element of '...' is not valid: it should be a fixest object or a list of fixest objects, it",Gemini,gemini-2.5-flash,0,,0,0,,
+s47,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: 'coef' is not an exported object from 'namespace:fixest'
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s48,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.326,1,,Kimi,moonshot-v1-128k,1,0.32612193641423565,1,1,,0.32612193641423565
+s48,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Sonnet,claude-sonnet-4-20250514,1,0.00013168079291111948,1,1,,0.00013168079291111948
+s48,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.254,1,,GPT-4o,gpt-4o,1,0.00013168079291111948,1,1,,0.00013168079291111948
+s48,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(leadlag_fml, data = df, cluster = ""unit_id""): 
+The variable 'D' is in the RHS (first part) of the formula but not in the
+data set.
+Maybe you meant: `D-3`, `D-2`, `D-1`, `D0`, `D1`, `D2",o3,o3,0,,0,0,,
+s48,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,0.00013168079291111948,1,1,,0.00013168079291111948
+s48,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Gemini,gemini-2.5-flash,1,0.00013168079291111948,1,1,,0.00013168079291111948
+s48,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ treat_x_post | unit_id + period + unit_...: 
+All observations are fixed-effects singletons. The estimation cannot be
+done.
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s49,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,12.9963,0,,Kimi,moonshot-v1-128k,0,12.995552357904376,0,0,,12.995552357904376
+s49,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,13.4574,0,,Sonnet,claude-sonnet-4-20250514,0,0.0007194715154685629,1,1,,0.0007194715154685629
+s49,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,33.7033,0,,GPT-4o,gpt-4o,0,0.0007194715154685629,1,1,,0.0007194715154685629
+s49,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: in feols(y ~ treated * post | unit_id + period + i(u...: 
+The fixed-effects part of the formula (unit_id + per..) is not valid:
+
+  The function i() should not be used in the fixed-effects part ",o3,o3,0,,0,0,,
+s49,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0007,1,,Opus,claude-opus-4-6,1,0.0007194715154685629,1,1,,0.0007194715154685629
+s49,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: 'coef' is not an exported object from 'namespace:fixest'
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s49,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,17.3516,0,,GPT-5,gpt-5,0,0.0007194715154685629,1,1,,0.0007194715154685629
+s50,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.7321,0,,Kimi,moonshot-v1-128k,0,0.732172971109935,0,0,,0.732172971109935
+s50,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Sonnet,claude-sonnet-4-20250514,1,1.2309358805580464e-05,1,1,,1.2309358805580464e-05
+s50,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.09,0,,GPT-4o,gpt-4o,0,1.0901291251738698,0,0,,1.0901291251738698
+s50,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in Math.data.frame(list(Model = c(""Simple"", ""TWFE"", ""Trend FE"",  : 
+  non-numeric-alike variable(s) in data frame: Model
+Calls: suppressMessages -> withCallingHandlers -> print -> Math.data.fram",o3,o3,0,,0,0,,
+s50,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,1.2309358805580464e-05,1,1,,1.2309358805580464e-05
+s50,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,1.2309358805580464e-05,1,1,,1.2309358805580464e-05
+s50,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-5,gpt-5,0,1.2309358805580464e-05,1,1,,1.2309358805580464e-05
+s51,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s51,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.7906,0,,Sonnet,claude-sonnet-4-20250514,0,0.8430780444629564,0,1,2,0.0785
+s51,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,51.0644,0,,GPT-4o,gpt-4o,0,0.8430780444629564,0,1,2,0.0785
+s51,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,91.8151,0,,o3,o3,0,0.06284167230697141,1,1,1,0.0628
+s51,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.6869,0,,Opus,claude-opus-4-6,0,0.6868849898474515,0,1,2,0.1566
+s51,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s51,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,91.8151,0,,GPT-5,gpt-5,0,0.07325454261467167,1,1,1,0.0733
+s52,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,9.958634790814722,0,1,11,0.0038
+s52,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"│     └─base::lapply(.x, .f, ...)
+ 10. │       └─dplyr (local) FUN(X[[i]], ...)
+ 11. │         └─mask$eval_all_summarise(quo)
+ 12. │           └─dplyr (local) eval()
+ 13. ├─stats::lm(ret ~ mkt_ret)
+ 1",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s52,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) : 
+  0 (non-NA) cases
+Calls: suppressMessages ... eval_tidy -> calculate_abnormal_returns -> lm -> lm.fit
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s52,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) : 
+  0 (non-NA) cases
+Calls: suppressMessages ... do -> do.grouped_df -> eval_tidy -> tidy -> lm -> lm.fit
+Execution halted",o3,o3,0,,0,0,,
+s52,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.9936,0,,Opus,claude-opus-4-6,0,0.9935514312676943,0,1,2,0.0032
+s52,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s52,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0381,1,,GPT-5,gpt-5,1,0.9935514312676943,0,1,2,0.0032
+s53,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in `contrasts<-`(`*tmp*`, value = contr.funs[1 + isOF[nn]]) : 
+  contrasts can be applied only to factors with 2 or more levels
+Calls: suppressMessages ... model.matrix -> model.matrix.default -",Kimi,moonshot-v1-128k,0,,0,0,,
+s53,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,32.5796,0,,Sonnet,claude-sonnet-4-20250514,0,1.0349227669576897,0,1,2,0.0175
+s53,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,". │   └─dplyr:::mutate_col(dots[[i]], data, mask, new_columns)
+  9. │     └─mask$eval_all_mutate(quo)
+ 10. │       └─dplyr (local) eval()
+ 11. ├─dplyr:::dplyr_internal_error(...)
+ 12. │ └─rlang::abort",GPT-4o,gpt-4o,0,,0,0,,
+s53,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,32.5796,0,,o3,o3,0,1.0735392881128274,0,1,2,0.0368
+s53,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0824,1,,Opus,claude-opus-4-6,1,0.08327736736064471,1,1,1,0.0833
+s53,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s53,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in data.frame(stock_id = s, alpha_hat = est[""alpha_hat""], beta_hat = est[""beta_hat""]) : 
+  row names contain missing values
+Calls: suppressMessages ... withCallingHandlers -> do.call -> lapply -",GPT-5,gpt-5,0,,0,0,,
+s54,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,24.2529,0,,Kimi,moonshot-v1-128k,0,0.07785753727222537,1,1,1,0.0779
+s54,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0944,1,,Sonnet,claude-sonnet-4-20250514,1,0.011595803423523017,1,1,1,0.0116
+s54,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,GPT-4o,gpt-4o,0,4.687465488680287,0,1,6,0.0521
+s54,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,56.2181,0,,o3,o3,0,1.041413583655439,0,1,2,0.0207
+s54,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0265,0,,Opus,claude-opus-4-6,0,1.026504693539481,0,1,2,0.0133
+s54,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s54,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,56.2181,0,,GPT-5,gpt-5,0,1.0320265046935393,0,1,2,0.016
+s55,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in model.frame.default(formula = car ~ event_day, data = data %>%  : 
+  invalid type (list) for variable 'car'
+Calls: suppressMessages ... lm -> eval -> eval -> <Anonymous> -> model.frame.defaul",Kimi,moonshot-v1-128k,0,,0,0,,
+s55,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.1123,0,,Sonnet,claude-sonnet-4-20250514,0,2.1122558488946126,0,1,3,0.0374
+s55,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.8176,0,,GPT-4o,gpt-4o,0,10.19338913930028,0,1,11,0.0176
+s55,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.1142,0,,o3,o3,0,1.1141875939042714,0,1,2,0.0571
+s55,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,34.7731,0,,Opus,claude-opus-4-6,0,1.1141875939042714,0,1,2,0.0571
+s55,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s55,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0677,0,,GPT-5,gpt-5,0,1.067682621449524,0,1,2,0.0338
+s56,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in x$event_day : $ operator is invalid for atomic vectors
+Calls: suppressMessages ... withCallingHandlers -> ave -> lapply -> FUN -> mean
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s56,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,22.9096,0,,Sonnet,claude-sonnet-4-20250514,0,1.9966101694915255,0,1,3,0.0011
+s56,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,", value = `<dbl[,80]>`)
+  4. ├─tibble:::`$<-.tbl_df`(`*tmp*`, ar, value = `<dbl[,80]>`)
+  5. │ └─tibble:::tbl_subassign(...)
+  6. │   └─tibble:::vectbl_recycle_rhs_rows(value, fast_nrow(xo), i_arg = N",GPT-4o,gpt-4o,0,,0,0,,
+s56,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,o3,o3,0,1.0022598870056498,0,1,2,0.0011
+s56,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,46.1977,0,,Opus,claude-opus-4-6,0,0.9254237288135594,0,1,2,0.0373
+s56,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,46.1977,0,,Gemini,gemini-2.5-flash,0,0.019209039548022524,1,1,1,0.0192
+s56,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0192,1,,GPT-5,gpt-5,1,0.019209039548022524,1,1,1,0.0192
+s57,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"ta, mask, new_columns)
+  9. │     └─mask$eval_all_mutate(quo)
+ 10. │       └─dplyr (local) eval()
+ 11. ├─dplyr:::dplyr_internal_error(""dplyr:::mutate_not_vector"", `<named list>`)
+ 12. │ └─rlang::abort",Kimi,moonshot-v1-128k,0,,0,0,,
+s57,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,99.884,0,,Sonnet,claude-sonnet-4-20250514,0,1.0735829433177324,0,1,2,0.0368
+s57,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,GPT-4o,gpt-4o,0,5.259750390015601,0,1,6,0.0433
+s57,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,64.0026,0,,o3,o3,0,0.011960478419136774,1,1,1,0.012
+s57,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.1711,0,,Opus,claude-opus-4-6,0,1.1710868434737387,0,1,2,0.0855
+s57,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s57,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,64.0026,0,,GPT-5,gpt-5,0,5.110244409776391,0,1,6,0.0184
+s58,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,0.5110716017455956,0,0,1,0.5111
+s58,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"│     └─base::lapply(.x, .f, ...)
+ 10. │       └─dplyr (local) FUN(X[[i]], ...)
+ 11. │         └─mask$eval_all_summarise(quo)
+ 12. │           └─dplyr (local) eval()
+ 13. ├─stats::lm(ret ~ mkt_ret)
+ 1",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s58,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,41.4073,0,,GPT-4o,gpt-4o,0,0.03022466461936313,1,1,1,0.0302
+s58,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.2163,0,,o3,o3,0,0.03022466461936313,1,1,1,0.0302
+s58,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0248,1,,Opus,claude-opus-4-6,1,0.026345563277840628,1,1,1,0.0263
+s58,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0293,1,,Gemini,gemini-2.5-flash,1,0.029254889283982503,1,1,1,0.0293
+s58,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,41.4073,0,,GPT-5,gpt-5,0,0.03426539518344909,1,1,1,0.0343
+s59,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in eval(predvars, data, env) : object 'event_day' not found
+Calls: suppressMessages ... eval -> <Anonymous> -> model.frame.default -> eval -> eval
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s59,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.9535,0,,Sonnet,claude-sonnet-4-20250514,0,0.9535231365087995,0,1,2,0.0232
+s59,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,34.9743,0,,GPT-4o,gpt-4o,0,0.9535231365087995,0,1,2,0.0232
+s59,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,o3,o3,0,0.9535231365087995,0,1,2,0.0232
+s59,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0204,0,,Opus,claude-opus-4-6,0,0.9535231365087995,0,1,2,0.0232
+s59,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Gemini,gemini-2.5-flash,0,0.9535231365087995,0,1,2,0.0232
+s59,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.9535,0,,GPT-5,gpt-5,0,0.9535231365087995,0,1,2,0.0232
+s60,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in aggregate.data.frame(lhs, mf[-1L], FUN = FUN, ...) : 
+  no rows to aggregate
+Calls: suppressMessages ... aggregate -> aggregate.formula -> aggregate.data.frame
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s60,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in cat(""Cumulative Abnormal Return on Event Day (0):"", round(event_day_0_car *  : 
+  argument 2 (type 'list') cannot be handled by 'cat'
+Calls: suppressMessages -> withCallingHandlers -> cat
+Exe",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s60,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,GPT-4o,gpt-4o,0,,0,0,,
+s60,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in beta[match(stock_id, df$stock_id[df$event_day == 0])] : 
+  object of type 'closure' is not subsettable
+Calls: suppressMessages ... model.frame.default -> eval -> eval -> I -> unique.default
+E",o3,o3,0,,0,0,,
+s60,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.9863,0,,Opus,claude-opus-4-6,0,0.9882039573820394,0,1,2,0.0059
+s60,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,48.5647,0,,Gemini,gemini-2.5-flash,0,0.9882039573820394,0,1,2,0.0059
+s60,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0868,1,,GPT-5,gpt-5,1,1.0547945205479452,0,1,2,0.0274
+s61,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,1.916055962691539,0,0,11,1.0833
+s61,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.7821,0,,Sonnet,claude-sonnet-4-20250514,0,1.6482345103264489,0,1,3,0.1173
+s61,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,8.9353,0,,GPT-4o,gpt-4o,0,8.937819231623362,0,1,10,0.0062
+s61,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in coeftest(reg, vcov = se_clust)[""treat"", ] : 
+  subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers -> print
+Execution halted",o3,o3,0,,0,0,,
+s61,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0209,0,,Opus,claude-opus-4-6,0,1.0208749722407284,0,1,2,0.0104
+s61,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s61,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.0209,0,,GPT-5,gpt-5,0,1.0208749722407284,0,1,2,0.0104
+s62,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in market_models[[stock_id]] : recursive indexing failed at level 3
+Calls: suppressMessages ... withCallingHandlers -> with -> with.default -> eval -> eval -> predict
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s62,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.6749,0,,Sonnet,claude-sonnet-4-20250514,0,1.6749086822141055,0,1,3,0.1084
+s62,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.3825,0,,GPT-4o,gpt-4o,0,2.2649620679966285,0,1,3,0.0883
+s62,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,o3,o3,0,1.095532452936218,0,0,11,1.0087
+s62,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.6749,0,,Opus,claude-opus-4-6,0,1.899128968811464,0,0,11,1.0817
+s62,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s62,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.7592,0,,GPT-5,gpt-5,0,0.44422590615341406,1,1,2,0.2779
+s63,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,16.514683561011022,0,0,11,0.5922
+s63,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1483,1,,Sonnet,claude-sonnet-4-20250514,1,4.899821817461889,0,1,6,0.0167
+s63,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,GPT-4o,gpt-4o,0,359.98462350689636,0,0,11,31.8168
+s63,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error: in feols(fmla, data = dt, cluster = ""stock_id""): 
+The variable 'D' is in the RHS of the formula but not in the data set.
+Maybe you meant: `D-5`, `D-4`, `D-3`, `D-2`, `D-1`, `D0`, `D1`, `D2`, `D",o3,o3,0,,0,0,,
+s63,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.9732,0,,Opus,claude-opus-4-6,0,0.9732066257506764,0,1,2,0.0134
+s63,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s63,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.026,0,,GPT-5,gpt-5,0,1.026001451857718,0,1,2,0.013
+s64,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in `$<-.data.frame`(`*tmp*`, car, value = c(NA, 0.0248463429, 0.0115751236,  : 
+  replacement has 1261 rows, data has 1260
+Calls: suppressMessages -> withCallingHandlers -> $<- -> $<-.data.frame",Kimi,moonshot-v1-128k,0,,0,0,,
+s64,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.9549,0,,Sonnet,claude-sonnet-4-20250514,0,2.0544545924521804,0,1,3,0.0182
+s64,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,GPT-4o,gpt-4o,0,0.82233327589178,0,1,2,0.0888
+s64,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in pivot_wider(., names_from = term, values_from = estimate) : 
+  could not find function ""pivot_wider""
+Calls: suppressMessages -> withCallingHandlers -> %>% -> rename
+Execution halted",o3,o3,0,,0,0,,
+s64,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,44.0812,0,,Opus,claude-opus-4-6,0,0.8955712562467688,0,1,2,0.0522
+s64,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s64,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0221,1,,GPT-5,gpt-5,1,0.8955712562467688,0,1,2,0.0522
+s65,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in covHC(residuals, method = ""HC1"") : 
+  could not find function ""covHC""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s65,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.4295,1,,Sonnet,claude-sonnet-4-20250514,1,0.42954934398174555,1,1,1,0.4295
+s65,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,GPT-4o,gpt-4o,0,684.9811751283515,0,0,11,61.3619
+s65,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,36.6532,0,,o3,o3,0,116.66970907016542,0,0,11,9.6972
+s65,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.2602,1,,Opus,claude-opus-4-6,1,362.27723901882484,0,0,11,32.0252
+s65,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s65,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.978,0,,GPT-5,gpt-5,0,114.8692241871078,0,0,11,9.5336
+s66,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rowSums(event_data$ar - event_data$ar.x) : 
+  'x' must be an array of at least two dimensions
+Calls: suppressMessages -> withCallingHandlers -> rowSums
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s66,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.602,0,,Sonnet,claude-sonnet-4-20250514,0,1.602001539645881,0,1,3,0.1327
+s66,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,4.2508,0,,GPT-4o,gpt-4o,0,4.2501924557351805,0,1,5,0.05
+s66,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,o3,o3,0,1.602001539645881,0,1,3,0.1327
+s66,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.4303,1,,Opus,claude-opus-4-6,1,0.5858352578906851,0,1,2,0.2071
+s66,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s66,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.5704,0,,GPT-5,gpt-5,0,0.5704387990762126,0,1,2,0.2148
+s67,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s67,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s67,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,7.799063291447402e-05,1,1,,7.799063291447402e-05
+s67,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0005,1,,o3,o3,1,7.799063291447402e-05,1,1,,7.799063291447402e-05
+s67,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,7.799063291447402e-05,1,1,,7.799063291447402e-05
+s67,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.0524,0,,Gemini,gemini-2.5-flash,0,7.799063291447402e-05,1,1,,7.799063291447402e-05
+s67,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.2804,0,,GPT-5,gpt-5,0,7.799063291447402e-05,1,1,,7.799063291447402e-05
+s68,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s68,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s68,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.00010580890911025289,1,1,,0.00010580890911025289
+s68,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.8668,0,,o3,o3,0,0.00010580890911025289,1,1,,0.00010580890911025289
+s68,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.00010580890911025289,1,1,,0.00010580890911025289
+s68,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,0.00010580890911025289,1,1,,0.00010580890911025289
+s68,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.8669,0,,GPT-5,gpt-5,0,0.00010580890911025289,1,1,,0.00010580890911025289
+s69,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s69,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s69,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.4667,0,,GPT-4o,gpt-4o,0,,0,0,,
+s69,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,o3,o3,1,7.400153429786714e-06,1,1,,7.400153429786714e-06
+s69,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0247,1,,Opus,claude-opus-4-6,1,0.02465977794606283,1,1,,0.02465977794606283
+s69,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in summary(iv_model, diagnostics = TRUE)$diagnostics[1, ""F-Statistic""] : 
+  subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s69,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-5,gpt-5,1,7.400153429786714e-06,1,1,,7.400153429786714e-06
+s70,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in overid(second_stage, first_stage) : 
+  could not find function ""overid""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s70,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s70,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,9.233073553399395e-05,1,1,,9.233073553399395e-05
+s70,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,o3,o3,0,9.233073553399395e-05,1,1,,9.233073553399395e-05
+s70,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,9.233073553399395e-05,1,1,,9.233073553399395e-05
+s70,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.3463,0,,Gemini,gemini-2.5-flash,0,9.233073553399395e-05,1,1,,9.233073553399395e-05
+s70,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,9.233073553399395e-05,1,1,,9.233073553399395e-05
+s71,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in bptest(second_stage, ~predict(first_stage) + controls, data = data,  : 
+  formal argument ""data"" matched by multiple actual arguments
+Calls: suppressMessages -> withCallingHandlers
+Execution ",Kimi,moonshot-v1-128k,0,,0,0,,
+s71,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Sonnet,claude-sonnet-4-20250514,1,8.988834304516399e-05,1,1,,8.988834304516399e-05
+s71,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,8.988834304516399e-05,1,1,,8.988834304516399e-05
+s71,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,o3,o3,0,8.988834304516399e-05,1,1,,8.988834304516399e-05
+s71,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,0.00010552109835738529,1,1,,0.00010552109835738529
+s71,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in if (!is.na(weak_instrument_fstat)) { : 
+  argument is of length zero
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s71,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,8.988834304516399e-05,1,1,,8.988834304516399e-05
+s72,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in areg(x ~ z + controls, data = data, absorb = ""id"") : 
+  could not find function ""areg""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s72,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.6478,0,,Sonnet,claude-sonnet-4-20250514,0,0.0001022904537433884,1,1,,0.0001022904537433884
+s72,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.0001022904537433884,1,1,,0.0001022904537433884
+s72,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(test) : 'arg' should be one of “Chisq”, “F”
+Calls: suppressMessages ... linearHypothesis -> linearHypothesis.default -> match.arg
+Execution halted",o3,o3,0,,0,0,,
+s72,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.0001022904537433884,1,1,,0.0001022904537433884
+s72,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s72,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.6478,0,,GPT-5,gpt-5,0,0.0001022904537433884,1,1,,0.0001022904537433884
+s73,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s73,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s73,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,2.4260009072594307e-06,1,1,,2.4260009072594307e-06
+s73,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in anova.ivreg(iv, diagnostics = TRUE) : 
+  argument ""object2"" is missing, with no default
+Calls: suppressMessages ... anova -> anova.ivreg -> waldtest -> waldtest.default
+Execution halted",o3,o3,0,,0,0,,
+s73,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.4656,1,,Opus,claude-opus-4-6,1,2.4260009072594307e-06,1,1,,2.4260009072594307e-06
+s73,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,2.4260009072594307e-06,1,1,,2.4260009072594307e-06
+s73,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.5526,0,,GPT-5,gpt-5,0,2.4260009072594307e-06,1,1,,2.4260009072594307e-06
+s74,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in constants(lhs, cnames_symb) : 
+  The hypothesis ""z = 0"" is not well formed: contains bad coefficient/variable names.
+Calls: suppressMessages ... linearHypothesis.default -> makeHypothesis -> ",Kimi,moonshot-v1-128k,0,,0,0,,
+s74,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s74,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in phtest(iv_model, lm(y ~ x + controls, data = data)) : 
+  could not find function ""phtest""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s74,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.4971,0,,o3,o3,0,1.949355737930564e-05,1,1,,1.949355737930564e-05
+s74,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,1.949355737930564e-05,1,1,,1.949355737930564e-05
+s74,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.4502,0,,Gemini,gemini-2.5-flash,0,1.949355737930564e-05,1,1,,1.949355737930564e-05
+s74,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.4971,0,,GPT-5,gpt-5,0,1.949355737930564e-05,1,1,,1.949355737930564e-05
+s75,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(clubSandwich) : 
+  there is no package called ‘clubSandwich’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s75,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s75,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.00010447857411203048,1,1,,0.00010447857411203048
+s75,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,o3,o3,1,0.00010447857411203048,1,1,,0.00010447857411203048
+s75,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in summary(balance_test)$coefficients[""z"", ""Pvalue""] : 
+  subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers -> cat
+Execution halted",Opus,claude-opus-4-6,0,,0,0,,
+s75,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in se(iv_model) : could not find function ""se""
+Calls: suppressMessages -> withCallingHandlers -> cat -> sprintf
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s75,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0019,1,,GPT-5,gpt-5,1,0.00010447857411203048,1,1,,0.00010447857411203048
+s76,IV,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s76,IV,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s76,IV,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,0.00022205811725709292,1,1,,0.00022205811725709292
+s76,IV,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,o3,o3,0,0.00022205811725709292,1,1,,0.00022205811725709292
+s76,IV,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,0.00022205811725709292,1,1,,0.00022205811725709292
+s76,IV,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in contrib.url(repos, ""source"") : 
+  trying to use CRAN without setting a mirror
+Calls: suppressMessages ... withCallingHandlers -> install.packages -> contrib.url
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s76,IV,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0002,1,,GPT-5,gpt-5,1,0.00022205811725709292,1,1,,0.00022205811725709292
+s77,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in bptest(second_stage, ~predicted_x + controls, data = data, order.by = ""fitted"") : 
+  unused argument (order.by = ""fitted"")
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s77,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s77,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-4o,gpt-4o,0,,0,0,,
+s77,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in first_stage$diagnostics : 
+  $ operator is invalid for atomic vectors
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",o3,o3,0,,0,0,,
+s77,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,2.0398972519335455e-05,1,1,,2.0398972519335455e-05
+s77,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,2.0398972519335455e-05,1,1,,2.0398972519335455e-05
+s77,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.8464,0,,GPT-5,gpt-5,0,2.0398972519335455e-05,1,1,,2.0398972519335455e-05
+s78,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in x$terms : $ operator is invalid for atomic vectors
+Calls: suppressMessages ... model.matrix.default -> terms -> terms.default -> %||% -> %||%
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s78,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s78,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-4o,gpt-4o,1,7.956082425013047e-05,1,1,,7.956082425013047e-05
+s78,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in fs$diagnostics[""weak"", ] : subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers -> print
+Execution halted",o3,o3,0,,0,0,,
+s78,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,7.956082425013047e-05,1,1,,7.956082425013047e-05
+s78,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.0029,0,,Gemini,gemini-2.5-flash,0,7.956082425013047e-05,1,1,,7.956082425013047e-05
+s78,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.0028,0,,GPT-5,gpt-5,0,7.956082425013047e-05,1,1,,7.956082425013047e-05
+s79,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in bptest(second_stage, ~predict(first_stage) + controls, data = data,  : 
+  unused argument (order.by = ""nw"")
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s79,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s79,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.273,1,,GPT-4o,gpt-4o,1,0.00012214912663374564,1,1,,0.00012214912663374564
+s79,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.4695,0,,o3,o3,0,0.00012214912663374564,1,1,,0.00012214912663374564
+s79,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.00012214912663374564,1,1,,0.00012214912663374564
+s79,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in iv_diag[""Weak instrument"", ""F-Statistic""] : 
+  subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s79,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.3625,0,,GPT-5,gpt-5,0,0.00012214912663374564,1,1,,0.00012214912663374564
+s80,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s80,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s80,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in array(x, c(length(x), 1L), if (!is.null(names(x))) list(names(x),  : 
+  'data' must be of a vector type, was 'NULL'
+Calls: suppressMessages ... sargan_test -> as.matrix -> as.matrix.default -",GPT-4o,gpt-4o,0,,0,0,,
+s80,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.9189,0,,o3,o3,0,0.00011223566849537686,1,1,,0.00011223566849537686
+s80,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,Opus,claude-opus-4-6,1,0.00011223566849537686,1,1,,0.00011223566849537686
+s80,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in summary_iv$diagnostics[""Weak instrument test"", ""statistic""] : 
+  subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s80,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.9189,0,,GPT-5,gpt-5,0,0.00011223566849537686,1,1,,0.00011223566849537686
+s81,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in coeftest(second_stage, vcovHC(first_stage, type = ""HC1""), se = TRUE)$estimate : 
+  $ operator is invalid for atomic vectors
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s81,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s81,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-4o,gpt-4o,0,7.737881832306574e-06,1,1,,7.737881832306574e-06
+s81,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,o3,o3,1,7.737881832306574e-06,1,1,,7.737881832306574e-06
+s81,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Opus,claude-opus-4-6,1,7.737881832306574e-06,1,1,,7.737881832306574e-06
+s81,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s81,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,GPT-5,gpt-5,1,7.737881832306574e-06,1,1,,7.737881832306574e-06
+s82,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s82,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Sonnet,claude-sonnet-4-20250514,1,0.009628610729023468,1,1,,0.009628610729023468
+s82,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-4o,gpt-4o,1,0.009628610729023468,1,1,,0.009628610729023468
+s82,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,o3,o3,0,0.009628610729023468,1,1,,0.009628610729023468
+s82,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0096,1,,Opus,claude-opus-4-6,1,0.009628610729023468,1,1,,0.009628610729023468
+s82,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,127.5282,0,,Gemini,gemini-2.5-flash,0,0.009628610729023468,1,1,,0.009628610729023468
+s82,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in iv_ct[""x"", ""z value""] : subscript out of bounds
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s83,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: unexpected ',' in:
+""library(AER)
+estat_overid,""
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s83,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s83,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.6098,0,,GPT-4o,gpt-4o,0,,0,0,,
+s83,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,o3,o3,0,7.515830217402906e-05,1,1,,7.515830217402906e-05
+s83,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.1929,0,,Opus,claude-opus-4-6,0,7.515830217402906e-05,1,1,,7.515830217402906e-05
+s83,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.1928,0,,Gemini,gemini-2.5-flash,0,7.515830217402906e-05,1,1,,7.515830217402906e-05
+s83,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0001,1,,GPT-5,gpt-5,1,7.515830217402906e-05,1,1,,7.515830217402906e-05
+s84,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in vif.default(data = data, model = ivreg(y ~ x | z + controls,  : 
+  argument ""mod"" is missing, with no default
+Calls: suppressMessages -> withCallingHandlers -> vif -> vif.default -> coef
+Exec",Kimi,moonshot-v1-128k,0,,0,0,,
+s84,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s84,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-4o,gpt-4o,0,,0,0,,
+s84,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in x$terms %||% attr(x, ""terms"") %||% stop(""no terms component nor attribute"") : 
+  no terms component nor attribute
+Calls: suppressMessages ... model.matrix.default -> terms -> terms.default ->",o3,o3,0,,0,0,,
+s84,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.0853,0,,Opus,claude-opus-4-6,0,1.0581898604258157e-05,1,1,,1.0581898604258157e-05
+s84,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Gemini,gemini-2.5-flash,1,1.0581898604258157e-05,1,1,,1.0581898604258157e-05
+s84,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.0841,0,,GPT-5,gpt-5,0,1.0581898604258157e-05,1,1,,1.0581898604258157e-05
+s85,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y ~ running_var | treated, data = data, kernel = ""triangular"",  : 
+  unused arguments (data = data, degree = 2)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s85,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rddensity(data$running_var, c = cutoff) : 
+  could not find function ""rddensity""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s85,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s85,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in round(rd_main$pval[1], 4) : 
+  non-numeric argument to mathematical function
+Calls: suppressMessages -> withCallingHandlers -> cat
+Execution halted",o3,o3,0,,0,0,,
+s85,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1272,1,,Opus,claude-opus-4-6,1,0.12745038118172447,1,1,,0.12745038118172447
+s85,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s85,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.5925,0,,GPT-5,gpt-5,0,0.10748468957424176,1,1,,0.10748468957424176
+s86,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y ~ running_var + treated + I(running_var^2), data = data,  : 
+  unused argument (data = data)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s86,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(data$y, data$age_centered, c = 0) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s86,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,3.8876,0,,GPT-4o,gpt-4o,0,0.11534269473457841,1,1,,0.11534269473457841
+s86,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0151,1,,o3,o3,1,0.015146701596781952,1,1,,0.015146701596781952
+s86,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0151,1,,Opus,claude-opus-4-6,1,0.013191657828239663,1,1,,0.013191657828239663
+s86,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s86,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.4438,0,,GPT-5,gpt-5,0,0.04789368471986668,1,1,,0.04789368471986668
+s87,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,`geom_smooth()` using formula = 'y ~ x',Kimi,moonshot-v1-128k,0,,0,0,,
+s87,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1218,1,,Sonnet,claude-sonnet-4-20250514,1,0.12176379105296861,1,1,,0.12176379105296861
+s87,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.3883,0,,GPT-4o,gpt-4o,0,0.12244144244876101,1,1,,0.12244144244876101
+s87,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y = df$y, x = df$running_var, c = 0, p = 1, kernel = ""triangular"") : 
+  
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",o3,o3,0,,0,0,,
+s87,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1218,1,,Opus,claude-opus-4-6,1,0.12176379105296861,1,1,,0.12176379105296861
+s87,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y = data$y, x = data$running_var, c = 0) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s87,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.3883,0,,GPT-5,gpt-5,0,0.1105825430223929,1,1,,0.1105825430223929
+s88,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s88,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y = data$y, x = data$running_var, c = 0) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s88,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s88,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y = df$y, x = df$running, c = 0) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",o3,o3,0,,0,0,,
+s88,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0748,1,,Opus,claude-opus-4-6,1,0.0748211921567398,1,1,,0.0748211921567398
+s88,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y = data$y, x = data$running_var, c = 0) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",Gemini,gemini-2.5-flash,0,,0,0,,
+s88,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in withCallingHandlers(expr, message = function(c) if (inherits(c,  : 
+  Running variable does not have support on both sides of the cutoff. RDD is not feasible.
+Calls: suppressMessages -> withC",GPT-5,gpt-5,0,,0,0,,
+s89,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y ~ running_var | treated, data = data, c = 0.5, h = 0.05) : 
+  unused argument (data = data)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s89,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rddensity(data$running_var_centered, c = 0) : 
+  could not find function ""rddensity""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s89,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,3.2296,0,,GPT-4o,gpt-4o,0,,0,0,,
+s89,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,o3,o3,0,,0,0,,
+s89,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.223,1,,Opus,claude-opus-4-6,1,0.22277206784249048,1,1,,0.22277206784249048
+s89,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s89,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error: 'rddensity.test' is not an exported object from 'namespace:rddensity'
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s90,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in chol.default(crossprod(x)) : 
+  the leading minor of order 3 is not positive
+Calls: suppressMessages ... rdrobust -> qrXXinv -> chol2inv -> chol -> chol.default
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s90,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.1961,1,,Sonnet,claude-sonnet-4-20250514,1,0.19609353091211773,1,1,,0.19609353091211773
+s90,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s90,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.4513,0,,o3,o3,0,0.1952032690415886,1,1,,0.1952032690415886
+s90,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.4513,0,,Opus,claude-opus-4-6,0,0.23838096976225553,1,1,,0.23838096976225553
+s90,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s90,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.4513,0,,GPT-5,gpt-5,0,0.17339185321362274,1,1,,0.17339185321362274
+s91,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in if (var(T_l) == 0 | var(T_r) == 0) perf_comp = TRUE : 
+  missing value where TRUE/FALSE needed
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s91,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.1362,0,,Sonnet,claude-sonnet-4-20250514,0,1.1362199444391223,0,0,,1.1362199444391223
+s91,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdplot(data$y, data$running_var, c = 0.15, title = ""RDD Plot of Log Neonatal Mortality by Birth Weight"",  : 
+  unused arguments (xlabel = ""Birth Weight (grams)"", ylabel = ""Log Neonatal Mortal",GPT-4o,gpt-4o,0,,0,0,,
+s91,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.6291,0,,o3,o3,0,0.6291379853023689,0,0,,0.6291379853023689
+s91,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.1445,0,,Opus,claude-opus-4-6,0,1.1444309115541993,0,0,,1.1444309115541993
+s91,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s91,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in model.frame.default(formula = treated ~ post + r + I(post * r),  : 
+  variable lengths differ (found for 'post')
+Calls: suppressMessages ... lm -> eval -> eval -> <Anonymous> -> model.frame.d",GPT-5,gpt-5,0,,0,0,,
+s92,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(y = data$y, x = data$running_var, c = cutoff, h = 0.05,  : 
+  unused arguments (degree = 2, bias = TRUE)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s92,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rddensity(data$running_var, c = cutoff) : 
+  could not find function ""rddensity""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s92,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s92,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0973,1,"`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'",o3,o3,1,0.11671509038083216,1,1,,0.11671509038083216
+s92,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.1167,1,,Opus,claude-opus-4-6,1,0.11671509038083216,1,1,,0.11671509038083216
+s92,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s92,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0,1,,GPT-5,gpt-5,1,1.0908971902034685e-05,1,1,,1.0908971902034685e-05
+s93,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdplot(data$running_var, data$y, data$treated, c = 0.05, xlab = ""Elevation"",  : 
+  unused arguments (xlab = ""Elevation"", ylab = ""Deforestation Rate"")
+Calls: suppressMessages -> withCallingHan",Kimi,moonshot-v1-128k,0,,0,0,,
+s93,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rddensity(data$running_var_centered, c = 0) : 
+  could not find function ""rddensity""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s93,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,4.644,0,,GPT-4o,gpt-4o,0,0.1364713850321707,1,1,,0.1364713850321707
+s93,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,4.644,0,"`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'",o3,o3,0,0.13308499830680673,1,1,,0.13308499830680673
+s93,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.1336,1,,Opus,claude-opus-4-6,1,0.13364939609436735,1,1,,0.13364939609436735
+s93,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s93,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,GPT-5,gpt-5,0,0.05181171689806972,1,1,,0.05181171689806972
+s94,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y ~ running_var | treated, data = data, c = 0.1, h = 0.1) : 
+  unused argument (data = data)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s94,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in chol.default(crossprod(x)) : 
+  the leading minor of order 1 is not positive
+Calls: suppressMessages ... rdrobust_bw -> qrXXinv -> chol2inv -> chol -> chol.default
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s94,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s94,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y = df$y, x = df$running_var, c = cutoff) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",o3,o3,0,,0,0,,
+s94,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.2607,1,,Opus,claude-opus-4-6,1,0.29608930086029317,1,1,,0.29608930086029317
+s94,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s94,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in estimate_rdd(y = df$y, x = df$signed_x, p = 1, h = NULL, donut = 0) : 
+  Treatment coefficient not found.
+Calls: suppressMessages -> withCallingHandlers -> estimate_rdd
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s95,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y = data$y, x = running_var, c = cutoff, h = 0.5, x2 = NULL,  : 
+  unused arguments (x2 = NULL, control = NULL)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s95,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y = data$y, x = data$age_from_21, c = 0) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s95,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.1591,0,,GPT-4o,gpt-4o,0,0.16727215289843625,1,1,,0.16727215289843625
+s95,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rddensity(X = df$running_var, c = 0) : 
+  The cutoff should be set within the range of the data.
+Calls: suppressMessages -> withCallingHandlers -> rddensity
+Execution halted",o3,o3,0,,0,0,,
+s95,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.1673,1,,Opus,claude-opus-4-6,1,0.16727215289843625,1,1,,0.16727215289843625
+s95,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s95,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.0261,0,,GPT-5,gpt-5,0,0.1252566735112937,1,1,,0.1252566735112937
+s96,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y ~ running_var, data = data, c = cutoff, h = ""rd"",  : 
+  unused argument (data = data)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s96,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.4358,1,,Sonnet,claude-sonnet-4-20250514,1,0.43578654883711204,1,1,,0.43578654883711204
+s96,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s96,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.3559,1,,o3,o3,1,0.28902189979264925,1,1,,0.28902189979264925
+s96,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.2875,1,,Opus,claude-opus-4-6,1,0.2874550174185091,1,1,,0.2874550174185091
+s96,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s96,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,8.7195,0,,GPT-5,gpt-5,0,0.14852478024474713,1,1,,0.14852478024474713
+s97,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(data$running_var, data$treated, data$y, c = 0.4949,  : 
+  unused argument (degree = 1)
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Kimi,moonshot-v1-128k,0,,0,0,,
+s97,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rddensity(data$running_var_centered, c = 0) : 
+  could not find function ""rddensity""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s97,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y = data$y, x = data$running_var, c = 0) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s97,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rdrobust(y = dat$y, x = dat$running_var, c = cutoff) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",o3,o3,0,,0,0,,
+s97,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: object 'rdd_type' not found
+Execution halted",Opus,claude-opus-4-6,0,,0,0,,
+s97,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s97,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in round(dens_sum$Estimate[1], 4) : 
+  non-numeric argument to mathematical function
+Calls: suppressMessages -> withCallingHandlers -> cat
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s98,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s98,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in rddensity(data$running_var_centered, c = 0) : 
+  could not find function ""rddensity""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s98,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,16.5623,0,,GPT-4o,gpt-4o,0,2.8057604495960664,0,0,,2.8057604495960664
+s98,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in round(dens$test$p_jkn, 4) : 
+  non-numeric argument to mathematical function
+Calls: suppressMessages -> withCallingHandlers -> cat
+Execution halted",o3,o3,0,,0,0,,
+s98,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,7.7864,0,,Opus,claude-opus-4-6,0,2.8057604495960664,0,0,,2.8057604495960664
+s98,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s98,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,16.5623,0,,GPT-5,gpt-5,0,8.6821215314366,0,0,,8.6821215314366
+s99,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(data$y, data$running_var, c = cutoff, h = 0.05, kernel = ""gaussian"",  : 
+  unused arguments (degree = 2, biasadj = TRUE, covmodel = ""HC1"")
+Calls: suppressMessages -> withCallingHandl",Kimi,moonshot-v1-128k,0,,0,0,,
+s99,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust(data$y, data$running_var, c = cutoff) : 
+Calls: suppressMessages -> withCallingHandlers -> rdrobust
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s99,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",GPT-4o,gpt-4o,0,,0,0,,
+s99,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.174,1,,o3,o3,1,0.17399501357506955,1,1,,0.17399501357506955
+s99,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.174,1,,Opus,claude-opus-4-6,1,0.2368387544617003,1,1,,0.2368387544617003
+s99,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s99,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,3.1074,0,,GPT-5,gpt-5,0,0.2023363084847265,1,1,,0.2023363084847265
+s100,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Kimi,moonshot-v1-128k,0,,0,0,,
+s100,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rddensity(data$bmi_centered) : 
+  could not find function ""rddensity""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Sonnet,claude-sonnet-4-20250514,0,,0,0,,
+s100,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,4.0154,0,,GPT-4o,gpt-4o,0,,0,0,,
+s100,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.5085,0,,o3,o3,0,0.002932502783545452,1,1,,0.002932502783545452
+s100,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,0.0029,1,,Opus,claude-opus-4-6,1,0.0030794539235453012,1,1,,0.0030794539235453012
+s100,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,0,0,,0,,Gemini,gemini-2.5-flash,0,,0,0,,
+s100,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error: 'summary.rddensity' is not an exported object from 'namespace:rddensity'
+Execution halted",GPT-5,gpt-5,0,,0,0,,
+s01,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,3.2468,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.00015083967418633832,1,1,,0.00015083967418633832
+s02,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(model) : 
+  'arg' should be one of “within”, “random”, “ht”, “between”, “pooling”, “fd”
+Calls: suppressMessages -> withCallingHandlers -> plm -> match.arg
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s03,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: unexpected ')' in:
+""library(plm)
+librarytidyverse)""
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s04,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in coeff(did_model) : could not find function ""coeff""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s05,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: unexpected symbol in:
+""# Convert the data to a panel data frame
+p pdata""
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s06,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in coeftest(did_model_clustered, vcov = vcovHC) : 
+  could not find function ""coeftest""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s07,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in tidy_did_model %>% filter(term == ""treated:post"") %>% pull(estimate) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s08,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,4.2796,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,1.3814152703850557,0,0,,1.3814152703850557
+s09,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.3613,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s10,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in eval(predvars, data, env) : object 'announce' not found
+Calls: suppressMessages ... model.frame.Formula -> model.frame -> model.frame.default -> eval -> eval
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s11,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"mutate.data.frame(., expected_ret = intercept + beta * mkt_ret)
+  6. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+  7. │   ├─base::withCallingHandlers(...)
+  8. │   └─dplyr:::mutate_col(dot",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s12,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,". │   └─dplyr:::mutate_col(dots[[i]], data, mask, new_columns)
+  9. │     └─mask$eval_all_mutate(quo)
+ 10. │       └─dplyr (local) eval()
+ 11. ├─dplyr:::dplyr_internal_error(...)
+ 12. │ └─rlang::abort",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s13,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,56.8909,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.8052761010507489,0,1,2,0.0974
+s14,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0," 5. ├─dplyr:::mutate.data.frame(...)
+  6. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+  7. │   ├─base::withCallingHandlers(...)
+  8. │   └─dplyr:::mutate_col(dots[[i]], data, mask, new_col",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s15,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,3.0393,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,3.0400919918992213,0,1,4,0.01
+s16,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s17,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in if (mean(car_data$car, na.rm = TRUE) < -fine_ratio_avg) { : 
+  missing value where TRUE/FALSE needed
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s18,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in eval(predvars, data, env) : object 'eps_surprise' not found
+Calls: suppressMessages ... eval -> <Anonymous> -> model.frame.default -> eval -> eval
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s19,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: object 'overid' not found
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s20,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0,1,,Llama,meta-llama-Llama-3.3-70B-Instruct,1,6.240802365868699e-05,1,1,,6.240802365868699e-05
+s21,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,5.7852,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s22,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in contrib.url(repos, ""source"") : 
+  trying to use CRAN without setting a mirror
+Calls: suppressMessages ... withCallingHandlers -> install.packages -> contrib.url
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s23,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in durbin.wu.hausman.test(y ~ x + controls, z ~ controls, data = data) : 
+  could not find function ""durbin.wu.hausman.test""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s24,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(cluster) : 'arg' should be one of “group”, “time”
+Calls: suppressMessages ... vcovHC -> vcovHC.plm -> vcovG -> vcovG.plm -> match.arg
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s25,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,2.9323,0,`geom_smooth()` using formula = 'y ~ x',Llama,meta-llama-Llama-3.3-70B-Instruct,0,1.5729205989479087e-05,1,1,,1.5729205989479087e-05
+s26,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s27,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in rdrobust::rdrobust(data$running_var, data$treated, model = ""ols"",  : 
+  argument 5 matches multiple formal arguments
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s28,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in data %>% filter(near_cutoff == 1) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s29,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s30,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(foreach) : there is no package called ‘foreach’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s31,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in data %>% filter(period < min(data$period[data$post == 1])) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s32,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in data %>% filter(post == 0) : could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s33,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: unexpected symbol in:
+""library(lmtest)
+did_model lm""
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s34,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(model) : 
+  'arg' should be one of “within”, “random”, “ht”, “between”, “pooling”, “fd”
+Calls: suppressMessages -> withCallingHandlers -> plm -> match.arg
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s35,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(model) : 
+  'arg' should be one of “within”, “random”, “ht”, “between”, “pooling”, “fd”
+Calls: suppressMessages -> withCallingHandlers -> plm -> match.arg
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s36,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,1.3873,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s37,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: unexpected symbol in:
+""library(plm)
+library sandwich""
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s38,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s39,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(model) : 
+  'arg' should be one of “within”, “random”, “ht”, “between”, “pooling”, “fd”
+Calls: suppressMessages -> withCallingHandlers -> plm -> match.arg
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s40,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s41,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in coeftest(did_model_clustered, vcov. = vcovHC) : 
+  could not find function ""coeftest""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s42,DID,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in df %>% filter(post == 0) : could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers -> plm -> row.names
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s43,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in tidy_did_model %>% filter(term == ""treated:post"") %>% pull(estimate) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s44,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(model) : 
+  'arg' should be one of “within”, “random”, “ht”, “between”, “pooling”, “fd”
+Calls: suppressMessages -> withCallingHandlers -> plm -> match.arg
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s45,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s46,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.9763,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.00025706078928833557,1,1,,0.00025706078928833557
+s47,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: unexpected symbol in:
+""# Convert data to pdata.frame for panel data analysis
+data pdata""
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s48,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,2.2117,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s49,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in tidy_model %>% filter(term == ""treated:post"") %>% pull(estimate) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s50,DID,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.09,1,,Llama,meta-llama-Llama-3.3-70B-Instruct,1,1.2309358805580464e-05,1,1,,1.2309358805580464e-05
+s51,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,53.0644,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s52,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,38.3205,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.03806228373702423,1,1,1,0.0381
+s53,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,34.5796,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.08327736736064471,1,1,1,0.0833
+s54,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(coin) : there is no package called ‘coin’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s55,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,5.1903,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,5.120769836159405,0,1,6,0.0201
+s56,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s57,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.19604784191367652,1,1,1,0.196
+s58,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(PerformanceAnalytics) : 
+  there is no package called ‘PerformanceAnalytics’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s59,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,41.994496160902365,0,0,11,2.9086
+s60,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,4.579,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.12480974124809747,1,1,1,0.1248
+s61,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,8.9353,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,8.937819231623362,0,1,10,0.0062
+s62,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(finance) : there is no package called ‘finance’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s63,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,349.0164983831585,0,0,11,30.8197
+s64,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s65,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,34.6532,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,63.575014261266396,0,0,11,4.8705
+s66,EVENT_STUDY,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,77.9823,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.43802925327174747,1,1,1,0.438
+s67,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(model) : 
+  'arg' should be one of “within”, “random”, “ht”, “between”, “pooling”, “fd”
+Calls: suppressMessages -> withCallingHandlers -> plm -> match.arg
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s68,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in pdata.frame(data, index = c(1:nrow(data)), drop.index = TRUE) : 
+  'index' can be of length 3 at the most (one index variable for individual, time, group)
+Calls: suppressMessages -> withCalli",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s69,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.4667,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s70,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in ivreg(y ~ x + controls | z + controls, data = data) : 
+  could not find function ""ivreg""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s71,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in pdata.frame(data, index = index, ...) : 
+  variable 'firm' does not exist (individual index)
+Calls: suppressMessages -> withCallingHandlers -> plm -> pdata.frame
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s72,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in pdata.frame(data, index = 1:nrow(data)) : 
+  'index' can be of length 3 at the most (one index variable for individual, time, group)
+Calls: suppressMessages -> withCallingHandlers -> pdata.fr",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s73,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s74,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in match.arg(model) : 
+  'arg' should be one of “within”, “random”, “ht”, “between”, “pooling”, “fd”
+Calls: suppressMessages -> withCallingHandlers -> plm -> match.arg
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s75,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,1.2229,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.00010447857411203048,1,1,,0.00010447857411203048
+s76,IV,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s77,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.5692,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s78,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,7.956082425013047e-05,1,1,,7.956082425013047e-05
+s79,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s80,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"*`, year, value = `<int>`)
+  4. ├─tibble:::`$<-.tbl_df`(`*tmp*`, year, value = `<int>`)
+  5. │ └─tibble:::tbl_subassign(...)
+  6. │   └─tibble:::vectbl_recycle_rhs_rows(value, fast_nrow(xo), i_arg = N",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s81,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in pdata.frame(data, index = index, ...) : 
+  variable 'student_id' does not exist (individual index)
+Calls: suppressMessages -> withCallingHandlers -> plm -> pdata.frame
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s82,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,127.5186,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.009628610729023468,1,1,,0.009628610729023468
+s83,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error: unexpected ')' in:
+""library(readr)
+library/plm)""
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s84,IV,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in library(stargazer) : there is no package called ‘stargazer’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s85,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s86,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error: variable 'treated' was fitted with type ""factor"" but type ""numeric"" was supplied
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s87,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in tidy(model) %>% filter(term == ""treated"") %>% pull(estimate) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s88,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in terms.formula(formula, data = data) : 
+  invalid model formula in ExtractVars
+Calls: suppressMessages ... <Anonymous> -> model.frame.default -> terms -> terms.formula
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s89,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in contrib.url(repos, ""source"") : 
+  trying to use CRAN without setting a mirror
+Calls: suppressMessages ... withCallingHandlers -> install.packages -> contrib.url
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s90,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.1747005381633009,1,1,,0.1747005381633009
+s91,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,`geom_smooth()` using formula = 'y ~ x',Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s92,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s93,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in data %>% filter(near_cutoff == 1) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s94,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in data %>% filter(distance_to_cutoff <= h) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s95,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,,0,`geom_smooth()` using formula = 'y ~ x',Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s96,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,0.0859,1,,Llama,meta-llama-Llama-3.3-70B-Instruct,1,0.08598528175156561,1,1,,0.08598528175156561
+s97,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,0,,0,"Error in data %>% filter(near_cutoff == 1) : 
+  could not find function ""%>%""
+Calls: suppressMessages -> withCallingHandlers
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s98,RDD,canonical,audit/dgp_verification.json,1,FLAGGED,1,1,1,16.5623,0,`geom_smooth()` using formula = 'y ~ x',Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.6526167896030911,0,0,,0.6526167896030911
+s99,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,0,,0,"Error in library(rdd) : there is no package called ‘rdd’
+Calls: suppressMessages -> withCallingHandlers -> library
+Execution halted",Llama,meta-llama-Llama-3.3-70B-Instruct,0,,0,0,,
+s100,RDD,canonical,audit/dgp_verification.json,1,VERIFIED,1,1,1,,0,,Llama,meta-llama-Llama-3.3-70B-Instruct,0,0.2346503766563349,1,1,,0.2346503766563349

@@ -1,0 +1,93 @@
+{
+  "Opus": {
+    "n": 100,
+    "L2b_plus_pass_rate": 0.64,
+    "ECE_numerical": 0.1238,
+    "ECE_method": 0.3249,
+    "ECE_specification": 0.1581,
+    "mean_numerical_conf_all": 0.5292,
+    "mean_numerical_conf_wrong": 0.4953,
+    "mean_numerical_conf_right": 0.5483,
+    "confidence_gap_right_minus_wrong": 0.053,
+    "P_high_conf_given_wrong": 0.0,
+    "P_high_conf_given_right": 0.0469
+  },
+  "Sonnet": {
+    "n": 99,
+    "L2b_plus_pass_rate": 0.2626,
+    "ECE_numerical": 0.3338,
+    "ECE_method": 0.6374,
+    "ECE_specification": 0.5294,
+    "mean_numerical_conf_all": 0.5965,
+    "mean_numerical_conf_wrong": 0.6,
+    "mean_numerical_conf_right": 0.5865,
+    "confidence_gap_right_minus_wrong": -0.0135,
+    "P_high_conf_given_wrong": 0.0,
+    "P_high_conf_given_right": 0.0
+  },
+  "GPT-4o": {
+    "n": 100,
+    "L2b_plus_pass_rate": 0.28,
+    "ECE_numerical": 0.4195,
+    "ECE_method": 0.652,
+    "ECE_specification": 0.51,
+    "mean_numerical_conf_all": 0.6995,
+    "mean_numerical_conf_wrong": 0.7042,
+    "mean_numerical_conf_right": 0.6875,
+    "confidence_gap_right_minus_wrong": -0.0167,
+    "P_high_conf_given_wrong": 0.0139,
+    "P_high_conf_given_right": 0.0
+  },
+  "o3": {
+    "n": 100,
+    "L2b_plus_pass_rate": 0.18,
+    "ECE_numerical": 0.1551,
+    "ECE_method": 0.5944,
+    "ECE_specification": 0.3821,
+    "mean_numerical_conf_all": 0.3341,
+    "mean_numerical_conf_wrong": 0.3337,
+    "mean_numerical_conf_right": 0.3361,
+    "confidence_gap_right_minus_wrong": 0.0025,
+    "P_high_conf_given_wrong": 0.0,
+    "P_high_conf_given_right": 0.0
+  },
+  "Kimi": {
+    "n": 100,
+    "L2b_plus_pass_rate": 0.06,
+    "ECE_numerical": 0.566,
+    "ECE_method": 0.8,
+    "ECE_specification": 0.696,
+    "mean_numerical_conf_all": 0.626,
+    "mean_numerical_conf_wrong": 0.6245,
+    "mean_numerical_conf_right": 0.65,
+    "confidence_gap_right_minus_wrong": 0.0255,
+    "P_high_conf_given_wrong": 0.0,
+    "P_high_conf_given_right": 0.0
+  },
+  "Gemini": {
+    "n": 48,
+    "L2b_plus_pass_rate": 0.1458,
+    "ECE_numerical": 0.2512,
+    "ECE_method": 0.804,
+    "ECE_specification": 0.4419,
+    "mean_numerical_conf_all": 0.3825,
+    "mean_numerical_conf_wrong": 0.3539,
+    "mean_numerical_conf_right": 0.55,
+    "confidence_gap_right_minus_wrong": 0.1961,
+    "P_high_conf_given_wrong": 0.0976,
+    "P_high_conf_given_right": 0.0
+  },
+  "GPT-5": {
+    "n": 99,
+    "L2b_plus_pass_rate": 0.2828,
+    "ECE_numerical": 0.1867,
+    "ECE_method": 0.5621,
+    "ECE_specification": 0.3426,
+    "mean_numerical_conf_all": 0.4372,
+    "mean_numerical_conf_wrong": 0.4438,
+    "mean_numerical_conf_right": 0.4204,
+    "confidence_gap_right_minus_wrong": -0.0234,
+    "P_high_conf_given_wrong": 0.0,
+    "P_high_conf_given_right": 0.0
+  }
+}

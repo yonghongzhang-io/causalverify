@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s33",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "Impact of 2003 Dividend Tax Cut on Corporate Dividend Payouts",
+  "research_question": "How did exposure to the 2003 dividend tax cut affect corporate dividend payouts? Specifically, we are interested in understanding whether firms that were more exposed to the tax cut adjusted their dividend payouts differently compared to less exposed firms.",
+  "data_description": "The dataset consists of 200 firms with columns including unit_id (firm identifier), period (year), treated (indicator for high exposure to tax cut), post (indicator for post-2003 period), treat_x_post (interaction term for treatment effect), and y (log dividend payout).",
+  "data_file": "experiments/exp_b/data/s33_data.csv"
+}

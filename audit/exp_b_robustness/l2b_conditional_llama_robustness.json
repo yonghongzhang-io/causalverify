@@ -1,0 +1,17 @@
+{
+  "robustness_only_model": "Llama",
+  "rows": [
+    {
+      "L2b_count": 41,
+      "L2b_plus_v2_count": 20,
+      "L2b_plus_v2_rate": 0.2,
+      "L2b_rate": 0.41,
+      "P_L2b_plus_v2_given_L2b": 0.4878,
+      "executed_but_not_correct_count": 21,
+      "gap_L2b_minus_L2b_plus_v2": 0.21,
+      "model": "Llama",
+      "n": 100
+    }
+  ],
+  "source": "experiments/exp_b/l2b_plus_scores_canonical_judge_v2.csv"
+}

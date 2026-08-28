@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s73",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "title": "Impact of Immigration on Native Wages",
+  "research_question": "How does an increase in immigrant inflow affect the wages of native workers? The study leverages historical settlement patterns as an instrumental variable to address potential endogeneity in immigrant distribution.",
+  "data_description": "The dataset consists of 400 observations, with columns including 'y' for native wages, 'x' for immigrant inflow, 'z' for historical settlement patterns, and 'controls' for demographic and economic factors. The data captures variations in immigrant inflow influenced by historical settlement patterns.",
+  "data_file": "experiments/exp_b/data/s73_data.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s06",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "Import tariff on domestic firm investment",
+  "research_question": "Did the 2018 steel/aluminum tariff increase capital investment at U.S. domestic steel producers (treated) compared to non-metals manufacturers (control)?",
+  "data_description": "Panel data on 200 manufacturing firms over 8 quarterly periods. Variables: unit_id, period, treated (1=steel/metals sector), post (1=post-2018Q1), treat_x_post, y (log capital expenditure). Tariff effective in period 4; control firms are in non-metals sectors.",
+  "data_file": "experiments/exp_b/data/s06_data.csv"
+}

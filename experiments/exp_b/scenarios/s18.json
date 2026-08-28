@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s18",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "hard",
+  "title": "Contaminated event window: confounding news during event period",
+  "research_question": "A firm announced both an acquisition AND an earnings beat on the same day. Can we decompose the market reaction to isolate the acquisition effect from the confounding earnings news?",
+  "data_description": "Event study data for 80 firms with simultaneous announcements. Variables: stock_id, event_day (−10 to +10), ret, mkt_ret, beta, eps_surprise. Challenge: earnings surprise on day 0 confounds acquisition announcement. Approach: partial out eps_surprise in the AR regression.",
+  "data_file": "experiments/exp_b/data/s18_data.csv"
+}

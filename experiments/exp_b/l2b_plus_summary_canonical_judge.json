@@ -1,0 +1,195 @@
+{
+  "tolerance": 0.5,
+  "baseline": "canonical",
+  "extraction": "llm_judge_haiku_4_5",
+  "by_model": {
+    "Kimi": {
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 45,
+      "L2b_plus_regex": 6,
+      "L2b_plus_judge": 8,
+      "n": 100,
+      "L2b_plus_regex_rate": 0.06,
+      "L2b_plus_judge_rate": 0.08,
+      "delta": 2
+    },
+    "Sonnet": {
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 51,
+      "L2b_plus_regex": 27,
+      "L2b_plus_judge": 31,
+      "n": 100,
+      "L2b_plus_regex_rate": 0.27,
+      "L2b_plus_judge_rate": 0.31,
+      "delta": 4
+    },
+    "GPT-4o": {
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 78,
+      "L2b_plus_regex": 28,
+      "L2b_plus_judge": 50,
+      "n": 100,
+      "L2b_plus_regex_rate": 0.28,
+      "L2b_plus_judge_rate": 0.5,
+      "delta": 22
+    },
+    "o3": {
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 50,
+      "L2b_plus_regex": 18,
+      "L2b_plus_judge": 37,
+      "n": 100,
+      "L2b_plus_regex_rate": 0.18,
+      "L2b_plus_judge_rate": 0.37,
+      "delta": 19
+    },
+    "Opus": {
+      "L1": 100,
+      "L2a": 99,
+      "L2b": 94,
+      "L2b_plus_regex": 64,
+      "L2b_plus_judge": 71,
+      "n": 100,
+      "L2b_plus_regex_rate": 0.64,
+      "L2b_plus_judge_rate": 0.71,
+      "delta": 7
+    },
+    "Gemini": {
+      "L1": 100,
+      "L2a": 57,
+      "L2b": 32,
+      "L2b_plus_regex": 15,
+      "L2b_plus_judge": 29,
+      "n": 100,
+      "L2b_plus_regex_rate": 0.15,
+      "L2b_plus_judge_rate": 0.29,
+      "delta": 14
+    }
+  },
+  "by_model_method": {
+    "Kimi__DID": {
+      "L2b_plus_judge": 5,
+      "n": 30,
+      "rate": 0.16666666666666666
+    },
+    "Sonnet__DID": {
+      "L2b_plus_judge": 20,
+      "n": 30,
+      "rate": 0.6666666666666666
+    },
+    "GPT-4o__DID": {
+      "L2b_plus_judge": 25,
+      "n": 30,
+      "rate": 0.8333333333333334
+    },
+    "o3__DID": {
+      "L2b_plus_judge": 8,
+      "n": 30,
+      "rate": 0.26666666666666666
+    },
+    "Opus__DID": {
+      "L2b_plus_judge": 29,
+      "n": 30,
+      "rate": 0.9666666666666667
+    },
+    "Gemini__DID": {
+      "L2b_plus_judge": 14,
+      "n": 30,
+      "rate": 0.4666666666666667
+    },
+    "Kimi__EVENT_STUDY": {
+      "L2b_plus_judge": 2,
+      "n": 24,
+      "rate": 0.08333333333333333
+    },
+    "Sonnet__EVENT_STUDY": {
+      "L2b_plus_judge": 2,
+      "n": 24,
+      "rate": 0.08333333333333333
+    },
+    "GPT-4o__EVENT_STUDY": {
+      "L2b_plus_judge": 1,
+      "n": 24,
+      "rate": 0.041666666666666664
+    },
+    "o3__EVENT_STUDY": {
+      "L2b_plus_judge": 3,
+      "n": 24,
+      "rate": 0.125
+    },
+    "Opus__EVENT_STUDY": {
+      "L2b_plus_judge": 2,
+      "n": 24,
+      "rate": 0.08333333333333333
+    },
+    "Gemini__EVENT_STUDY": {
+      "L2b_plus_judge": 2,
+      "n": 24,
+      "rate": 0.08333333333333333
+    },
+    "Kimi__IV": {
+      "L2b_plus_judge": 1,
+      "n": 24,
+      "rate": 0.041666666666666664
+    },
+    "Sonnet__IV": {
+      "L2b_plus_judge": 3,
+      "n": 24,
+      "rate": 0.125
+    },
+    "GPT-4o__IV": {
+      "L2b_plus_judge": 15,
+      "n": 24,
+      "rate": 0.625
+    },
+    "o3__IV": {
+      "L2b_plus_judge": 16,
+      "n": 24,
+      "rate": 0.6666666666666666
+    },
+    "Opus__IV": {
+      "L2b_plus_judge": 23,
+      "n": 24,
+      "rate": 0.9583333333333334
+    },
+    "Gemini__IV": {
+      "L2b_plus_judge": 13,
+      "n": 24,
+      "rate": 0.5416666666666666
+    },
+    "Kimi__RDD": {
+      "L2b_plus_judge": 0,
+      "n": 22,
+      "rate": 0.0
+    },
+    "Sonnet__RDD": {
+      "L2b_plus_judge": 6,
+      "n": 22,
+      "rate": 0.2727272727272727
+    },
+    "GPT-4o__RDD": {
+      "L2b_plus_judge": 9,
+      "n": 22,
+      "rate": 0.4090909090909091
+    },
+    "o3__RDD": {
+      "L2b_plus_judge": 10,
+      "n": 22,
+      "rate": 0.45454545454545453
+    },
+    "Opus__RDD": {
+      "L2b_plus_judge": 17,
+      "n": 22,
+      "rate": 0.7727272727272727
+    },
+    "Gemini__RDD": {
+      "L2b_plus_judge": 0,
+      "n": 22,
+      "rate": 0.0
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s47",
+  "method_family": "DID",
+  "difficulty": "hard",
+  "title": "Impact of Catalytic Converter Mandate on NOx Emissions",
+  "research_question": "How does the implementation of a catalytic converter mandate affect NOx emissions in urban areas? This study aims to determine the causal impact of the mandate on log NOx emissions by comparing regions with and without the mandate over time.",
+  "data_description": "The dataset includes 100 observations with columns: unit_id representing the region, period indicating the time of observation, treated denoting if the region is subject to the mandate, post indicating the time after the mandate, treat_x_post as the interaction term, and y representing the log NOx emissions.",
+  "data_file": "experiments/exp_b/data/s47_data.csv"
+}

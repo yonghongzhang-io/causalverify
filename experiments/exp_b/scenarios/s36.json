@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s36",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "Impact of Indoor Smoking Ban on Respiratory Health",
+  "research_question": "Does the implementation of an indoor smoking ban in certain municipalities lead to an increase in hospital admissions for respiratory illnesses? By comparing municipalities with and without the ban, we aim to identify the causal effect of the policy on public health outcomes.",
+  "data_description": "The dataset includes 200 observations with columns: unit_id (municipality identifier), period (time period), treated (indicator for municipalities with the smoking ban), post (indicator for periods after the ban), treat_x_post (interaction term), and y (log hospital admissions for respiratory illness).",
+  "data_file": "experiments/exp_b/data/s36_data.csv"
+}

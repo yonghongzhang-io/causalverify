@@ -1,0 +1,81 @@
+domain,difficulty,authors,year,journal,title
+finance,easy,Giroud & Mueller,2010,RFS,Does Corporate Governance Matter in Competitive Industries?
+finance,medium,Chernenko & Sunderam,2014,JFE,Frictions in Shadow Banking: Evidence from the Lending Behavior of Money Market Funds
+finance,hard,Gilje & Taillard,2016,RFS,Do Private Firms Invest Differently than Public Firms? Taking Cues from the Natural Gas Industry
+finance,medium,Hong & Kacperczyk,2009,JFE,The Price of Sin: The Effects of Social Norms on Markets
+finance,easy,"Brav, Jiang, Partnoy & Thomas",2008,JF,"Hedge Fund Activism, Corporate Governance, and Firm Performance"
+finance,medium,Schwert,1996,JFE,Markup Pricing in Mergers and Acquisitions
+finance,hard,Kelly & Ljungqvist,2012,JFE,Testing Asymmetric-Information Asset Pricing Models
+finance,easy,"Slovin, Sushka & Polonchek",1993,JF,The Value of Bank Durability: Borrowers as Bank Stakeholders
+finance,medium,Laeven & Levine,2009,JFE,"Bank Governance, Regulation, and Risk Taking"
+finance,hard,"Baker, Stein & Wurgler",2003,QJE,When Does the Market Matter? Stock Prices and the Investment of Equity-Dependent Firms
+finance,medium,"Aggarwal, Erel, Ferreira & Matos",2011,JFE,Does Governance Travel Around the World? Evidence from Institutional Investors
+finance,easy,Chava & Roberts,2008,JF,How Does Financing Impact Investment? The Role of Debt Covenants
+finance,medium,Roberts & Sufi,2009,JF,Control Rights and Capital Structure: An Empirical Investigation
+finance,hard,Rauh,2006,JF,Investment and Financing Constraints: Evidence from the Funding of Corporate Pension Plans
+labor,easy,"Autor, Kerr & Kugler",2007,QJE,Does Employment Protection Reduce Productivity? Evidence from US States
+labor,medium,Kline & Moretti,2014,QJE,"People, Places, and Public Policy: Some Simple Welfare Economics of Local Economic Development Programs"
+labor,hard,Gathmann & Schoenberg,2010,JOLE,How General Is Human Capital? A Task-Based Approach
+labor,medium,Bailey & Goodman-Bacon,2015,AER,The War on Poverty's Experiment in Public Medicine: Community Health Centers and the Mortality of Older Americans
+labor,easy,"Jacobson, LaLonde & Sullivan",1993,AER,Earnings Losses of Displaced Workers
+labor,medium,"Kleven, Landais & Sogaard",2019,AER,Children and Gender Inequality: Evidence from Denmark
+labor,hard,Fadlon & Nielsen,2019,AER,Family Health Behaviors
+labor,easy,Angrist,1990,AER,Lifetime Earnings and the Vietnam Era Draft Lottery: Evidence from Social Security Administrative Records
+labor,medium,Card,1995,ILRR,Using Geographic Variation in College Proximity to Estimate the Return to Schooling
+labor,hard,Oreopoulos,2006,AER,Estimating Average and Local Average Treatment Effects of Education When Compulsory Schooling Laws Really Matter
+labor,medium,Pischke & von Wachter,2008,QJE,Zero Returns to Compulsory Schooling in Germany: Evidence and Interpretation
+labor,easy,DiNardo & Lee,2004,QJE,Economic Impacts of New Unionization on Private Sector Employers: 1984-2001
+labor,medium,"Schmieder, von Wachter & Bender",2012,AER,The Effects of Extended Unemployment Insurance over the Business Cycle: Evidence from Regression Discontinuity Estimates over 20 Years
+labor,hard,Lemieux & Milligan,2008,JHR,Incentive Effects of Social Assistance: A Regression Discontinuity Approach
+labor,easy,Lalive,2008,REStat,How Do Extended Benefits Affect Unemployment Duration? A Regression Discontinuity Approach
+development,easy,Duflo & Pande,2007,QJE,Dams
+development,medium,Burgess & Pande,2005,AER,Do Rural Banks Matter? Evidence from the Indian Social Banking Experiment
+development,hard,Nunn & Qian,2011,QJE,The Potato's Contribution to Population and Urbanization: Evidence from a Historical Experiment
+development,easy,Jayachandran & Pande,2017,AER,Why Are Indian Children So Short? The Role of Birth Order and Son Preference
+development,medium,"Kleven, Landais, Posch, Steinhauer & Zweimuller",2019,AEJ:Applied,Child Penalties Across Countries: Evidence and Explanations
+development,easy,Frankel & Romer,1999,AER,Does Trade Cause Growth?
+development,medium,Nunn,2008,QJE,The Long-Term Effects of Africa's Slave Trades
+development,hard,Bleakley,2007,QJE,Disease and Development: Evidence from Hookworm Eradication in the American South
+development,easy,Pop-Eleches & Urquiola,2013,AER,Going to a Better School: Effects and Behavioral Responses
+development,medium,Meyersson,2014,Econometrica,Islamic Rule and the Empowerment of the Poor and Pious
+development,hard,"Manacorda, Miguel & Vigorito",2011,AEJ:Applied,Government Transfers and Political Support
+health,easy,Gruber,1994,AER,The Incidence of Mandated Maternity Benefits
+health,medium,Kolstad & Kowalski,2012,JPublE,The Impact of Health Care Reform on Hospital and Preventive Care: Evidence from Massachusetts
+health,hard,Duggan,2000,JPE,Hospital Ownership and Public Medical Spending
+health,easy,"Dranove, Kessler, McClellan & Satterthwaite",2003,JPE,Is More Information Better? The Effects of Report Cards on Health Care Providers
+health,medium,Buchmueller & DiNardo,2002,ILRR,"Did Community Rating Induce an Adverse Selection Death Spiral? Evidence from New York, Pennsylvania, and Connecticut"
+health,easy,"McClellan, McNeil & Newhouse",1994,JAMA,Does More Intensive Treatment of Acute Myocardial Infarction in the Elderly Reduce Mortality?
+health,medium,Evans & Ringel,1999,AER,Can Higher Cigarette Taxes Improve Birth Outcomes?
+health,hard,Lleras-Muney,2005,REStat,The Relationship Between Education and Adult Mortality in the United States
+health,easy,Shigeoka,2014,AER,"The Effect of Patient Cost Sharing on Utilization, Health, and Risk Protection"
+health,medium,"Barreca, Guldi, Lindo & Waddell",2011,QJE,Saving Babies? Revisiting the Effect of Very Low Birth Weight Classification on Mortality
+health,hard,Ludwig & Miller,2007,QJE,Does Head Start Improve Children's Life Chances? Evidence from a Regression Discontinuity Design
+education,easy,Hoxby,2000,AER,Does Competition Among Public Schools Benefit Students and Taxpayers?
+education,medium,Dynarski,2003,AER,Does Aid Matter? Measuring the Effect of Student Aid on College Attendance and Completion
+education,hard,Cascio & Staiger,2012,AEJ:EP,"Knowledge, Tests, and Fadeout in Educational Interventions"
+education,medium,"Jackson, Johnson & Persico",2016,QJE,The Effects of School Spending on Educational and Economic Outcomes: Evidence from School Finance Reforms
+education,easy,Deming,2009,QJE,Early Childhood Intervention and Life-Cycle Skill Development: Evidence from Head Start
+education,medium,Dale & Krueger,2002,QJE,Estimating the Payoff to Attending a More Selective College: An Application of Selection on Observables and Unobservables
+education,hard,Dee,2004,AER,Are There Civic Returns to Education?
+education,easy,"Abdulkadiroglu, Angrist & Pathak",2014,AER,The Elite Illusion: Achievement Effects at Boston and New York Exam Schools
+education,medium,"Abdulkadiroglu, Angrist, Narita & Pathak",2017,AER,Research Design Meets Market Design: Using Centralized Assignment for Impact Evaluation
+public,easy,Di Tella & Schargrodsky,2004,AER,Do Police Reduce Crime? Estimates Using the Allocation of Police Forces After a Terrorist Attack
+public,medium,Bleakley & Lin,2012,QJE,Portage and Path Dependence
+public,hard,Greenstone,2002,AER,The Impacts of Environmental Regulations on Industrial Activity: Evidence from the 1970 and 1977 Clean Air Act Amendments and the Census of Manufactures
+public,easy,Davis & Weinstein,2002,AER,"Bones, Bombs, and Break Points: The Geography of Economic Activity"
+public,medium,Abadie & Gardeazabal,2003,AER,The Economic Costs of Conflict: A Case Study of the Basque Country
+public,medium,Levitt,1997,AER,Using Electoral Cycles in Police Hiring to Estimate the Effect of Police on Crime
+public,hard,Donohue & Levitt,2001,QJE,The Impact of Legalized Abortion on Crime
+public,easy,"Cellini, Ferreira & Rothstein",2010,QJE,The Value of School Facility Investments: Evidence from a Dynamic Regression Discontinuity Design
+public,medium,Ito,2014,AER,Do Consumers Respond to Marginal or Average Price? Evidence from Nonlinear Electricity Pricing
+public,hard,Linden & Rockoff,2008,AER,Estimates of the Impact of Crime Risk on Property Values from Megan's Laws
+trade,easy,Pavcnik,2002,REStat,"Trade Liberalization, Exit, and Productivity Improvements: Evidence from Chilean Plants"
+trade,medium,Pierce & Schott,2016,AER,The Surprisingly Swift Decline of US Manufacturing Employment
+trade,hard,Topalova,2010,REStat,Factor Immobility and Regional Impacts of Trade Liberalization: Evidence on Poverty from India
+trade,easy,"Bloom, Draca & Van Reenen",2016,REStat,"Trade Induced Technical Change? The Impact of Chinese Imports on Innovation, IT and Productivity"
+trade,medium,Dix-Carneiro,2014,Econometrica,Trade Liberalization and Labor Market Dynamics
+trade,easy,Feyrer,2019,AEJ:Applied,Trade and Income -- Exploiting Time Series in Geography
+trade,medium,Goldberg & Pavcnik,2005,REStat,"Trade, Wages, and the Political Economy of Trade Protection: Evidence from the Colombian Trade Reforms"
+trade,hard,Kovak,2013,AER,Regional Effects of Trade Reform: What Is the Correct Measure of Liberalization?
+trade,medium,Holmes,1998,JPE,The Effect of State Policies on the Location of Manufacturing: Evidence from State Borders
+trade,hard,"Fontagné, Orefice, Piermartini & Rocha",2015,JIE,Product Standards and Margins of Trade: Firm-Level Evidence

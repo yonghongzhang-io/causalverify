@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s66",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "hard",
+  "title": "Impact of Surprise Tariff Announcements on Industry Returns",
+  "research_question": "How do surprise tariff announcements affect the cumulative abnormal returns (CAR) of industries exposed to international trade? We aim to isolate the immediate impact of such announcements on stock returns of companies within these industries.",
+  "data_description": "The dataset includes 60 stocks from industries heavily involved in international trade. For each stock, data is collected on a daily basis, including stock_id, event_day, ret, mkt_ret, and beta, covering a window around the tariff announcement event.",
+  "data_file": "experiments/exp_b/data/s66_data.csv"
+}

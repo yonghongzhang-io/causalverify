@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s82",
+  "method_family": "IV",
+  "difficulty": "hard",
+  "title": "Impact of Hospital Choice on 30-Day Mortality",
+  "research_question": "Does the choice of hospital, influenced by ambulance diversion, affect 30-day mortality rates for patients? Understanding the causal impact of hospital choice on patient outcomes is crucial for policy decisions regarding emergency medical services.",
+  "data_description": "The dataset includes 300 observations with columns: y (30-day mortality), x (hospital choice), z (ambulance diversion), and controls (patient demographics and health status). Ambulance diversion is used as an instrument to study the impact of hospital choice on mortality.",
+  "data_file": "experiments/exp_b/data/s82_data.csv"
+}

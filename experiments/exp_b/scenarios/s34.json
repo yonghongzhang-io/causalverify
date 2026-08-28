@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s34",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "Impact of China's WTO Accession on Manufacturing Employment",
+  "research_question": "How did China's 2001 accession to the World Trade Organization affect manufacturing employment in regions with varying levels of exposure to trade? By examining regions with different levels of trade integration, we aim to identify the causal impact of this policy change on employment levels.",
+  "data_description": "The dataset includes 200 observations with columns: unit_id (region identifier), period (year), treated (indicator for high exposure to trade), post (indicator for post-2001 period), treat_x_post (interaction term for treatment effect), and y (log manufacturing employment).",
+  "data_file": "experiments/exp_b/data/s34_data.csv"
+}

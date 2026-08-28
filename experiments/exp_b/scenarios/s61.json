@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s61",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "medium",
+  "title": "Impact of Pharmaceutical Patent Approval on Company Returns",
+  "research_question": "How does the approval of a pharmaceutical patent affect the cumulative abnormal returns (CAR) of the drug company? By examining stock market reactions around the event of patent approval, we aim to quantify the financial impact on the company.",
+  "data_description": "The dataset contains information on 80 pharmaceutical companies, with columns including stock_id, event_day, ret, mkt_ret, and beta. The event_day column captures the days surrounding the patent approval, while ret and mkt_ret represent the company's and market's daily returns, respectively.",
+  "data_file": "experiments/exp_b/data/s61_data.csv"
+}

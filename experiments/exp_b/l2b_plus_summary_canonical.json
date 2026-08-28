@@ -1,0 +1,120 @@
+{
+  "tolerance": 0.5,
+  "baseline": "canonical",
+  "canonical_baselines_loaded": 100,
+  "diagnostics": {
+    "rows": 700,
+    "missing_baseline": 0,
+    "executed_without_coefficient": 50,
+    "coefficient_extraction_failure_rate": 0.1174
+  },
+  "by_model": {
+    "Kimi": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 45,
+      "L2b_plus": 6,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.45,
+      "L2b_plus_rate": 0.06
+    },
+    "Sonnet": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 51,
+      "L2b_plus": 27,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.51,
+      "L2b_plus_rate": 0.27
+    },
+    "GPT-4o": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 78,
+      "L2b_plus": 28,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.78,
+      "L2b_plus_rate": 0.28
+    },
+    "o3": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 50,
+      "L2b_plus": 18,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.5,
+      "L2b_plus_rate": 0.18
+    },
+    "Opus": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 99,
+      "L2b": 94,
+      "L2b_plus": 64,
+      "L1_rate": 1.0,
+      "L2a_rate": 0.99,
+      "L2b_rate": 0.94,
+      "L2b_plus_rate": 0.64
+    },
+    "Gemini": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 57,
+      "L2b": 32,
+      "L2b_plus": 15,
+      "L1_rate": 1.0,
+      "L2a_rate": 0.57,
+      "L2b_rate": 0.32,
+      "L2b_plus_rate": 0.15
+    },
+    "GPT-5": {
+      "n": 100,
+      "L1": 100,
+      "L2a": 100,
+      "L2b": 76,
+      "L2b_plus": 29,
+      "L1_rate": 1.0,
+      "L2a_rate": 1.0,
+      "L2b_rate": 0.76,
+      "L2b_plus_rate": 0.29
+    }
+  },
+  "by_method": {
+    "DID": {
+      "n": 210,
+      "L2b": 141,
+      "L2b_plus": 90,
+      "L2b_rate": 0.671,
+      "L2b_plus_rate": 0.429
+    },
+    "EVENT_STUDY": {
+      "n": 168,
+      "L2b": 106,
+      "L2b_plus": 12,
+      "L2b_rate": 0.631,
+      "L2b_plus_rate": 0.071
+    },
+    "IV": {
+      "n": 168,
+      "L2b": 109,
+      "L2b_plus": 53,
+      "L2b_rate": 0.649,
+      "L2b_plus_rate": 0.315
+    },
+    "RDD": {
+      "n": 154,
+      "L2b": 70,
+      "L2b_plus": 32,
+      "L2b_rate": 0.455,
+      "L2b_plus_rate": 0.208
+    }
+  }
+}

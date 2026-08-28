@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "CausalVerify: An Execution-Grounded Benchmark for LLM Causal Inference Workflows"
+message: "If you use CausalVerify, please cite it as below."
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Yonghong
+    affiliation: "Department of Finance, Universidad Autónoma de Madrid, Madrid, Spain"
+  - family-names: Correia
+    given-names: Ricardo
+    affiliation: "Department of Finance, Universidad Autónoma de Madrid, Madrid, Spain"
+  - family-names: Parra
+    given-names: Isabel M.
+    affiliation: "Department of Finance, Universidad Autónoma de Madrid, Madrid, Spain"
+  - family-names: Xie
+    given-names: Yong
+    affiliation: "Spanish National Research Council (CSIC), Madrid, Spain"
+repository-code: "https://github.com/yonghongzhang-io/causalverify"
+license: MIT
+keywords:
+  - causal inference
+  - benchmark
+  - large language models
+  - execution-grounded evaluation

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s17",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "hard",
+  "title": "Surprise regulatory fine on bank reputation and stock value",
+  "research_question": "Does a surprise regulatory fine announcement generate negative abnormal returns beyond the direct financial cost (fine amount / market cap), suggesting reputational damage?",
+  "data_description": "Event study data for 80 banks. Variables: stock_id, event_day (−10 to +10), ret, mkt_ret, beta, fine_ratio (fine/mktcap). Evaluate if CAR < −fine_ratio, implying reputational loss beyond the fine itself. Market model: [−10,−2]. Event window [−1,+1].",
+  "data_file": "experiments/exp_b/data/s17_data.csv"
+}

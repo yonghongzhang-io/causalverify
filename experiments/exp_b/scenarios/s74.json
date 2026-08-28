@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s74",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "title": "Impact of Political Turnover on Public Spending",
+  "research_question": "How does a close-election Democratic win influence public spending? By using close-election victories as an instrument, we aim to isolate the causal effect of Democratic control on the level of public spending.",
+  "data_description": "The dataset contains 400 observations with columns: y (log public spending), x (Democratic control), z (close-election Democratic win), and controls (various socio-economic indicators). The instrument, z, is used to account for potential endogeneity in x.",
+  "data_file": "experiments/exp_b/data/s74_data.csv"
+}

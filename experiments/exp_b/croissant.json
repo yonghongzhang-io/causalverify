@@ -1,0 +1,312 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "name": "CausalVerify-ExpB",
+  "description": "Experiment B of the CausalVerify benchmark. 100 synthetic causal-inference scenarios spanning four method families (DID, Event Study, IV, RDD), each defined by a hand-coded data-generating process (DGP) with a known canonical estimator. For each scenario, the dataset releases (a) a JSON specification describing the research question, available data, and DGP truth, and (b) a CSV file containing the realised data sampled from the DGP. The dataset is intended for evaluating LLM causal-inference workflows where execution-grounded correctness can be checked against a canonical estimator on the realised dataset. Detailed methodology is in the CausalVerify paper .",
+  "url": "https://huggingface.co/datasets/yonghongzhang/causalverify",
+  "version": "1.0.0",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Organization",
+    "name": "Yonghong Zhang, Ricardo Correia, Isabel M. Parra, Yong Xie"
+  },
+  "datePublished": "2026-04-29",
+  "isLiveDataset": false,
+  "citeAs": "@misc{zhang2026causalverify, title={CausalVerify: An Execution-Grounded Benchmark for LLM Causal Inference Workflows}, author={Zhang, Yonghong and Correia, Ricardo and Parra, Isabel M. and Xie, Yong}, year={2026}, url={https://github.com/yonghongzhang-io/causalverify}}",
+  "keywords": [
+    "causal inference",
+    "benchmark",
+    "evaluation",
+    "LLM",
+    "synthetic data",
+    "difference-in-differences",
+    "event study",
+    "instrumental variables",
+    "regression discontinuity",
+    "execution-grounded evaluation"
+  ],
+
+  "rai:dataCollection": "All 100 scenarios are fully synthetic. The data-generating processes are hand-coded numpy/pandas Python procedures parametrised per scenario (treatment effect, sample size, noise scale, method-specific structural parameters such as event windows for Event Study, instrument strength for IV, bandwidth for RDD). No human-subject or real-world data are involved. See the paper Section 3 (Context Construction and DGP design) and the lab notebook in the repository.",
+
+  "rai:dataPreprocessingProtocol": [
+    "Each scenario seed is fixed and recorded in the scenario JSON; CSV files are byte-stable across reruns of the generator.",
+    "For each scenario, the canonical estimator (textbook regression for the method family) is computed once on the realised CSV; its output (canonical beta-hat) is recorded in audit/dgp_verification.json and used as the L2b+ baseline.",
+    "No filtering, deduplication, or class-balancing is applied beyond the parametrised generator."
+  ],
+
+  "rai:dataAnnotationProtocol": "Scenarios carry method_family ∈ {DID, EVENT_STUDY, IV, RDD} and difficulty ∈ {easy, medium, hard} labels, set at scenario design time. dgp_truth.effect is the structural treatment-effect parameter used to simulate the data; dgp_truth.direction is its sign. Both labels are exact by construction (not inferred or annotated post hoc).",
+
+  "rai:personalSensitiveInformation": "None. All data are synthetic; no individuals, organisations, locations, or other personally identifiable or sensitive entities appear in the records.",
+
+  "rai:socialImpact": "The dataset is intended to enable rigorous evaluation of LLM causal-inference workflows. Positive impact: deployment-relevant evidence for whether LLM-generated causal estimates are numerically trustworthy. Risks: a model that scores well on this benchmark might be misrepresented as 'good at causal inference in general'; the dataset only tests four method families on hand-coded DGPs and does not generalise to real-world identification challenges (e.g., staggered DiD, weak instruments, manipulation around RD cutoffs). Users are explicitly cautioned in the paper Section 6 (Limitations).",
+
+  "rai:safetyMeasures": "All data are synthetic so there is no risk of leaking sensitive information. The benchmark is read-only at evaluation time (running an LLM's generated R code does not modify the released data).",
+
+  "rai:dataReleaseMaintenancePlan": "This is a fixed snapshot for the CausalVerify NeurIPS 2026 ED Track submission. Future updates (additional method families, additional difficulty tiers, regenerated seeds) will be released as separate versions with their own Croissant files; this submission snapshot will remain accessible.",
+
+  "rai:dataUseCases": "Primary use: evaluating LLMs and LLM-based agentic systems on causal-inference workflow generation, including identification-strategy choice, R code generation, code execution, and coefficient correctness. Secondary use: studying the gap between text-level and execution-level evaluations of structured numerical reasoning.",
+
+  "rai:dataLimitations": [
+    "Method coverage limited to four families (DID, ES, IV, RDD); no synthetic control, DML, staggered DiD, or interactive fixed effects.",
+    "Each method family has only 22-30 scenarios; per-family bootstrap CIs are wide.",
+    "DGPs are stylised (no measurement error layered on instruments, no anticipation effects in event studies, no manipulation in RDD running variables).",
+    "Difficulty tiers are designed labels, not empirical rankings."
+  ],
+
+  "distribution": [
+    {
+      "@type": "cr:FileSet",
+      "@id": "scenario-jsons",
+      "name": "scenario-jsons",
+      "description": "100 scenario specifications, one JSON per scenario.",
+      "encodingFormat": "application/json",
+      "includes": "experiments/exp_b/scenarios/s*.json"
+    },
+    {
+      "@type": "cr:FileSet",
+      "@id": "scenario-data",
+      "name": "scenario-data",
+      "description": "100 realised-data CSV files, one per scenario.",
+      "encodingFormat": "text/csv",
+      "includes": "experiments/exp_b/data/s*_data.csv"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "dgp-verification",
+      "name": "dgp_verification",
+      "description": "Canonical estimator (textbook regression) recomputed once per scenario; this is the L2b+ comparison baseline.",
+      "contentUrl": "https://huggingface.co/datasets/yonghongzhang/causalverify/resolve/main/audit/dgp_verification.json",
+      "encodingFormat": "application/json",
+      "sha256": "b60dbd2dc35a241ea47680084508dad29057c18c4a7596160082064ca936fd9a"
+    }
+  ],
+
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "scenarios",
+      "name": "scenarios",
+      "description": "Per-scenario metadata: method_family, difficulty, research question, DGP truth.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/scenario_id",
+          "name": "scenario_id",
+          "description": "Unique scenario identifier (e.g. s01..s100).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.scenario_id"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/method_family",
+          "name": "method_family",
+          "description": "Causal-identification method family: DID, EVENT_STUDY, IV, or RDD.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.method_family"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/difficulty",
+          "name": "difficulty",
+          "description": "Designer-assigned difficulty tier: easy, medium, hard.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.difficulty"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/title",
+          "name": "title",
+          "description": "Short human-readable scenario title.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.title"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/research_question",
+          "name": "research_question",
+          "description": "Methods-blinded research question shown to evaluated models.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.research_question"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/data_description",
+          "name": "data_description",
+          "description": "Methods-blinded data description shown to evaluated models.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.data_description"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/dgp_effect",
+          "name": "dgp_effect",
+          "description": "Structural DGP treatment-effect parameter (beta*) used to simulate the data. NOT the L2b+ comparison baseline; see canonical_baseline.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.dgp_truth.effect"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/dgp_direction",
+          "name": "dgp_direction",
+          "description": "Sign of dgp_effect: 'positive' or 'negative'.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.dgp_truth.direction"}
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "scenarios/data_file",
+          "name": "data_file",
+          "description": "Relative path to the realised CSV for this scenario.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {"@id": "scenario-jsons"},
+            "extract": {"jsonPath": "$.data_file"}
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "cr:RecordSet",
+      "@id": "did-records",
+      "name": "did-records",
+      "description": "DID realised-data records (one row per unit-period observation). Treatment effect is identified by the coefficient on treat_x_post (treated x post interaction).",
+      "field": [
+        {"@type": "cr:Field", "@id": "did-records/unit_id", "name": "unit_id", "description": "Unit identifier.", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "unit_id"}}},
+        {"@type": "cr:Field", "@id": "did-records/period", "name": "period", "description": "Time period.", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "period"}}},
+        {"@type": "cr:Field", "@id": "did-records/treated", "name": "treated", "description": "Treatment-group indicator (0/1).", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "treated"}}},
+        {"@type": "cr:Field", "@id": "did-records/post", "name": "post", "description": "Post-treatment-period indicator (0/1).", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "post"}}},
+        {"@type": "cr:Field", "@id": "did-records/treat_x_post", "name": "treat_x_post", "description": "Treatment-by-post interaction; the coefficient on this is the DID treatment effect.", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "treat_x_post"}}},
+        {"@type": "cr:Field", "@id": "did-records/y", "name": "y", "description": "Outcome variable.", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "y"}}}
+      ]
+    },
+
+    {
+      "@type": "cr:RecordSet",
+      "@id": "event-study-records",
+      "name": "event-study-records",
+      "description": "Event Study realised-data records (one row per stock-event-day observation). Abnormal returns are identified via market-model adjustment using mkt_ret and beta.",
+      "field": [
+        {"@type": "cr:Field", "@id": "es-records/stock_id", "name": "stock_id", "description": "Stock identifier.", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "stock_id"}}},
+        {"@type": "cr:Field", "@id": "es-records/event_day", "name": "event_day", "description": "Trading day relative to the event (event_day = 0 is the event day; negative values precede, positive values follow).", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "event_day"}}},
+        {"@type": "cr:Field", "@id": "es-records/ret", "name": "ret", "description": "Daily stock return.", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "ret"}}},
+        {"@type": "cr:Field", "@id": "es-records/mkt_ret", "name": "mkt_ret", "description": "Daily market return (used by market-model adjustment).", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "mkt_ret"}}},
+        {"@type": "cr:Field", "@id": "es-records/beta", "name": "beta", "description": "Stock-specific market beta.", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "beta"}}}
+      ]
+    },
+
+    {
+      "@type": "cr:RecordSet",
+      "@id": "iv-records",
+      "name": "iv-records",
+      "description": "IV realised-data records (one row per observation). x is the endogenous regressor; z is the instrument; treatment effect is the 2SLS coefficient on x.",
+      "field": [
+        {"@type": "cr:Field", "@id": "iv-records/y", "name": "y", "description": "Outcome.", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "y"}}},
+        {"@type": "cr:Field", "@id": "iv-records/x", "name": "x", "description": "Endogenous regressor (instrumented by z).", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "x"}}},
+        {"@type": "cr:Field", "@id": "iv-records/z", "name": "z", "description": "Instrument.", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "z"}}},
+        {"@type": "cr:Field", "@id": "iv-records/controls", "name": "controls", "description": "Exogenous control covariate.", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "controls"}}}
+      ]
+    },
+
+    {
+      "@type": "cr:RecordSet",
+      "@id": "rdd-records",
+      "name": "rdd-records",
+      "description": "Sharp RDD realised-data records (one row per observation). Treatment is assigned by running_var crossing a designer-set cutoff; the coefficient on treated within the bandwidth identifies the local average treatment effect.",
+      "field": [
+        {"@type": "cr:Field", "@id": "rdd-records/running_var", "name": "running_var", "description": "Running variable; treatment assignment depends on this crossing the designer-set cutoff.", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "running_var"}}},
+        {"@type": "cr:Field", "@id": "rdd-records/treated", "name": "treated", "description": "Treatment indicator (1 if running_var crosses the cutoff).", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "treated"}}},
+        {"@type": "cr:Field", "@id": "rdd-records/y", "name": "y", "description": "Outcome.", "dataType": "sc:Float",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "y"}}},
+        {"@type": "cr:Field", "@id": "rdd-records/near_cutoff", "name": "near_cutoff", "description": "Indicator for whether the observation is within the designer-set bandwidth around the cutoff.", "dataType": "sc:Integer",
+          "source": {"fileSet": {"@id": "scenario-data"}, "extract": {"column": "near_cutoff"}}}
+      ]
+    }
+  ]
+}

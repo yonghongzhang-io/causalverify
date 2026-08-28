@@ -1,0 +1,159 @@
+{
+  "ground_truth": "L2b+ v2: code runs AND coefficient matches canonical estimator on realized data within +/-50% (with ES window-aware match for event studies)",
+  "n_scenarios": 100,
+  "n_models": 7,
+  "rates": {
+    "L2_L2a": {
+      "Kimi": 1.0,
+      "Sonnet": 1.0,
+      "GPT-4o": 1.0,
+      "o3": 1.0,
+      "Opus": 0.99,
+      "Gemini": 0.57,
+      "GPT-5": 1.0
+    },
+    "L2_L2b": {
+      "Kimi": 0.45,
+      "Sonnet": 0.51,
+      "GPT-4o": 0.78,
+      "o3": 0.5,
+      "Opus": 0.94,
+      "Gemini": 0.32,
+      "GPT-5": 0.76
+    },
+    "L2_L2b_plus": {
+      "Kimi": 0.1,
+      "Sonnet": 0.5,
+      "GPT-4o": 0.62,
+      "o3": 0.46,
+      "Opus": 0.88,
+      "Gemini": 0.32,
+      "GPT-5": 0.72
+    },
+    "L4_S1_latter_half": {
+      "Kimi": 0.74,
+      "Sonnet": 0.69,
+      "GPT-4o": 0.64,
+      "o3": 0.63,
+      "Opus": 0.68,
+      "Gemini": 0.41,
+      "GPT-5": 0.69
+    },
+    "L4_S2_section_aware": {
+      "Kimi": 0.73,
+      "Sonnet": 0.7,
+      "GPT-4o": 0.64,
+      "o3": 0.64,
+      "Opus": 0.63,
+      "Gemini": 0.42,
+      "GPT-5": 0.66
+    },
+    "GT_L2b_plus": {
+      "Kimi": 0.1,
+      "Sonnet": 0.5,
+      "GPT-4o": 0.62,
+      "o3": 0.46,
+      "Opus": 0.88,
+      "Gemini": 0.32,
+      "GPT-5": 0.72
+    }
+  },
+  "rankings": {
+    "L2_L2a": [
+      "Kimi",
+      "Sonnet",
+      "GPT-4o",
+      "o3",
+      "GPT-5",
+      "Opus",
+      "Gemini"
+    ],
+    "L2_L2b": [
+      "Opus",
+      "GPT-4o",
+      "GPT-5",
+      "Sonnet",
+      "o3",
+      "Kimi",
+      "Gemini"
+    ],
+    "L2_L2b_plus": [
+      "Opus",
+      "GPT-5",
+      "GPT-4o",
+      "Sonnet",
+      "o3",
+      "Gemini",
+      "Kimi"
+    ],
+    "L4_S1_latter_half": [
+      "Kimi",
+      "Sonnet",
+      "GPT-5",
+      "Opus",
+      "GPT-4o",
+      "o3",
+      "Gemini"
+    ],
+    "L4_S2_section_aware": [
+      "Kimi",
+      "Sonnet",
+      "GPT-5",
+      "GPT-4o",
+      "o3",
+      "Opus",
+      "Gemini"
+    ],
+    "GT_L2b_plus": [
+      "Opus",
+      "GPT-5",
+      "GPT-4o",
+      "Sonnet",
+      "o3",
+      "Gemini",
+      "Kimi"
+    ]
+  },
+  "correlations_with_GT": {
+    "L2a (code present)": {
+      "n_common": 7,
+      "kendall_tau": -0.0658,
+      "kendall_p": 0.8492,
+      "spearman_rho": -0.0445,
+      "spearman_p": 0.9245,
+      "pairwise_accuracy": 0.3333,
+      "top1_match": 0,
+      "top_half_overlap": 0.667
+    },
+    "L2b (code executes)": {
+      "n_common": 7,
+      "kendall_tau": 0.8095,
+      "kendall_p": 0.0107,
+      "spearman_rho": 0.9286,
+      "spearman_p": 0.0025,
+      "pairwise_accuracy": 0.9048,
+      "top1_match": 1,
+      "top_half_overlap": 1.0
+    },
+    "L4 latter-half (S1)": {
+      "n_common": 7,
+      "kendall_tau": 0.0976,
+      "kendall_p": 0.7613,
+      "spearman_rho": 0.036,
+      "spearman_p": 0.9389,
+      "pairwise_accuracy": 0.5238,
+      "top1_match": 0,
+      "top_half_overlap": 0.333
+    },
+    "L4 section-aware (S2)": {
+      "n_common": 7,
+      "kendall_tau": -0.1952,
+      "kendall_p": 0.5434,
+      "spearman_rho": -0.2523,
+      "spearman_p": 0.5852,
+      "pairwise_accuracy": 0.4286,
+      "top1_match": 0,
+      "top_half_overlap": 0.333
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s56",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "medium",
+  "title": "Impact of Bond Downgrade on Equity CAR",
+  "research_question": "How does a bond credit rating downgrade affect the cumulative abnormal returns (CAR) of a company's equity? We aim to understand the immediate market reaction to such downgrades and quantify the effect on equity performance.",
+  "data_description": "The dataset consists of 80 observations of stock returns around the event of a bond credit rating downgrade. Columns include stock_id, event_day, ret, mkt_ret, and beta. The data captures daily returns over a window surrounding the downgrade event.",
+  "data_file": "experiments/exp_b/data/s56_data.csv"
+}

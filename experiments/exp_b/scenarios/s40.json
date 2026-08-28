@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s40",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "Impact of Crop Insurance Subsidy Reform on Agricultural Land Use",
+  "research_question": "How does a reform in crop insurance subsidies affect the amount of land farmers decide to plant? Specifically, does the introduction of more favorable insurance terms lead to an increase in the acreage planted by farmers?",
+  "data_description": "The dataset contains 150 observations with columns: unit_id (identifying each farm), period (indicating the time period), treated (indicating whether the farm is in the treatment group), post (indicating the period after the reform), treat_x_post (interaction term for treatment and post-reform period), and y (log of acres planted).",
+  "data_file": "experiments/exp_b/data/s40_data.csv"
+}

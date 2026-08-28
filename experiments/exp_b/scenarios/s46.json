@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s46",
+  "method_family": "DID",
+  "difficulty": "hard",
+  "title": "Impact of COPS Grant on Violent Crime Rates",
+  "research_question": "How does the allocation of COPS grants for police hiring affect the violent crime rates in municipalities? Understanding this relationship can help policymakers evaluate the effectiveness of federal funding in enhancing public safety.",
+  "data_description": "The dataset includes 100 municipalities observed over several years, with columns: unit_id, period, treated, post, treat_x_post, and y. The variable 'y' represents the log of the violent crime rate, while 'treated' indicates whether a municipality received the COPS grant, and 'post' denotes the periods after the grant allocation.",
+  "data_file": "experiments/exp_b/data/s46_data.csv"
+}

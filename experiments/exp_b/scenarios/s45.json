@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s45",
+  "method_family": "DID",
+  "difficulty": "hard",
+  "title": "Impact of Class Size Cap Policy on Reading Scores",
+  "research_question": "This study investigates the effect of implementing a class size cap policy on students' reading scores in elementary schools. Specifically, it examines whether reducing class sizes leads to changes in reading performance, measured in standard deviation units.",
+  "data_description": "The dataset includes 100 observations from various schools, with columns for unit_id representing each school, period indicating the academic year, treated as a binary indicator of whether the school was subject to the class size cap policy, post indicating the period after policy implementation, treat_x_post as the interaction term, and y representing the reading scores in SD units.",
+  "data_file": "experiments/exp_b/data/s45_data.csv"
+}

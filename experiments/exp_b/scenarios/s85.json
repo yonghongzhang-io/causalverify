@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s85",
+  "method_family": "RDD",
+  "difficulty": "easy",
+  "title": "Impact of Merit Scholarships on College Enrollment",
+  "research_question": "Does meeting a GPA threshold for a merit scholarship influence college enrollment rates? By examining students around the GPA cutoff, we can assess the causal effect of the scholarship on their decision to enroll in college.",
+  "data_description": "The dataset includes 600 students, with columns for running_var (GPA), treated (indicating if the student meets the GPA threshold), and y (college enrollment status). The data focuses on students near the GPA cutoff for a merit scholarship.",
+  "data_file": "experiments/exp_b/data/s85_data.csv"
+}

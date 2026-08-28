@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s30",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "title": "Fuzzy RDD: imperfect compliance with admission cutoff",
+  "research_question": "A scholarship program nominally requires GPA ≥ 3.0, but compliance is imperfect (some below-cutoff students receive exceptions, some above-cutoff decline). Using a fuzzy RDD, estimate the LATE of scholarship receipt on graduation rates.",
+  "data_description": "Cross-sectional data on 600 students. Variables: running_var (GPA / 4.0, cutoff = 0.5 × 4.0 / 4.0 = 0.75 normalized to 0.5), z (1 if GPA ≥ cutoff — eligibility instrument), treated (1 = actually received scholarship — endogenous), y (graduated in 4 years binary as continuous proxy), near_cutoff. Fuzzy RDD: use cutoff crossing as instrument for actual scholarship receipt.",
+  "data_file": "experiments/exp_b/data/s30_data.csv"
+}

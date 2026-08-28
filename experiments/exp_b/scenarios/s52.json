@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s52",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "easy",
+  "title": "Impact of M&A Announcements on Stock Returns",
+  "research_question": "How do merger and acquisition announcements affect the cumulative abnormal returns of the involved companies? We aim to quantify the immediate impact of these announcements on stock performance.",
+  "data_description": "The dataset comprises daily stock returns for 100 companies around the time of merger announcements. Key columns include stock_id, event_day, ret, mkt_ret, and beta, capturing stock returns, market returns, and the event window day relative to the announcement.",
+  "data_file": "experiments/exp_b/data/s52_data.csv"
+}

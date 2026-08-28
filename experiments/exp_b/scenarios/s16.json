@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s16",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "hard",
+  "title": "Supply chain disruption on auto manufacturer stocks",
+  "research_question": "Did a major semiconductor shortage announcement negatively affect auto manufacturer stocks, and do firms with higher chip dependency experience larger negative CARs?",
+  "data_description": "Event study data for 80 auto-related stocks. Variables: stock_id, event_day (−10 to +10), ret, mkt_ret, beta. Requires both time-series CAR calculation and cross-sectional regression of CAR on chip-dependency measure. Market model: [−10,−2]. Event window [0,+5].",
+  "data_file": "experiments/exp_b/data/s16_data.csv"
+}

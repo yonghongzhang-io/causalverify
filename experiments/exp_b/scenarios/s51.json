@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s51",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "easy",
+  "title": "Impact of Earnings Announcements on Stock Returns",
+  "research_question": "Do quarterly earnings announcements lead to abnormal stock returns? Specifically, we aim to measure the immediate impact of these announcements on the stock prices of publicly traded companies. Understanding this effect is crucial for investors seeking to optimize their portfolio strategies around these events.",
+  "data_description": "The dataset comprises 100 publicly traded companies, each with daily stock return data around the time of their quarterly earnings announcements. Key columns include stock_id, event_day, ret (daily stock return), mkt_ret (market return), and beta (stock's sensitivity to market movements).",
+  "data_file": "experiments/exp_b/data/s51_data.csv"
+}

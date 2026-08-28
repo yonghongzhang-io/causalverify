@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s53",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "easy",
+  "title": "Impact of Dividend Initiation on Stock Returns",
+  "research_question": "How does the announcement of dividend initiation affect the cumulative abnormal returns (CAR) of a company's stock? Specifically, we are interested in understanding if the market reacts negatively to such announcements on the announcement day.",
+  "data_description": "The dataset contains 100 observations of daily stock returns, focusing on the period around the dividend initiation announcement. Key columns include stock_id for identifying each stock, event_day indicating the day relative to the announcement, ret for daily stock returns, mkt_ret for market returns, and beta representing the stock's sensitivity to market movements.",
+  "data_file": "experiments/exp_b/data/s53_data.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s28",
+  "method_family": "RDD",
+  "difficulty": "medium",
+  "title": "Asset size threshold and regulatory burden on bank profitability",
+  "research_question": "Does crossing the $10B asset threshold (triggering additional regulatory requirements) reduce bank profitability (ROA), using banks just above and below the threshold?",
+  "data_description": "Cross-sectional data on 600 bank holding companies. Variables: running_var (log assets / log $10B, centered at 1.0; cutoff = 0.5 in normalized units), treated (1 if assets > $10B), y (ROA), near_cutoff. Key concern: banks may strategically manage assets to stay below threshold.",
+  "data_file": "experiments/exp_b/data/s28_data.csv"
+}

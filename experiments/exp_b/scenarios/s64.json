@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s64",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "hard",
+  "title": "Impact of Surprise Electoral Outcomes on Industry Returns",
+  "research_question": "How do unexpected election results affect cumulative abnormal returns (CAR) in various industries? Specifically, we aim to understand the immediate impact of a surprise electoral outcome on industry-level financial performance.",
+  "data_description": "The dataset consists of 60 industry-level observations, with columns including stock_id, event_day, ret, mkt_ret, and beta. The data captures daily stock returns around the time of the election, allowing for the calculation of cumulative abnormal returns (CAR) relative to market returns.",
+  "data_file": "experiments/exp_b/data/s64_data.csv"
+}

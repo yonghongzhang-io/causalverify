@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s95",
+  "method_family": "RDD",
+  "difficulty": "medium",
+  "title": "Impact of Minimum Drinking Age on Alcohol Consumption",
+  "research_question": "Does reaching the legal drinking age of 21 lead to an increase in alcohol consumption among young adults? This study aims to identify the causal effect of the minimum legal drinking age on alcohol consumption patterns.",
+  "data_description": "The dataset includes 500 observations with columns 'running_var' representing age in months, 'treated' indicating if the individual is at least 21 years old, and 'y' measuring alcohol consumption. The data focuses on individuals near the age-21 cutoff.",
+  "data_file": "experiments/exp_b/data/s95_data.csv"
+}

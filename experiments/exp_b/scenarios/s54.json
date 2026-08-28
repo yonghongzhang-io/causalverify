@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s54",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "easy",
+  "title": "Impact of Unexpected CEO Departures on Stock Returns",
+  "research_question": "Does an unexpected CEO departure lead to significant changes in stock returns? By examining stock performance around the departure date, we aim to understand the market's reaction to such events.",
+  "data_description": "The dataset contains 100 observations with columns: stock_id, event_day, ret, mkt_ret, and beta. Each observation represents a company's stock return data around the event of an unexpected CEO departure, capturing daily returns and market returns for a specified period.",
+  "data_file": "experiments/exp_b/data/s54_data.csv"
+}

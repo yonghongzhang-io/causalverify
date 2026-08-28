@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s88",
+  "method_family": "RDD",
+  "difficulty": "easy",
+  "title": "Impact of Close-Election Incumbency on Reelection Probability",
+  "research_question": "Does winning a close election affect the probability of an incumbent being reelected in subsequent elections? Specifically, we investigate whether incumbents who barely win an election are more or less likely to win reelection compared to those who barely lose.",
+  "data_description": "The dataset contains information on 600 elections, with columns for running_var (vote-share margin), treated (whether the incumbent won the close election), and y (reelection probability). The data focuses on elections where the vote-share margin was within a narrow range around the cutoff for winning.",
+  "data_file": "experiments/exp_b/data/s88_data.csv"
+}

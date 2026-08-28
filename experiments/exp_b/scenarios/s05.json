@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s05",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "Interstate banking deregulation on credit supply",
+  "research_question": "Did state-level interstate banking deregulation increase credit supply (total loans / assets) in deregulated states compared to regulated states?",
+  "data_description": "Panel data on 200 bank branches across 8 annual periods. Variables: unit_id, period, treated (1=state deregulated in period 4), post, treat_x_post, y (log loans-to-assets ratio). Deregulation timing varies across states — use the treated=1 group as those deregulating at period 4 exactly.",
+  "data_file": "experiments/exp_b/data/s05_data.csv"
+}

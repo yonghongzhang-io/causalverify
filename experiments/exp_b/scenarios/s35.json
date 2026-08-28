@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s35",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "Impact of School Finance Reform on Math Test Scores",
+  "research_question": "What is the causal effect of state school finance reform on student math test scores? Specifically, does the reform lead to a change in math test scores among students in affected schools compared to those in unaffected schools?",
+  "data_description": "The dataset includes information on 200 schools, with columns for unit_id, period, treated, post, treat_x_post, and y. The variable y represents math test scores measured in standard deviation units. The treated column indicates whether a school was affected by the reform, and post indicates periods after the reform implementation.",
+  "data_file": "experiments/exp_b/data/s35_data.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s92",
+  "method_family": "RDD",
+  "difficulty": "medium",
+  "title": "Impact of Welfare Eligibility on Labor Supply",
+  "research_question": "How does eligibility for welfare benefits, determined by an income threshold, affect individuals' labor supply? Specifically, does crossing the income threshold for welfare eligibility lead to a reduction in hours worked?",
+  "data_description": "The dataset includes 500 observations with columns: running_var (income), treated (indicator for eligibility), and y (hours worked). The data focuses on individuals near the income threshold for welfare eligibility to assess its impact on labor supply.",
+  "data_file": "experiments/exp_b/data/s92_data.csv"
+}

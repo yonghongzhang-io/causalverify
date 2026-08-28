@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s71",
+  "method_family": "IV",
+  "difficulty": "easy",
+  "title": "Impact of Analyst Coverage on Firm Investment",
+  "research_question": "How does analyst coverage affect firm investment decisions? Specifically, we investigate whether changes in coverage due to broker mergers influence investment levels.",
+  "data_description": "The dataset includes 500 firms with columns: y (firm investment), x (analyst coverage), z (broker merger), and controls (firm size, industry, and past performance). The broker merger serves as an instrumental variable for analyst coverage.",
+  "data_file": "experiments/exp_b/data/s71_data.csv"
+}

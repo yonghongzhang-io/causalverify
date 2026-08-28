@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s84",
+  "method_family": "IV",
+  "difficulty": "hard",
+  "title": "Impact of Police Staffing on Crime Rates",
+  "research_question": "Does an increase in police staffing lead to a reduction in crime rates? To address the potential endogeneity between police count and crime rates, we use a cops grant lottery as an instrumental variable for police staffing levels.",
+  "data_description": "The dataset includes 300 observations with columns: y (crime rate), x (police count), z (cops grant lottery), and controls (various socioeconomic factors). The grant lottery serves as an exogenous source of variation in police staffing.",
+  "data_file": "experiments/exp_b/data/s84_data.csv"
+}

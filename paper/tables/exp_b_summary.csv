@@ -1,0 +1,9 @@
+model,layer,pass_rate_pct
+Kimi-128k,L1 complete,100.0
+Kimi-128k,L2 has code,100.0
+Kimi-128k,L3 strategy,100.0
+Kimi-128k,L4 direction,90.0
+Claude-Sonnet,L1 complete,86.66666666666667
+Claude-Sonnet,L2 has code,86.66666666666667
+Claude-Sonnet,L3 strategy,86.66666666666667
+Claude-Sonnet,L4 direction,66.66666666666666

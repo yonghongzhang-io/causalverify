@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s90",
+  "method_family": "RDD",
+  "difficulty": "medium",
+  "title": "Impact of Elite High School Admission on SAT Scores",
+  "research_question": "Does gaining admission to an elite high school through a test score cutoff impact students' SAT scores? Specifically, what is the effect of narrowly meeting the admission score requirement on subsequent academic performance?",
+  "data_description": "The dataset includes information on 500 students who took the admission test for an elite high school. Key columns are running_var (admission test score), treated (indicator for admission), and y (SAT score). The data focuses on students near the admission cutoff score.",
+  "data_file": "experiments/exp_b/data/s90_data.csv"
+}

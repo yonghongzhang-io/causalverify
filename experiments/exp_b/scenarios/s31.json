@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s31",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "Impact of Medicaid Expansion on Uninsured Rates",
+  "research_question": "How does the expansion of Medicaid coverage affect the uninsured rate in states that adopted the policy compared to those that did not? We aim to understand whether the policy effectively reduces the uninsured rate in the treated states.",
+  "data_description": "The dataset includes 200 observations with columns: unit_id representing state identifiers, period indicating the year of observation, treated marking states that expanded Medicaid, post indicating years after the policy implementation, treat_x_post as the interaction term, and y representing the log uninsured rate.",
+  "data_file": "experiments/exp_b/data/s31_data.csv"
+}

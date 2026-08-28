@@ -1,0 +1,334 @@
+file,scenario_id,method_family,difficulty,model,main_effect,conclusion_direction
+s02_moonshot-v1-128k.json,"model                      s02
+input_tokens               s02
+output_tokens              s02
+content                    s02
+stop_reason                s02
+identification_strategy    s02
+conclusion_direction       s02
+conclusion_detail          s02
+main_effect                s02
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      easy
+input_tokens               easy
+output_tokens              easy
+content                    easy
+stop_reason                easy
+identification_strategy    easy
+conclusion_direction       easy
+conclusion_detail          easy
+main_effect                easy
+Name: difficulty, dtype: object","model                      moonshot-v1-128k
+input_tokens               moonshot-v1-128k
+output_tokens              moonshot-v1-128k
+content                    moonshot-v1-128k
+stop_reason                moonshot-v1-128k
+identification_strategy    moonshot-v1-128k
+conclusion_direction       moonshot-v1-128k
+conclusion_detail          moonshot-v1-128k
+main_effect                moonshot-v1-128k
+Name: model, dtype: object",~15% reduction in employment,negative
+s02_claude-sonnet-4-20250514.json,"model                      s02
+input_tokens               s02
+output_tokens              s02
+content                    s02
+stop_reason                s02
+identification_strategy    s02
+conclusion_direction       s02
+conclusion_detail          s02
+main_effect                s02
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      easy
+input_tokens               easy
+output_tokens              easy
+content                    easy
+stop_reason                easy
+identification_strategy    easy
+conclusion_direction       easy
+conclusion_detail          easy
+main_effect                easy
+Name: difficulty, dtype: object","model                      claude-sonnet-4-20250514
+input_tokens               claude-sonnet-4-20250514
+output_tokens              claude-sonnet-4-20250514
+content                    claude-sonnet-4-20250514
+stop_reason                claude-sonnet-4-20250514
+identification_strategy    claude-sonnet-4-20250514
+conclusion_direction       claude-sonnet-4-20250514
+conclusion_detail          claude-sonnet-4-20250514
+main_effect                claude-sonnet-4-20250514
+Name: model, dtype: object",~15% reduction in employment,negative
+s04_moonshot-v1-128k.json,"model                      s04
+input_tokens               s04
+output_tokens              s04
+content                    s04
+stop_reason                s04
+identification_strategy    s04
+conclusion_direction       s04
+conclusion_detail          s04
+main_effect                s04
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      medium
+input_tokens               medium
+output_tokens              medium
+content                    medium
+stop_reason                medium
+identification_strategy    medium
+conclusion_direction       medium
+conclusion_detail          medium
+main_effect                medium
+Name: difficulty, dtype: object","model                      moonshot-v1-128k
+input_tokens               moonshot-v1-128k
+output_tokens              moonshot-v1-128k
+content                    moonshot-v1-128k
+stop_reason                moonshot-v1-128k
+identification_strategy    moonshot-v1-128k
+conclusion_direction       moonshot-v1-128k
+conclusion_detail          moonshot-v1-128k
+main_effect                moonshot-v1-128k
+Name: model, dtype: object",20bp increase in NPL ratio for TARP banks,positive
+s03_claude-sonnet-4-20250514.json,"model                      s03
+input_tokens               s03
+output_tokens              s03
+content                    s03
+stop_reason                s03
+identification_strategy    s03
+conclusion_direction       s03
+conclusion_detail          s03
+main_effect                s03
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      easy
+input_tokens               easy
+output_tokens              easy
+content                    easy
+stop_reason                easy
+identification_strategy    easy
+conclusion_direction       easy
+conclusion_detail          easy
+main_effect                easy
+Name: difficulty, dtype: object","model                      claude-sonnet-4-20250514
+input_tokens               claude-sonnet-4-20250514
+output_tokens              claude-sonnet-4-20250514
+content                    claude-sonnet-4-20250514
+stop_reason                claude-sonnet-4-20250514
+identification_strategy    claude-sonnet-4-20250514
+conclusion_direction       claude-sonnet-4-20250514
+conclusion_detail          claude-sonnet-4-20250514
+main_effect                claude-sonnet-4-20250514
+Name: model, dtype: object",0.25 SD improvement in test scores,positive
+s06_moonshot-v1-128k.json,"model                      s06
+input_tokens               s06
+output_tokens              s06
+content                    s06
+stop_reason                s06
+identification_strategy    s06
+conclusion_direction       s06
+conclusion_detail          s06
+main_effect                s06
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      medium
+input_tokens               medium
+output_tokens              medium
+content                    medium
+stop_reason                medium
+identification_strategy    medium
+conclusion_direction       medium
+conclusion_detail          medium
+main_effect                medium
+Name: difficulty, dtype: object","model                      moonshot-v1-128k
+input_tokens               moonshot-v1-128k
+output_tokens              moonshot-v1-128k
+content                    moonshot-v1-128k
+stop_reason                moonshot-v1-128k
+identification_strategy    moonshot-v1-128k
+conclusion_direction       moonshot-v1-128k
+conclusion_detail          moonshot-v1-128k
+main_effect                moonshot-v1-128k
+Name: model, dtype: object",22% higher investment in treated firms post-tariff,positive
+s01_moonshot-v1-128k.json,"model                      s01
+input_tokens               s01
+output_tokens              s01
+content                    s01
+stop_reason                s01
+identification_strategy    s01
+conclusion_direction       s01
+conclusion_detail          s01
+main_effect                s01
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      easy
+input_tokens               easy
+output_tokens              easy
+content                    easy
+stop_reason                easy
+identification_strategy    easy
+conclusion_direction       easy
+conclusion_detail          easy
+main_effect                easy
+Name: difficulty, dtype: object","model                      moonshot-v1-128k
+input_tokens               moonshot-v1-128k
+output_tokens              moonshot-v1-128k
+content                    moonshot-v1-128k
+stop_reason                moonshot-v1-128k
+identification_strategy    moonshot-v1-128k
+conclusion_direction       moonshot-v1-128k
+conclusion_detail          moonshot-v1-128k
+main_effect                moonshot-v1-128k
+Name: model, dtype: object",~30% decline in foot traffic for treated stores,negative
+s03_moonshot-v1-128k.json,"model                      s03
+input_tokens               s03
+output_tokens              s03
+content                    s03
+stop_reason                s03
+identification_strategy    s03
+conclusion_direction       s03
+conclusion_detail          s03
+main_effect                s03
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      easy
+input_tokens               easy
+output_tokens              easy
+content                    easy
+stop_reason                easy
+identification_strategy    easy
+conclusion_direction       easy
+conclusion_detail          easy
+main_effect                easy
+Name: difficulty, dtype: object","model                      moonshot-v1-128k
+input_tokens               moonshot-v1-128k
+output_tokens              moonshot-v1-128k
+content                    moonshot-v1-128k
+stop_reason                moonshot-v1-128k
+identification_strategy    moonshot-v1-128k
+conclusion_direction       moonshot-v1-128k
+conclusion_detail          moonshot-v1-128k
+main_effect                moonshot-v1-128k
+Name: model, dtype: object",0.25 SD improvement in test scores,positive
+s05_moonshot-v1-128k.json,"model                      s05
+input_tokens               s05
+output_tokens              s05
+content                    s05
+stop_reason                s05
+identification_strategy    s05
+conclusion_direction       s05
+conclusion_detail          s05
+main_effect                s05
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      medium
+input_tokens               medium
+output_tokens              medium
+content                    medium
+stop_reason                medium
+identification_strategy    medium
+conclusion_direction       medium
+conclusion_detail          medium
+main_effect                medium
+Name: difficulty, dtype: object","model                      moonshot-v1-128k
+input_tokens               moonshot-v1-128k
+output_tokens              moonshot-v1-128k
+content                    moonshot-v1-128k
+stop_reason                moonshot-v1-128k
+identification_strategy    moonshot-v1-128k
+conclusion_direction       moonshot-v1-128k
+conclusion_detail          moonshot-v1-128k
+main_effect                moonshot-v1-128k
+Name: model, dtype: object",18% increase in loans-to-assets,positive
+s01_claude-sonnet-4-20250514.json,"model                      s01
+input_tokens               s01
+output_tokens              s01
+content                    s01
+stop_reason                s01
+identification_strategy    s01
+conclusion_direction       s01
+conclusion_detail          s01
+main_effect                s01
+Name: scenario_id, dtype: object","model                      DID
+input_tokens               DID
+output_tokens              DID
+content                    DID
+stop_reason                DID
+identification_strategy    DID
+conclusion_direction       DID
+conclusion_detail          DID
+main_effect                DID
+Name: method_family, dtype: object","model                      easy
+input_tokens               easy
+output_tokens              easy
+content                    easy
+stop_reason                easy
+identification_strategy    easy
+conclusion_direction       easy
+conclusion_detail          easy
+main_effect                easy
+Name: difficulty, dtype: object","model                      claude-sonnet-4-20250514
+input_tokens               claude-sonnet-4-20250514
+output_tokens              claude-sonnet-4-20250514
+content                    claude-sonnet-4-20250514
+stop_reason                claude-sonnet-4-20250514
+identification_strategy    claude-sonnet-4-20250514
+conclusion_direction       claude-sonnet-4-20250514
+conclusion_detail          claude-sonnet-4-20250514
+main_effect                claude-sonnet-4-20250514
+Name: model, dtype: object",~30% decline in foot traffic for treated stores,negative

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s57",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "medium",
+  "title": "Impact of IPO Lockup Expiry on Stock Returns",
+  "research_question": "Does the expiration of IPO lockup periods affect stock returns? Specifically, we aim to determine whether the release of previously restricted shares leads to a significant change in cumulative abnormal returns (CAR) around the lockup expiry date.",
+  "data_description": "The dataset includes daily stock return data for 80 companies, each with a recent IPO. Key columns are stock_id, event_day, ret, mkt_ret, and beta. The event_day variable captures the days surrounding the IPO lockup expiration, allowing us to measure changes in returns relative to this event.",
+  "data_file": "experiments/exp_b/data/s57_data.csv"
+}

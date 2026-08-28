@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s97",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "title": "Impact of Grade Retention on Future Academic Performance",
+  "research_question": "Does retaining students who score just below a cutoff on end-of-year tests affect their future academic performance negatively? This study aims to determine the causal impact of grade retention on subsequent test scores.",
+  "data_description": "The dataset includes 400 students with columns for running_var (end-of-year test scores), treated (indicator for retention), and y (future test scores). The data focuses on students near the cutoff score for grade retention.",
+  "data_file": "experiments/exp_b/data/s97_data.csv"
+}

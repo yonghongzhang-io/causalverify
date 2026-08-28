@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s55",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "easy",
+  "title": "Impact of Stock Split Announcements on Cumulative Abnormal Returns",
+  "research_question": "How do stock split announcements affect the cumulative abnormal returns (CAR) of the announcing firms? Understanding the immediate market reaction to such announcements can provide insights into investor sentiment and market efficiency.",
+  "data_description": "The dataset includes 100 firms that announced stock splits, with data collected on their daily stock returns. Key columns include stock_id, event_day, ret (daily stock return), mkt_ret (market return), and beta (firm-specific risk factor). The event window spans several days before and after the announcement to capture the CAR.",
+  "data_file": "experiments/exp_b/data/s55_data.csv"
+}

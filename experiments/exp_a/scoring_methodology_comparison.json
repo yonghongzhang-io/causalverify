@@ -1,0 +1,43 @@
+{
+  "title": "L4 Direction Scoring: Old vs New Methodology",
+  "old_method": "Search second half of text for positive/negative keywords",
+  "new_method": "Find Section 6 (Expected Results) marker, search within window",
+  "spot_check_n": 20,
+  "spot_check_old_accuracy": "18/20 (90%)",
+  "spot_check_new_accuracy": "16/20 (80%)",
+  "interpretation": "Spot check is too small to reliably distinguish methods. The new scorer is more semantically grounded (looks at the actual prediction location) but can be fooled by mixed predictions in Section 6 itself.",
+  "old_l4_rates": {
+    "Claude-Opus": 57,
+    "Gemini-2.5": 60,
+    "Claude-Sonnet": 53,
+    "GPT-4o": 42,
+    "Kimi-128k": 39,
+    "o3": 39
+  },
+  "new_l4_rates": {
+    "Claude-Opus": 77,
+    "Gemini-2.5": 72,
+    "Claude-Sonnet": 68,
+    "GPT-4o": 72,
+    "Kimi-128k": 69,
+    "o3": 68
+  },
+  "delta_kd_old": {
+    "GPT-4o": 33,
+    "Kimi-128k": 27,
+    "o3": 25,
+    "Claude-Sonnet": 19,
+    "Claude-Opus": 14,
+    "Gemini-2.5": 15
+  },
+  "delta_kd_new": {
+    "Claude-Opus": -5,
+    "Kimi-128k": -1,
+    "o3": -2,
+    "Claude-Sonnet": 4,
+    "GPT-4o": 5,
+    "Gemini-2.5": 5
+  },
+  "implication": "If the new (section-aware) scorer is more accurate, the 'knowing-doing gap' largely disappears. This is a substantive methodological finding that should be addressed in the paper.",
+  "recommendation": "Report BOTH scoring methods in the paper; treat \u0394KD as scoring-method-dependent; present the comparison as evidence that L4 is hard to measure reliably."
+}

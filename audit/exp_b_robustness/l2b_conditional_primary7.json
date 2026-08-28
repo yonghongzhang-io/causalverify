@@ -1,0 +1,91 @@
+{
+  "primary_models": [
+    "Kimi",
+    "Sonnet",
+    "GPT-4o",
+    "o3",
+    "Opus",
+    "Gemini",
+    "GPT-5"
+  ],
+  "rows": [
+    {
+      "L2b_count": 45,
+      "L2b_plus_v2_count": 10,
+      "L2b_plus_v2_rate": 0.1,
+      "L2b_rate": 0.45,
+      "P_L2b_plus_v2_given_L2b": 0.2222,
+      "executed_but_not_correct_count": 35,
+      "gap_L2b_minus_L2b_plus_v2": 0.35,
+      "model": "Kimi",
+      "n": 100
+    },
+    {
+      "L2b_count": 51,
+      "L2b_plus_v2_count": 50,
+      "L2b_plus_v2_rate": 0.5,
+      "L2b_rate": 0.51,
+      "P_L2b_plus_v2_given_L2b": 0.9804,
+      "executed_but_not_correct_count": 1,
+      "gap_L2b_minus_L2b_plus_v2": 0.01,
+      "model": "Sonnet",
+      "n": 100
+    },
+    {
+      "L2b_count": 78,
+      "L2b_plus_v2_count": 62,
+      "L2b_plus_v2_rate": 0.62,
+      "L2b_rate": 0.78,
+      "P_L2b_plus_v2_given_L2b": 0.7949,
+      "executed_but_not_correct_count": 16,
+      "gap_L2b_minus_L2b_plus_v2": 0.16,
+      "model": "GPT-4o",
+      "n": 100
+    },
+    {
+      "L2b_count": 50,
+      "L2b_plus_v2_count": 46,
+      "L2b_plus_v2_rate": 0.46,
+      "L2b_rate": 0.5,
+      "P_L2b_plus_v2_given_L2b": 0.92,
+      "executed_but_not_correct_count": 4,
+      "gap_L2b_minus_L2b_plus_v2": 0.04,
+      "model": "o3",
+      "n": 100
+    },
+    {
+      "L2b_count": 94,
+      "L2b_plus_v2_count": 88,
+      "L2b_plus_v2_rate": 0.88,
+      "L2b_rate": 0.94,
+      "P_L2b_plus_v2_given_L2b": 0.9362,
+      "executed_but_not_correct_count": 6,
+      "gap_L2b_minus_L2b_plus_v2": 0.06,
+      "model": "Opus",
+      "n": 100
+    },
+    {
+      "L2b_count": 32,
+      "L2b_plus_v2_count": 32,
+      "L2b_plus_v2_rate": 0.32,
+      "L2b_rate": 0.32,
+      "P_L2b_plus_v2_given_L2b": 1.0,
+      "executed_but_not_correct_count": 0,
+      "gap_L2b_minus_L2b_plus_v2": 0.0,
+      "model": "Gemini",
+      "n": 100
+    },
+    {
+      "L2b_count": 76,
+      "L2b_plus_v2_count": 72,
+      "L2b_plus_v2_rate": 0.72,
+      "L2b_rate": 0.76,
+      "P_L2b_plus_v2_given_L2b": 0.9474,
+      "executed_but_not_correct_count": 4,
+      "gap_L2b_minus_L2b_plus_v2": 0.04,
+      "model": "GPT-5",
+      "n": 100
+    }
+  ],
+  "source": "experiments/exp_b/l2b_plus_scores_canonical_judge_v2.csv"
+}

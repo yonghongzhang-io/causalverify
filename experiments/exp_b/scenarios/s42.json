@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s42",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "Impact of Paid Family Leave on Women's Labor Force Participation",
+  "research_question": "Does the implementation of state paid family leave laws affect women's labor force participation? Specifically, we aim to understand if these laws lead to an increase in the log of labor force participation among women.",
+  "data_description": "The dataset includes 150 observations with columns: unit_id (identifying states), period (time periods before and after the law implementation), treated (indicator for states with the law), post (indicator for periods after the law), treat_x_post (interaction term), and y (log labor force participation of women).",
+  "data_file": "experiments/exp_b/data/s42_data.csv"
+}

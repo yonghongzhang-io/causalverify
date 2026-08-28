@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s78",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "title": "The Impact of Trade on Economic Prosperity",
+  "research_question": "How does the volume of international trade affect a country's economic prosperity? Specifically, we investigate the causal relationship between trade volume and GDP per capita, using geographic distance as an instrumental variable for trade volume.",
+  "data_description": "The dataset contains 400 observations with columns y (log GDP per capita), x (trade volume), z (geographic distance), and controls (various economic indicators). The sample includes data from multiple countries over recent years.",
+  "data_file": "experiments/exp_b/data/s78_data.csv"
+}

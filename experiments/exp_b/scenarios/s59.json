@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s59",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "medium",
+  "title": "Impact of SEC Investigation Announcements on Stock Returns",
+  "research_question": "How do announcements of SEC investigations affect the cumulative abnormal returns (CAR) of publicly traded companies? Specifically, does the announcement of an investigation lead to a significant change in stock performance over a short window around the event?",
+  "data_description": "The dataset consists of daily stock returns for 80 companies, each identified by a unique stock_id. The event_day variable denotes the day relative to the SEC investigation announcement, with day 0 being the announcement day. The dataset includes ret for daily stock returns and mkt_ret for market returns, along with the estimated beta for each stock.",
+  "data_file": "experiments/exp_b/data/s59_data.csv"
+}

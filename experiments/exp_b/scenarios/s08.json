@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s08",
+  "method_family": "DID",
+  "difficulty": "hard",
+  "title": "Staggered fintech adoption on loan default rates",
+  "research_question": "Did adoption of algorithmic credit scoring (fintech) reduce loan default rates at banks, where banks adopted the technology at different points in time?",
+  "data_description": "Panel data on 200 banks over 8 quarterly periods. Variables: unit_id, period, treated (1=bank adopted fintech by period 4; staggered adoption is simplified here to a single cohort), post, treat_x_post, y (loan default rate). Note: in the real world this would require Callaway-Sant'Anna or Sun-Abraham estimators for staggered adoption.",
+  "data_file": "experiments/exp_b/data/s08_data.csv"
+}

@@ -1,0 +1,53 @@
+# --- credentials ---
+.env
+config/api_keys.json
+
+# --- third-party source-paper corpus (copyright: not redistributed) ---
+experiments/exp_a/pdfs/
+audit/pdfs/
+
+# --- large experiment artifacts (released via Hugging Face, not git) ---
+experiments/exp_a/outputs/
+experiments/exp_a/outputs_v1_legacy/
+experiments/exp_a/papers/
+experiments/exp_a/llm_ratings/
+experiments/exp_a/ground_truth_extractions/
+experiments/exp_b/outputs/
+experiments/exp_b/data/
+experiments/exp_b/data_obfuscated/
+
+# --- caches ---
+*_cache/
+experiments/exp_a/multi_scorer_cache/
+experiments/exp_a/openalex_cache/
+experiments/exp_b/calibration_cache/
+audit/resolver_cache/
+audit/*_cache.json
+
+# --- superseded / temp ---
+*_legacy/
+*_v1_legacy.csv
+*.bak*
+_tmp_*
+
+# --- python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- R ---
+.Rhistory
+.RData
+*.Rproj.user/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+Icon?
+*.numbers
+
+# --- logs / latex build ---
+logs/*.log
+*.aux
+*.out

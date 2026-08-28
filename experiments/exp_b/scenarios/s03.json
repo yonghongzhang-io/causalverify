@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s03",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "School voucher program on student test scores",
+  "research_question": "Did introduction of a school voucher program (period 4) improve standardized test scores for students in treated school districts compared to control districts?",
+  "data_description": "Panel data on 200 school districts over 8 annual periods. Variables: unit_id, period, treated (1=voucher district), post, treat_x_post, y (standardized test score, mean-centered). Voucher program begins in period 4.",
+  "data_file": "experiments/exp_b/data/s03_data.csv"
+}

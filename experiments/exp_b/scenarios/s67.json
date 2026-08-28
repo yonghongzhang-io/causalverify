@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s67",
+  "method_family": "IV",
+  "difficulty": "easy",
+  "title": "Impact of Hospital Proximity on Mortality Rates",
+  "research_question": "Does the intensity of healthcare received affect mortality rates? Specifically, we investigate whether living closer to a hospital increases the intensity of care and subsequently impacts mortality outcomes.",
+  "data_description": "The dataset includes 500 individuals with columns: y (mortality rate), x (care intensity), z (distance to nearest hospital), and controls (age, gender, pre-existing conditions). The variable z serves as an instrument for x to explore its causal impact on y.",
+  "data_file": "experiments/exp_b/data/s67_data.csv"
+}

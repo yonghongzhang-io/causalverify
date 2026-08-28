@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s24",
+  "method_family": "IV",
+  "difficulty": "hard",
+  "title": "Oil price shocks as IV for inflation on investment",
+  "research_question": "Does inflation reduce corporate investment, using oil price shocks as an instrument for inflation to address the endogeneity of inflation with economic activity?",
+  "data_description": "Panel data on 500 firm-quarter observations. Variables: y (log investment), x (inflation rate), z (oil price change — instrument), controls (firm size, leverage, Q). Challenge: oil prices may directly affect investment beyond inflation channel (exclusion restriction is debatable).",
+  "data_file": "experiments/exp_b/data/s24_data.csv"
+}

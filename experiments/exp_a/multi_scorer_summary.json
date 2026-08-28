@@ -1,0 +1,44 @@
+{
+  "Kimi": {
+    "n_papers": 137,
+    "S1_latter_half_l4": 0.6569,
+    "S2_section6_l4": 0.6861,
+    "S3_llm_judge_l4": 0.7445,
+    "S4_structured_l4": 0.6861
+  },
+  "Sonnet": {
+    "n_papers": 137,
+    "S1_latter_half_l4": 0.6788,
+    "S2_section6_l4": 0.6788,
+    "S3_llm_judge_l4": 0.7956,
+    "S4_structured_l4": 0.3942
+  },
+  "GPT-4o": {
+    "n_papers": 137,
+    "S1_latter_half_l4": 0.7153,
+    "S2_section6_l4": 0.7153,
+    "S3_llm_judge_l4": 0.7518,
+    "S4_structured_l4": 0.7153
+  },
+  "o3": {
+    "n_papers": 137,
+    "S1_latter_half_l4": 0.6423,
+    "S2_section6_l4": 0.6788,
+    "S3_llm_judge_l4": 0.7445,
+    "S4_structured_l4": 0.2482
+  },
+  "Opus": {
+    "n_papers": 137,
+    "S1_latter_half_l4": 0.7153,
+    "S2_section6_l4": 0.7664,
+    "S3_llm_judge_l4": 0.7664,
+    "S4_structured_l4": 0.1898
+  },
+  "Gemini": {
+    "n_papers": 137,
+    "S1_latter_half_l4": 0.7299,
+    "S2_section6_l4": 0.7153,
+    "S3_llm_judge_l4": 0.781,
+    "S4_structured_l4": 0.1241
+  }
+}

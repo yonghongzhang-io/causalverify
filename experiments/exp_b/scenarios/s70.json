@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s70",
+  "method_family": "IV",
+  "difficulty": "easy",
+  "title": "Impact of Income on Civil Conflict Using Rainfall Variation",
+  "research_question": "Does a change in income, driven by rainfall variation, affect the likelihood of civil conflict in developing regions? By using rainfall as an instrumental variable, we aim to isolate the causal impact of income fluctuations on conflict occurrence.",
+  "data_description": "The dataset includes 500 observations with columns: y (civil conflict incidence), x (income), z (rainfall variation), and controls (other socioeconomic factors). Rainfall variation serves as an instrumental variable for income, allowing us to assess its impact on civil conflict.",
+  "data_file": "experiments/exp_b/data/s70_data.csv"
+}

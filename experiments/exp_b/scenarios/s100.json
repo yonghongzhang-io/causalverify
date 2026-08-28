@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s100",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "title": "Impact of Obesity Diagnosis on Medication Use",
+  "research_question": "Does receiving an obesity diagnosis at a specific BMI cutoff lead to increased medication use? This study aims to understand the causal impact of being diagnosed as obese on the subsequent use of medications.",
+  "data_description": "The dataset includes 400 individuals with columns for running_var (BMI), treated (whether BMI is above the obesity cutoff), and y (log medication use). The data focuses on individuals with BMI values near the obesity threshold.",
+  "data_file": "experiments/exp_b/data/s100_data.csv"
+}

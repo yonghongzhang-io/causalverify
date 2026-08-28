@@ -1,0 +1,31 @@
+{
+  "ambiguity_count": 15,
+  "ambiguity_rate": 0.3,
+  "disagreement_count_by_method": {
+    "DID": 1,
+    "EVENT_STUDY": 6,
+    "IV": 1,
+    "RDD": 4
+  },
+  "disagreement_examples_sample_id_only": [
+    "l2bjhv_002",
+    "l2bjhv_015",
+    "l2bjhv_016",
+    "l2bjhv_017",
+    "l2bjhv_019",
+    "l2bjhv_021",
+    "l2bjhv_024",
+    "l2bjhv_033",
+    "l2bjhv_043",
+    "l2bjhv_044"
+  ],
+  "judge_human_l2bplus_pass_agreement_count": 39,
+  "judge_human_l2bplus_pass_agreement_rate": 0.8863636363636364,
+  "judge_human_numeric_agreement_count": 40,
+  "judge_human_numeric_agreement_rate": 0.9090909090909091,
+  "l2bplus_tolerance": 0.5,
+  "n_annotated": 50,
+  "n_numeric_eligible": 44,
+  "n_pass_fail_eligible": 44,
+  "status": "complete"
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s23",
+  "method_family": "IV",
+  "difficulty": "hard",
+  "title": "Judge leniency as IV for incarceration on recidivism",
+  "research_question": "Does incarceration reduce or increase recidivism, using random assignment of criminal cases to lenient vs. strict judges as an instrument?",
+  "data_description": "Cross-sectional data on 500 criminal defendants. Variables: y (recidivism within 3 years, binary), x (incarcerated binary), z (judge leniency index — leave-one-out mean incarceration rate for judge), controls (offense type, prior record, age). Exclusion: judge assignment affects recidivism only through incarceration decision.",
+  "data_file": "experiments/exp_b/data/s23_data.csv"
+}

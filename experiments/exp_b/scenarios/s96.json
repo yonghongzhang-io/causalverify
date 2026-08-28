@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s96",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "title": "Impact of Irrigation Eligibility on Crop Revenue",
+  "research_question": "Does eligibility for irrigation based on land slope significantly impact crop revenue for farmers? The study investigates whether being just eligible for irrigation, determined by a land slope threshold, leads to increased crop revenue.",
+  "data_description": "The dataset consists of 400 observations with columns: running_var (land slope), treated (irrigation eligibility), y (crop revenue), and near_cutoff (indicator for land slope near threshold). The sample includes farms with varying land slopes around the eligibility threshold.",
+  "data_file": "experiments/exp_b/data/s96_data.csv"
+}

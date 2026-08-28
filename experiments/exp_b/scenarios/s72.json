@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s72",
+  "method_family": "IV",
+  "difficulty": "easy",
+  "title": "The Impact of Education on Chronic Disease Risk",
+  "research_question": "Does the level of education attained influence the likelihood of developing chronic diseases later in life? This study explores the causal relationship between education and chronic disease incidence, using quarter-of-birth as an instrumental variable to address potential endogeneity in educational attainment.",
+  "data_description": "The dataset comprises 500 individuals, including variables such as 'y' (indicator for chronic disease), 'x' (years of education), 'z' (quarter-of-birth as an instrument), and 'controls' (demographic and socioeconomic factors).",
+  "data_file": "experiments/exp_b/data/s72_data.csv"
+}

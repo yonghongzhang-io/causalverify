@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s63",
+  "method_family": "EVENT_STUDY",
+  "difficulty": "hard",
+  "title": "Impact of FDA Drug Approval on Biotech Company Returns",
+  "research_question": "What is the effect of FDA drug approvals on the cumulative abnormal returns (CAR) of biotech companies? Understanding this relationship can provide insights into market reactions to regulatory events in the pharmaceutical sector.",
+  "data_description": "The dataset includes information on 60 biotech companies, focusing on stock_id, event_day, ret, mkt_ret, and beta. Event days are centered around the FDA approval date, capturing stock returns before and after the approval event.",
+  "data_file": "experiments/exp_b/data/s63_data.csv"
+}

@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s39",
+  "method_family": "DID",
+  "difficulty": "medium",
+  "title": "Impact of Microfinance Branch Entry on Household Consumption",
+  "research_question": "How does the entry of a microfinance branch affect household consumption in developing regions? We aim to determine whether access to microfinance services leads to an increase in household consumption levels.",
+  "data_description": "The dataset includes 150 observations with columns: unit_id, period, treated, post, treat_x_post, and y. 'unit_id' identifies households, 'period' represents time, 'treated' indicates whether a household is in a region with a new microfinance branch, 'post' marks the period after branch entry, 'treat_x_post' is the interaction term, and 'y' is the log of household consumption.",
+  "data_file": "experiments/exp_b/data/s39_data.csv"
+}

@@ -1,0 +1,28 @@
+domain,difficulty,authors,year,journal,title,oa_status
+agriculture,easy,Olmstead & Rhode,2011,JEP,"Adapting North American Wheat Production to Climatic Challenges, 1839-2009",mismatch
+agriculture,hard,"Burgess, Deschenes, Donaldson & Greenstone",2014,QJE,The Unequal Effects of Weather and Climate Change: Evidence from Mortality in India,mismatch
+agriculture,medium,Olper & Raimondi,2010,AEJ:Applied,Market Access and Agricultural Productivity: Evidence from a Regression Discontinuity Design,mismatch
+agriculture,hard,Foster & Rosenzweig,2004,JDE,Agricultural Productivity Growth and Rural Economic Development: Evidence from India,mismatch
+agriculture,medium,Dell & Olken,2012,Econometrica,Temperature Shocks and Economic Growth: Evidence from the Agricultural Sector,mismatch
+development,hard,Miguel & Kremer,2004,Econometrica,Worms: Identifying Impacts on Education and Health in the Presence of Treatment Externalities,mismatch
+development,hard,Martinez,2013,AEJ:Applied,Sources of Disparity in School Funding and Outcomes: Evidence from Chile,mismatch
+education,medium,Jackson,2010,JHR,Do College-Prep Programs Improve Long-Term Outcomes?,mismatch
+education,medium,Lochner & Moretti,2004,AER,"The Effect of Education on Crime: Evidence from Prison Inmates, Arrests, and Self-Reports",mismatch
+environment,medium,Hanna & Oliva,2015,AEJ:Applied,The Effect of Pollution on Labor Supply: Evidence from a Natural Experiment in Mexico City,mismatch
+environment,medium,"Bento, Freedman & Lang",2015,REStat,Who Benefits from Environmental Regulation? Evidence from the Clean Air Act Amendments,mismatch
+environment,hard,"Fowlie, Holland & Mansur",2012,AER,What Do Emissions Markets Deliver and to Whom? Evidence from Southern California’s NOx Trading Program,not_found
+finance,medium,Becker,2007,JFE,Geographical Segmentation of U.S. Capital Markets,mismatch
+finance,hard,"Gao, Parsons & Shen",2020,RFS,Global Relation of Corporate Governance and Firm Value,mismatch
+health,medium,"Lindo, Siminski & Yerokhin",2016,JHE,Breaking the Link Between Legal Access to Alcohol and Motor Vehicle Accidents: Evidence from New South Wales,mismatch
+labor,hard,"Dustmann, Schönberg & Stuhler",2017,QJE,"Labor Supply Shocks, Native Wages, and the Adjustment of Local Employment",mismatch
+labor,hard,"Dustmann, Frattini & Preston",2013,REStat,The Effect of Immigration along the Distribution of Wages,mismatch
+labor,hard,Imbens & Lemieux,2008,JAE,Regression Discontinuity Designs: A Guide to Practice,mismatch
+public,medium,Chetty et al.,2011,AER,Salience and Taxation: Theory and Evidence,mismatch
+trade,medium,McLaren & Hakobyan,2016,REStat,NAFTA and the Income Distributional Impacts on U.S. Workers,mismatch
+trade,medium,Pierce & Schott,2016,AER,The Surprisingly Swift Decline of U.S. Manufacturing Employment,mismatch
+urban,easy,Glaeser & Gyourko,2005,JUE,Urban Decline and Durable Housing,mismatch
+urban,medium,Mast,2019,AEJ:EP,The Effect of New Luxury Housing on Regional Housing Markets,mismatch
+urban,medium,Glaeser & Gyourko,2003,JUE,The Impact of Zoning on Housing Affordability,mismatch
+urban,hard,Kline & Moretti,2014,Econometrica,"Local Economic Development, Agglomeration Economies, and the Big Push: 100 Years of Evidence from the Tennessee Valley Authority",mismatch
+urban,medium,"Gibbons, Machin & Silva",2013,JUE,Valuing School Quality Using Boundary Discontinuities,mismatch
+urban,hard,Severen,2020,AEJ:EP,"Commuting, Labor, and Housing Market Effects of Mass Transportation: Welfare and Identification",mismatch

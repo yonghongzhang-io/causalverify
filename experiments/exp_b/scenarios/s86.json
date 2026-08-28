@@ -1,0 +1,9 @@
+{
+  "scenario_id": "s86",
+  "method_family": "RDD",
+  "difficulty": "easy",
+  "title": "Impact of Medicare Eligibility on Hospital Visits",
+  "research_question": "Does becoming eligible for Medicare at age 65 reduce the number of hospital visits? By examining individuals around the age threshold, we aim to determine the causal effect of Medicare eligibility on healthcare utilization.",
+  "data_description": "The dataset includes 600 individuals with columns: running_var (age), treated (indicating Medicare eligibility), and y (log hospital visits). The sample focuses on individuals near the age-65 cutoff to assess changes in hospital visit patterns.",
+  "data_file": "experiments/exp_b/data/s86_data.csv"
+}
