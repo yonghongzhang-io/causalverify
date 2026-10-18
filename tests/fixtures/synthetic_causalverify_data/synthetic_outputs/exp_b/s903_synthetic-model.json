@@ -1,0 +1,13 @@
+{
+  "scenario_id": "s903",
+  "model": "synthetic-model",
+  "run_at": "2099-01-01T00:00:00+00:00",
+  "_synthetic": true,
+  "llm_response": {
+    "model": "synthetic-model",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "content": "## 1. Identification Strategy\nInstrumental variables (2SLS): outage hours are instrumented with distance to the relay\ntower. The first stage should be strong; the exclusion restriction is the key assumption.\n\n## 2. R Code\n```r\n# SYNTHETIC fixture completion: '# FAIL' makes the test stand-in for Rscript exit with an error\nlibrary(AER)\ndf <- read.csv(\"experiments/exp_b/data/s903_data.csv\")\n# FAIL\niv <- ivreg(y ~ x | z, data = df)\nprint(summary(iv))\n```\n\n## 3. Expected Findings\nWe expect a negative coefficient: more outage hours mean lower export sales, a decrease\nof roughly half a log point.\n",
+    "stop_reason": "stop"
+  }
+}

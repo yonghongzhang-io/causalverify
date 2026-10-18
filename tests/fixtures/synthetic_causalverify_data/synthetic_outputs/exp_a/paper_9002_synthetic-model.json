@@ -1,0 +1,13 @@
+{
+  "paper_id": "paper_9002",
+  "model": "synthetic-model",
+  "run_at": "2099-01-01T00:00:00+00:00",
+  "_synthetic": true,
+  "llm_response": {
+    "model": "synthetic-model",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "content": "## 1. Identification Strategy\nI would run an event study around each firm's longest outage, estimating cumulative abnormal\nreturns in export sales relative to a pre-outage baseline. An event-study approach is natural\nbecause outages are discrete events.\n\n## 2. Treatment and Control\n- Treatment: firms experiencing an outage.\n- Control: pre-outage weeks of the same firm.\n\n## 3. Key Identifying Assumptions\nNo anticipation of outages by firms.\n\n## 4. Threats to Identification\nOutage duration may correlate with firm size.\n\n## 5. R Code Outline\n```r\nlibrary(fixest)\ndf <- read.csv(\"firms.csv\")\nes <- feols(export_sales ~ i(event_time, ref = -1) | firm_id, data = df)\nsummary(es)\n```\n\n## 6. Expected Results\nI expect a negative effect: longer outages decrease export sales, with lower sales\nand a decline of several percent for each additional day offline.\n\n## 7. Validity Checklist Self-Assessment\n- C1: 1\n- C2: 0\n- C3: 1\n- C4: 0\n- C5: 1\n",
+    "stop_reason": "stop"
+  }
+}

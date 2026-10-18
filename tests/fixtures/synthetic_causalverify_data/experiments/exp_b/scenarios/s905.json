@@ -1,0 +1,20 @@
+{
+  "scenario_id": "s905",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "SYNTHETIC: Testland pension reform and invented saving rates",
+  "research_question": "Did the fictional pension reform (period 3 onwards) change household saving rates in reformed regions relative to others?",
+  "data_description": "Invented panel: unit_id, period (1-4), treated, post, treat_x_post, y (saving rate).",
+  "data_file": "experiments/exp_b/data/s905_data.csv",
+  "dgp_truth": {
+    "type": "did",
+    "effect": 0.1,
+    "direction": "positive"
+  },
+  "ground_truth": {
+    "identification_strategy": "DID",
+    "conclusion_direction": "positive",
+    "main_effect": "made-up +0.10"
+  },
+  "_synthetic": true
+}

@@ -1,0 +1,23 @@
+#!/bin/sh
+# Stand-in for R used by the CausalVerify Inspect tests, so they run without R or Docker.
+#
+# It is invoked exactly like the real thing (`Rscript --vanilla <script>`), reads the
+# script, and
+#   * exits 1 with an error on stderr if the script contains the marker '# FAIL',
+#   * otherwise prints every line beginning with '# OUT:' (marker removed) to stdout.
+# The synthetic completions in tests/fixtures/synthetic_causalverify_data carry those
+# markers, which lets the tests drive the pipeline's coefficient extraction and L2b/L2b+
+# logic deterministically through both the pipeline's own executor and the Inspect sandbox.
+for last; do :; done
+script="$last"
+if [ ! -f "$script" ]; then
+  echo "Fatal error: cannot open file '$script': No such file or directory" >&2
+  exit 2
+fi
+if grep -q '# FAIL' "$script"; then
+  echo "Error in synthetic_failure() : simulated R error from the test stand-in" >&2
+  echo "Execution halted" >&2
+  exit 1
+fi
+grep '^# OUT:' "$script" | sed 's/^# OUT://'
+exit 0

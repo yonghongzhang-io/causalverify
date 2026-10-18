@@ -51,3 +51,8 @@ Icon?
 logs/*.log
 *.aux
 *.out
+
+# --- Inspect eval logs (hold prompts, completions and scoring targets) ---
+logs/*.eval
+logs/*.json
+.inspect/

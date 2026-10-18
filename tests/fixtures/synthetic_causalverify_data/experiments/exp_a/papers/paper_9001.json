@@ -1,0 +1,12 @@
+{
+  "paper_id": "paper_9001",
+  "authors": "Fixture & Placeholder (fictional)",
+  "year": 2099,
+  "journal": "Journal of Synthetic Fixtures",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "source": "synthetic",
+  "research_question": "Did the fictional Republic of Testland's 2088 'Lantern Subsidy' for night markets raise monthly stall revenue, relative to markets in unsubsidised districts?",
+  "data_description": "Panel of 120 invented night markets over 10 months (2087M9-2088M6). Variables: market_id, month, treated (1 = subsidised district), post (1 = from 2088M1), revenue (log monthly stall revenue index).",
+  "institutional_context": "In this made-up setting the subsidy was assigned by district lottery announced in 2087M12 and paid from 2088M1."
+}

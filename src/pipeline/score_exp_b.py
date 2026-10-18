@@ -33,8 +33,7 @@ import numpy as np
 
 SCENARIOS_DIR = Path("experiments/exp_b/scenarios")
 OUTPUTS_DIR   = Path("experiments/exp_b/outputs")
-FIGURES_DIR   = Path("paper/figures")
-FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+FIGURES_DIR   = Path("paper/figures")  # created on demand in generate_heatmap()
 
 METHOD_KEYWORDS = {
     "DID": [
@@ -240,6 +239,7 @@ def print_table(results: dict[str, list[dict]]):
 
 
 def generate_heatmap(results: dict[str, list[dict]]):
+    FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     models   = list(results.keys())
     n_models = len(models)
     rows     = results[models[0]]

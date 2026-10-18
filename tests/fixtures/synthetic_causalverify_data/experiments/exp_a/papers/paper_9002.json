@@ -1,0 +1,12 @@
+{
+  "paper_id": "paper_9002",
+  "authors": "Placeholder & Fixture (fictional)",
+  "year": 2099,
+  "journal": "Review of Imaginary Economics",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "source": "synthetic",
+  "research_question": "Does longer broadband outage duration reduce invented small-firm export sales in the fictional province of Nullmark?",
+  "data_description": "Cross-section of 800 invented firms. Variables: firm_id, outage_hours, export_sales (log), distance_to_relay_tower (km), sector.",
+  "institutional_context": "Outage duration in this fictional province is driven by distance to a relay tower that was sited in 2040 for unrelated geological reasons."
+}

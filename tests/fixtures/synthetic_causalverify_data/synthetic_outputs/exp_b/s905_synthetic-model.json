@@ -1,0 +1,13 @@
+{
+  "scenario_id": "s905",
+  "model": "synthetic-model",
+  "run_at": "2099-01-01T00:00:00+00:00",
+  "_synthetic": true,
+  "llm_response": {
+    "model": "synthetic-model",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "content": "## 1. Identification Strategy\nDifference-in-differences comparing reformed and non-reformed regions before and after\nperiod 3; parallel trends is the identifying assumption.\n\n## 2. R Code\nI would estimate a two-way fixed-effects regression of y on treat_x_post with unit and\nperiod fixed effects, but I have not written the code here.\n\n## 3. Expected Findings\nWe expect a positive effect: higher saving rates, an increase of about 10 points.\n",
+    "stop_reason": "stop"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "paper_id": "paper_9003",
+  "authors": "Synthetic, Fake & Dummy (fictional)",
+  "year": 2099,
+  "journal": "Journal of Synthetic Fixtures",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "source": "synthetic",
+  "research_question": "Does eligibility for the fictional 'Coral Grant' (awarded when a school's invented readiness score is at least 70) increase graduation rates?",
+  "data_description": "Cross-section of 1,500 invented schools. Variables: school_id, readiness_score (0-100), grant (1 = received), grad_rate.",
+  "institutional_context": "In this made-up programme the 70-point cutoff was fixed before scores were collected."
+}

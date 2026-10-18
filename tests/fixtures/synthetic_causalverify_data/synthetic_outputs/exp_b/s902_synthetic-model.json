@@ -1,0 +1,13 @@
+{
+  "scenario_id": "s902",
+  "model": "synthetic-model",
+  "run_at": "2099-01-01T00:00:00+00:00",
+  "_synthetic": true,
+  "llm_response": {
+    "model": "synthetic-model",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "content": "## 1. Identification Strategy\nEvent study with a market model: estimate abnormal returns ret - beta * mkt over the\npre-event window and cumulate them after the announcement (event day 0).\n\n## 2. R Code\n```r\n# SYNTHETIC fixture completion: '# OUT:' lines are echoed by the test stand-in for Rscript\ndf <- read.csv(\"experiments/exp_b/data/s902_data.csv\")\npre <- subset(df, event_day < 0)\nmm <- lm(ret ~ mkt, data = pre)\ndf$ar <- df$ret - predict(mm, newdata = df)\ncar <- sum(df$ar[df$event_day >= 0 & df$event_day <= 2])\n# OUT:Cumulative abnormal return CAR: 0.0121\ncat(\"CAR[0,+2]:\", car, \"\\n\")\n```\n\n## 3. Expected Findings\nWe expect a positive abnormal return, i.e. higher bond prices and an increase in\nreturns over the three post-announcement days.\n",
+    "stop_reason": "stop"
+  }
+}

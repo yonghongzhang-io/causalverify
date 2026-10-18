@@ -1,0 +1,38 @@
+[
+  {
+    "paper_id": "paper_9001",
+    "new_method": "DID",
+    "new_direction": "positive",
+    "m_level": "unanimous",
+    "d_level": "unanimous",
+    "needs_human": false,
+    "_synthetic": true
+  },
+  {
+    "paper_id": "paper_9002",
+    "new_method": "IV",
+    "new_direction": "negative",
+    "m_level": "majority",
+    "d_level": "unanimous",
+    "needs_human": false,
+    "_synthetic": true
+  },
+  {
+    "paper_id": "paper_9003",
+    "new_method": "RDD",
+    "new_direction": "positive",
+    "m_level": "unanimous",
+    "d_level": "majority",
+    "needs_human": false,
+    "_synthetic": true
+  },
+  {
+    "paper_id": "paper_9004",
+    "new_method": "OTHER",
+    "new_direction": "mixed",
+    "m_level": "split",
+    "d_level": "split",
+    "needs_human": true,
+    "_synthetic": true
+  }
+]

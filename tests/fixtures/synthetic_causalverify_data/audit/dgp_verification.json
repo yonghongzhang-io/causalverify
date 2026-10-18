@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "note": "SYNTHETIC fixture - arbitrary numbers, not benchmark baselines"
+  },
+  "results": [
+    {
+      "scenario_id": "s901",
+      "estimated": -0.29,
+      "status": "OK",
+      "rel_error": 0.033,
+      "standard_error": 0.05
+    },
+    {
+      "scenario_id": "s902",
+      "estimated": 0.0041,
+      "status": "OK",
+      "rel_error": 0.025,
+      "standard_error": 0.001
+    },
+    {
+      "scenario_id": "s903",
+      "estimated": 0.47,
+      "status": "FLAGGED",
+      "rel_error": 0.06,
+      "standard_error": 0.08
+    },
+    {
+      "scenario_id": "s905",
+      "estimated": 0.11,
+      "status": "OK",
+      "rel_error": 0.1,
+      "standard_error": 0.02
+    }
+  ]
+}

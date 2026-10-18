@@ -31,8 +31,7 @@ import numpy as np
 PAPERS_DIR  = Path("experiments/exp_a/papers")
 OUTPUTS_DIR = Path("experiments/exp_a/outputs")
 GT_PATH     = Path("audit/gt_aggregate_decisions.json")
-FIGURES_DIR = Path("paper/figures")
-FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+FIGURES_DIR = Path("paper/figures")  # created on demand in generate_heatmap()
 
 # Keywords that indicate each method family (section-aware weighted scoring)
 STRATEGY_KEYWORDS = {
@@ -351,6 +350,7 @@ def print_table(results: dict[str, list[dict]]):
 
 
 def generate_heatmap(results: dict[str, list[dict]]):
+    FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     models = list(results.keys())
     n_models = len(models)
     papers = results[models[0]]

@@ -1,0 +1,13 @@
+{
+  "scenario_id": "s904",
+  "model": "synthetic-model",
+  "run_at": "2099-01-01T00:00:00+00:00",
+  "_synthetic": true,
+  "llm_response": {
+    "model": "synthetic-model",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "content": "## 1. Identification Strategy\nSharp regression discontinuity at the readiness cutoff: local linear regression on\nrunning_var within a bandwidth around the cutoff, treated = 1 above the cutoff.\n\n## 2. R Code\n```r\n# SYNTHETIC fixture completion: runs but prints no coefficient (tests the extraction-failure path)\nlibrary(rdrobust)\ndf <- read.csv(\"experiments/exp_b/data/s904_data.csv\")\nrd <- rdrobust(y = df$y, x = df$running_var, c = 0)\n# OUT:Analysis complete. See table above.\n```\n\n## 3. Expected Findings\nWe expect a positive jump: higher graduation rates, an increase of around 20 points.\n",
+    "stop_reason": "stop"
+  }
+}

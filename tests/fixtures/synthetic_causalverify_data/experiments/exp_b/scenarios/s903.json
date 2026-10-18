@@ -1,0 +1,20 @@
+{
+  "scenario_id": "s903",
+  "method_family": "IV",
+  "difficulty": "medium",
+  "title": "SYNTHETIC: broadband outages and invented export sales",
+  "research_question": "Using distance to a relay tower as an instrument, what is the effect of outage hours on log export sales of invented firms?",
+  "data_description": "Invented cross-section: firm_id, x (outage hours, endogenous), z (distance to relay tower, instrument), y (log export sales).",
+  "data_file": "experiments/exp_b/data/s903_data.csv",
+  "dgp_truth": {
+    "type": "iv",
+    "effect": 0.5,
+    "direction": "positive"
+  },
+  "ground_truth": {
+    "identification_strategy": "IV",
+    "conclusion_direction": "positive",
+    "main_effect": "made-up +0.50"
+  },
+  "_synthetic": true
+}

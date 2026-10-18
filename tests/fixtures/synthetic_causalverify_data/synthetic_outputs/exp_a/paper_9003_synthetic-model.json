@@ -1,0 +1,13 @@
+{
+  "paper_id": "paper_9003",
+  "model": "synthetic-model",
+  "run_at": "2099-01-01T00:00:00+00:00",
+  "_synthetic": true,
+  "llm_response": {
+    "model": "synthetic-model",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "content": "## 1. Identification Strategy\nA sharp regression discontinuity design (RDD) exploiting the 70-point readiness cutoff.\nSchools just above and just below the cutoff are compared with rdrobust local-linear estimates.\n\n## 2. Treatment and Control\n- Running variable: readiness score; cutoff 70.\n- Treatment: readiness score >= 70 (grant eligibility).\n\n## 3. Key Identifying Assumptions\nContinuity of potential outcomes at the cutoff; no manipulation of scores.\n\n## 4. Threats to Identification\nScore manipulation (McCrary test); other programmes using the same cutoff.\n\n## 5. R Code Outline\n```r\nlibrary(rdrobust)\ndf <- read.csv(\"schools.csv\")\nrd <- rdrobust(y = df$grad_rate, x = df$readiness_score, c = 70)\nsummary(rd)\n```\n\n## 6. Expected Results\nSurprisingly I expect a negative effect: a decline in graduation rates, lower by a few\npoints, because the grant in this setting is tied to burdensome reporting that reduces\nteaching time.\n\n## 7. Validity Checklist Self-Assessment\n- C1: 1\n- C2: 1\n- C3: 0\n- C4: 1\n- C5: 1\n",
+    "stop_reason": "stop"
+  }
+}
