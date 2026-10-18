@@ -1,0 +1,10 @@
+# Optional extra: run CausalVerify with Inspect (UK AISI inspect_ai).
+#
+#   pip install -r requirements-inspect.txt
+#
+# Pulls in the base requirements (the Inspect scorers call the repository's own
+# scoring code) plus Inspect itself and pytest for the port's test-suite.
+# No model API keys are needed to install or to run the tests (mockllm only).
+-r requirements.txt
+inspect_ai>=0.3.281      # version the port was developed and tested against
+pytest>=8.0

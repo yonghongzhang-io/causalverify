@@ -21,7 +21,6 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-import pandas as pd
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -33,60 +32,15 @@ OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── Prompt ────────────────────────────────────────────────────────────
 
-SYSTEM_PROMPT = """You are an expert financial economist and econometrician.
-You will be given a research scenario with a data description and a sample of the dataset.
-Your task is to implement a complete empirical analysis.
-
-Respond in exactly this structure:
-
-## 1. Identification Strategy
-[Which causal method (DID / Event Study / IV / RDD) and why. State the key assumption(s).]
-
-## 2. R Code
-```r
-# Complete, self-contained R code that:
-# - Reads the CSV file from the path provided
-# - Runs the appropriate causal analysis
-# - Prints a clear numerical result (coefficient, CAR, etc.)
-# - Includes basic robustness checks
-```
-
-## 3. Expected Findings
-[What sign and approximate magnitude do you expect? Why?]
-"""
-
-USER_PROMPT_TEMPLATE = """Research scenario: {title}
-
-Research question:
-{research_question}
-
-Data description:
-{data_description}
-
-Data file path: {data_file}
-
-Data preview (first 5 rows):
-{data_preview}
-
-Column types:
-{col_types}
-
-Please implement the full analysis."""
-
-
-def build_user_prompt(scenario: dict) -> str:
-    data_file = scenario["data_file"]
-    df = pd.read_csv(data_file, nrows=5)
-    preview = df.to_string(index=False)
-    col_info = "\n".join(f"  {c}: {str(t)}" for c, t in df.dtypes.items())
-    return USER_PROMPT_TEMPLATE.format(
-        title=scenario["title"],
-        research_question=scenario["research_question"],
-        data_description=scenario["data_description"],
-        data_file=data_file,
-        data_preview=preview,
-        col_types=col_info,
-    )
+# The prompt text and prompt builder live in src/prompts/exp_b.py so they can
+# be imported without this module's side effects (dotenv, output-dir creation).
+# The names are re-exported here unchanged for existing importers of this module.
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from src.prompts.exp_b import (  # noqa: E402
+    SYSTEM_PROMPT,
+    USER_PROMPT_TEMPLATE,
+    build_user_prompt,
+)
 
 
 # ── LLM callers ───────────────────────────────────────────────────────

@@ -1,0 +1,20 @@
+{
+  "scenario_id": "s904",
+  "method_family": "RDD",
+  "difficulty": "hard",
+  "title": "SYNTHETIC: Coral Grant eligibility cutoff and graduation",
+  "research_question": "Using the fictional 70-point readiness cutoff, what is the effect of Coral Grant eligibility on graduation rates?",
+  "data_description": "Invented cross-section: school_id, running_var (readiness score centred at the cutoff), treated (1 = above cutoff), y (graduation rate).",
+  "data_file": "experiments/exp_b/data/s904_data.csv",
+  "dgp_truth": {
+    "type": "rdd",
+    "effect": 0.2,
+    "direction": "positive"
+  },
+  "ground_truth": {
+    "identification_strategy": "RDD",
+    "conclusion_direction": "positive",
+    "main_effect": "made-up +0.20"
+  },
+  "_synthetic": true
+}

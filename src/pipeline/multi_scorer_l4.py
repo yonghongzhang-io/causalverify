@@ -43,8 +43,7 @@ load_dotenv()
 PAPERS_DIR = Path("experiments/exp_a/papers")
 OUTPUTS_DIR = Path("experiments/exp_a/outputs")
 RESULTS_DIR = Path("experiments/exp_a")
-CACHE_DIR = Path("experiments/exp_a/multi_scorer_cache")
-CACHE_DIR.mkdir(parents=True, exist_ok=True)
+CACHE_DIR = Path("experiments/exp_a/multi_scorer_cache")  # created on demand by S3/S4/S5
 
 MODELS = [
     ("moonshot-v1-128k", "Kimi"),
@@ -126,6 +125,7 @@ Output ONLY the single word. No explanation."""
 
 def s3_llm_judge(text: str, gt_direction: str, paper_id: str, model_slug: str) -> str | None:
     """Use Claude Opus as a rater to extract the model's direction."""
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_file = CACHE_DIR / f"s3_{paper_id}_{model_slug}.json"
     if cache_file.exists():
         return json.load(open(cache_file)).get("direction")
@@ -165,6 +165,7 @@ Definitions:
 
 
 def s4_structured(text: str, gt_direction: str, paper_id: str, model_slug: str) -> str | None:
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_file = CACHE_DIR / f"s4_{paper_id}_{model_slug}.json"
     if cache_file.exists():
         return json.load(open(cache_file)).get("direction")
@@ -195,6 +196,7 @@ def s4_structured(text: str, gt_direction: str, paper_id: str, model_slug: str) 
 
 def s5_logprob(text: str, gt_direction: str, paper_id: str, model_slug: str) -> str | None:
     """Use OpenAI logprobs to get P(positive) vs P(negative) at the next token."""
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_file = CACHE_DIR / f"s5_{paper_id}_{model_slug}.json"
     if cache_file.exists():
         return json.load(open(cache_file)).get("direction")

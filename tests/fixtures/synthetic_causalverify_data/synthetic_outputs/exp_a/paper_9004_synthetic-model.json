@@ -1,0 +1,13 @@
+{
+  "paper_id": "paper_9004",
+  "model": "synthetic-model",
+  "run_at": "2099-01-01T00:00:00+00:00",
+  "_synthetic": true,
+  "llm_response": {
+    "model": "synthetic-model",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "content": "",
+    "stop_reason": "stop"
+  }
+}

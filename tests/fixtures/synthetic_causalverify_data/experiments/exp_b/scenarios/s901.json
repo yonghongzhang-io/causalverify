@@ -1,0 +1,20 @@
+{
+  "scenario_id": "s901",
+  "method_family": "DID",
+  "difficulty": "easy",
+  "title": "SYNTHETIC: Lantern Subsidy and night-market revenue",
+  "research_question": "Did the fictional Lantern Subsidy (paid from period 4) change log stall revenue in subsidised markets relative to unsubsidised ones?",
+  "data_description": "Invented panel: unit_id, period (1-6, treatment at period 4), treated, post, treat_x_post, y (log revenue).",
+  "data_file": "experiments/exp_b/data/s901_data.csv",
+  "dgp_truth": {
+    "type": "did",
+    "effect": -0.3,
+    "direction": "negative"
+  },
+  "ground_truth": {
+    "identification_strategy": "DID",
+    "conclusion_direction": "negative",
+    "main_effect": "made-up -0.30"
+  },
+  "_synthetic": true
+}

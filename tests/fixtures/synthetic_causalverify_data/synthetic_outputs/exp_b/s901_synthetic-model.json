@@ -1,0 +1,13 @@
+{
+  "scenario_id": "s901",
+  "model": "synthetic-model",
+  "run_at": "2099-01-01T00:00:00+00:00",
+  "_synthetic": true,
+  "llm_response": {
+    "model": "synthetic-model",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "content": "## 1. Identification Strategy\nDifference-in-differences (DID) with two-way fixed effects: subsidised markets versus the\nrest, before versus after period 4. Key assumption: parallel trends in log revenue.\n\n## 2. R Code\n```r\n# SYNTHETIC fixture completion: '# OUT:' lines are echoed by the test stand-in for Rscript\nlibrary(fixest)\ndf <- read.csv(\"experiments/exp_b/data/s901_data.csv\")\nm <- feols(y ~ treat_x_post | unit_id + period, data = df)\n# OUT:DID coef: -0.2851\nprint(summary(m))\n```\n\n## 3. Expected Findings\nWe expect a negative effect: a decrease in log revenue of about -0.3 in subsidised\nmarkets, i.e. a decline relative to control markets.\n",
+    "stop_reason": "stop"
+  }
+}

@@ -29,6 +29,7 @@ import os
 import re
 import subprocess
 import tempfile
+from collections.abc import Callable
 from pathlib import Path
 
 SCEN_DIR = Path("experiments/exp_b/scenarios")
@@ -134,18 +135,35 @@ def extract_r_code(text: str) -> str | None:
     return None
 
 
-def execute_r_code(code: str, timeout: int = 60) -> tuple[bool, str, str]:
-    """Run R code and return (success, stdout, stderr)."""
-    try:
-        with tempfile.NamedTemporaryFile(suffix=".R", mode="w", delete=False, dir="/tmp") as f:
-            # Wrap to print all coefficients clearly
-            wrapper = f"""
+# Wrapper applied to every model-generated script before execution (suppresses
+# warnings/messages so that stdout holds the printed coefficients).
+R_WRAPPER_TEMPLATE = """
 options(warn = -1)
 suppressMessages({{
 {code}
 }})
 """
-            f.write(wrapper)
+
+
+def wrap_r_code(code: str) -> str:
+    """Return the exact script text that L2b executes for ``code``.
+
+    Factored out of execute_r_code so that alternative executors (e.g. the
+    Inspect sandbox runner in causalverify_inspect/) run byte-identical scripts.
+    """
+    return R_WRAPPER_TEMPLATE.format(code=code)
+
+
+# Signature shared by execute_r_code and any injected executor:
+# code -> (success, stdout, stderr)
+RExecutor = Callable[[str], tuple[bool, str, str]]
+
+
+def execute_r_code(code: str, timeout: int = 60) -> tuple[bool, str, str]:
+    """Run R code and return (success, stdout, stderr)."""
+    try:
+        with tempfile.NamedTemporaryFile(suffix=".R", mode="w", delete=False, dir="/tmp") as f:
+            f.write(wrap_r_code(code))
             tmp = f.name
         result = subprocess.run(
             ["Rscript", "--vanilla", tmp],
@@ -258,8 +276,15 @@ def score_output(
     tolerance: float = DEFAULT_TOL,
     baseline: str = "dgp",
     canonical_baselines: dict[str, dict] | None = None,
+    executor: RExecutor | None = None,
 ) -> dict:
-    """Compute L1, L2a, L2b, L2b+ for a single output."""
+    """Compute L1, L2a, L2b, L2b+ for a single output.
+
+    ``executor`` optionally replaces the local ``Rscript`` call
+    (``execute_r_code``) with another function of the same signature, e.g. one
+    that runs the identical wrapped script inside a sandbox. All scoring logic
+    (code extraction, coefficient extraction, baseline comparison) is unchanged.
+    """
     content = llm_output.get("llm_response", {}).get("content", "")
     sid = scenario["scenario_id"]
     method = scenario["method_family"]
@@ -299,7 +324,7 @@ def score_output(
     stdout_excerpt = ""
     if l2a:
         # Run code as-is; cwd inherited from the python process (project root)
-        ok, stdout, err = execute_r_code(code)
+        ok, stdout, err = (executor or execute_r_code)(code)
         l2b = ok
         if ok and stdout:
             estimated = extract_coefficient(stdout, method)

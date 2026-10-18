@@ -1,0 +1,25 @@
+# Inspect sandbox for CausalVerify Experiment B (L2b / L2b+ execute model-written R).
+#
+# The image is the repository's own `Dockerfile` (rocker/r-ver:4.4.2 with the
+# CRAN-pinned fixest / AER / rdrobust / sandwich / lmtest / dplyr / data.table /
+# broom stack used for the paper's scoring), so code runs against the same R
+# environment as `scripts/rescore.sh`. Build it once with
+#   docker compose -f causalverify_inspect/compose.yaml build
+# or let `inspect eval` build it on first use.
+#
+# Inspect copies each sample's realised dataset to `experiments/exp_b/data/<sid>_data.csv`
+# relative to the working directory, which is the path the prompt gives the model.
+services:
+  default:
+    build:
+      context: ..            # repository root
+      dockerfile: Dockerfile
+    image: causalverify-inspect-sandbox
+    command: tail -f /dev/null
+    init: true
+    working_dir: /app
+    # Model-written code gets no network (Inspect's default for generated
+    # sandboxes). The CRAN packages the paper's outputs need are pre-installed;
+    # remove this line if you want scripts to be able to install packages.
+    network_mode: none
+    stop_grace_period: 1s

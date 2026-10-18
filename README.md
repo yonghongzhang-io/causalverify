@@ -74,6 +74,7 @@ check and is excluded from the primary ranking.
 | `audit/` | Audit methodology, human-validation summaries, robustness analyses |
 | `paper/` | Manuscript source, figures, tables |
 | `docs/` | Pipeline walkthrough |
+| `causalverify_inspect/` | Inspect (`inspect_ai`) port: tasks, dataset loader, solvers, scorers wrapping the pipeline's scoring code |
 
 ### What is deliberately not here
 
@@ -133,6 +134,94 @@ scoring-side targets.
 ```bash
 bash scripts/rescore.sh        # re-run scoring
 bash scripts/build_paper.sh    # rebuild figures and the manuscript
+```
+
+## Running with Inspect
+
+`causalverify_inspect/` packages the benchmark as [Inspect](https://inspect.aisi.org.uk/)
+tasks, so it can be run against any Inspect-supported model with
+`inspect eval`. The port is a thin wrapper: prompts are the paper's own
+(`src/prompts/`), and scores are produced by calling the repository's scoring
+functions (`auto_score_exp_a.py`, `score_l2b_plus.py`, `score_exp_b.py`,
+`multi_scorer_l4.py`), so an Inspect run yields the same per-item scores as
+`scripts/rescore.sh`.
+
+| Task | Experiment | Layers reported | Needs |
+|---|---|---|---|
+| `causalverify_exp_a` | A — identification plans for 259 published papers | L1, L3 (method family), L4 (direction), S1/S2 direction scorers | items + consensus targets |
+| `causalverify_exp_b` | B — executable R analyses of 100 synthetic DGPs | L1, L2a, L2b, **L2b+** (DGP or canonical baseline), text-level L3/L4, S1/S2; optional LLM-judge + event-study-aware L2b+ | items + realised data + baselines; R (Docker sandbox or host) |
+
+### Install
+
+```bash
+pip install -r requirements-inspect.txt      # base requirements + inspect_ai + pytest
+```
+
+### Benchmark items
+
+The public repository deliberately omits the scoring targets
+([`REDACTIONS.md`](REDACTIONS.md)). Point `CAUSALVERIFY_DATA` (or
+`-T data_root=...`) at a directory with the full items, laid out like this
+repository:
+
+```
+$CAUSALVERIFY_DATA/
+  experiments/exp_a/papers/paper_*.json     Experiment A items
+  audit/gt_aggregate_decisions.json         Experiment A targets (new_method, new_direction, ...)
+  experiments/exp_b/scenarios/s*.json       Experiment B items incl. dgp_truth / ground_truth
+  experiments/exp_b/data/s*_data.csv        realised Experiment B datasets
+  audit/dgp_verification.json               canonical-estimator baselines
+```
+
+### Run
+
+```bash
+export CAUSALVERIFY_DATA=/path/to/benchmark/items
+
+# Experiment A (text-level layers; no code execution)
+inspect eval causalverify_inspect/tasks.py@causalverify_exp_a --model openai/gpt-4o
+
+# Experiment B. L2b/L2b+ execute model-written R inside a Docker sandbox built
+# from this repository's Dockerfile (same R 4.4.2 / CRAN-pinned stack as the paper).
+inspect eval causalverify_inspect/tasks.py@causalverify_exp_b --model anthropic/claude-opus-4-6
+
+# ... or run R from the host (requires Rscript + fixest/AER/rdrobust on PATH)
+inspect eval causalverify_inspect/tasks.py@causalverify_exp_b --model openai/gpt-4o --sandbox local
+
+# Options: L2b+ tolerance / baseline, and the paper's LLM-judge + event-study-aware L2b+
+inspect eval causalverify_inspect/tasks.py@causalverify_exp_b --model openai/o3 \
+    -T tolerance=0.5 -T baseline=canonical \
+    -T judge=true --model-role grader=anthropic/claude-haiku-4-5-20251001
+
+inspect view                                 # browse per-sample scores, R stdout, judge output
+```
+
+Each sample's score is a dictionary with one entry per layer (`L1`, `L2a`,
+`L2b`, `L2b_plus`, ...), the full pipeline row is kept in the score metadata,
+and the task-level metrics are the per-layer rates the pipeline summaries
+report (`L2b_plus_rate`, `L3_method_agree_rate` per scoreable paper, per-method
+`L2b_plus_rate_DID`, ...). Cross-model analyses (Kendall τ head-to-head
+ranking, bootstrap CIs) remain post-processing over several logs, as in
+`src/pipeline/head_to_head_ranking.py`.
+
+### Tests
+
+```bash
+pytest tests          # loader, solver wiring, scorer parity, inspect eval end to end
+```
+
+The Inspect tests run on a small, clearly labelled **synthetic** fixture
+(`tests/fixtures/synthetic_causalverify_data/`) with made-up items, targets and
+completions, use Inspect's `mockllm/model`, and stand in a fake `Rscript`, so
+they need no API keys, no R and no Docker. The parity tests assert that the
+Inspect scorers return exactly the rows `score_l2b_plus.score_output`,
+`score_exp_b.score_output`, `auto_score_exp_a.score_output` and the
+`multi_scorer_l4` S1/S2 scorers return for the same inputs. Smoke-test the
+CLI yourself with:
+
+```bash
+inspect eval causalverify_inspect/tasks.py@causalverify_exp_b --model mockllm/model \
+    --sandbox local -T data_root=tests/fixtures/synthetic_causalverify_data
 ```
 
 ## Models evaluated
